@@ -1,7 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
 <head>
-    <el-input>Esse é um modelo teste</el-input>
+    <el-input placeholder="Please input" v-model="input3" class="input-with-select">
+        <el-select v-model="select" slot="prepend" placeholder="Select">
+            <el-option label="Restaurant" value="1"></el-option>
+            <el-option label="Order No." value="2"></el-option>
+            <el-option label="Tel" value="3"></el-option>
+        </el-select>
+        <el-button slot="append" icon="el-icon-search"></el-button>
+    </el-input>
 </head>
 
 <body >
