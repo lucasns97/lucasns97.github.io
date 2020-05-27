@@ -3,7 +3,7 @@ Vue.use(VueLazyload)
 const vm = new Vue({
     el: '#app',
     data: {
-        input3: '',
+        input_data: '',
     },
     mounted() {},
     methods: {},
