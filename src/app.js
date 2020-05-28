@@ -8,10 +8,10 @@ const vm = new Vue({
         language: 'pt',
     },
     mounted() {
+        var self = this;
         this.loadJSON(function(response) {
             // Parse JSON string into object
-            this.dictData = JSON.parse(response);
-            console.log(this.dictData)
+            self.dictData = JSON.parse(response);
         });
     },
     methods: {
