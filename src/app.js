@@ -5,11 +5,13 @@ const vm = new Vue({
         inputData: '',
         activeMenu: '1',
         dictData: '',
+        language: 'pt',
     },
     mounted() {
         this.loadJSON(function(response) {
             // Parse JSON string into object
-            dictData = JSON.parse(response);
+            this.dictData = JSON.parse(response);
+            console.log(this.dictData)
         });
     },
     methods: {
@@ -22,12 +24,11 @@ const vm = new Vue({
             var xobj = new XMLHttpRequest();
 
             xobj.overrideMimeType("application/json");
-            xobj.open('GET', './src/json/dict.json', true);
+            xobj.open('GET', 'https://raw.githubusercontent.com/lucasns97/lucasns97.github.io/master/src/json/dict.json', true);
 
             xobj.onreadystatechange = function () {
                 if (xobj.readyState == 4 && xobj.status == "200") {
                     // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
-                    console.log(xobj.responseText)
                     callback(xobj.responseText);
                 }
             };
