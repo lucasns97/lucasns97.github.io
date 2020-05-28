@@ -1,0 +1,15 @@
+{
+    "language": {
+        "en": {
+            "menu1": "Home",
+            "menu2": "Search",
+            "inputPlaceholder": "Search a topic"
+            
+        },
+        "pt": {
+            "menu1": "Home",
+            "menu2": "Pesquise",
+            "inputPlaceholder": "Pesquise um tema"
+        }
+    }
+}

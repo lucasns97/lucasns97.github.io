@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="src/css/app.css">
 </head>
 
 <body>
@@ -18,7 +18,7 @@
                 class="el-menu-demo"
                 mode="horizontal"
                 @select="handleMenu"
-                background-color="rgba(0,0,0,0)"
+                background-color="#FAF3DD"
                 text-color="#8FC0A9"
                 active-text-color="#68B0AB">
                 <el-menu-item index="1" class="menu-text">Home</el-menu-item>
@@ -26,9 +26,12 @@
             </el-menu>
         </el-row>
 
+        <!-- home -->
         <div v-if="activeMenu === '1'">
             Apresentação
         </div>
+
+        <!-- pesquisa -->
         <div v-else>
             <el-row class="input-bar__outer" type="flex">
                 <el-col class="input-bar__inner">
@@ -50,7 +53,7 @@
     <!-- import JavaScript -->
     <script src="https://unpkg.com/element-ui/lib/index.js"></script>
     
-    <script src="script/app.js"></script>
+    <script src="src/app.js"></script>
 </html>
 
 

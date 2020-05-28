@@ -45,8 +45,21 @@ iframe {
     line-height: 50px !important;
     height: 50px !important;
 }
+
+.el-input__inner:hover, .input-bar:hover {
+    box-shadow: 0px 0px 4px 1px rgba(104, 176, 171, 0.3);
+}
+
+.el-input__inner:focus, .input-bar:focus {
+    border-color: #68B0AB;
+}
+
 .menu-text {
     font-size: 20px;
+}
+
+.el-menu-item:hover {
+    background-color: rgba(200, 213, 185, 0.3) !important;
 }
 
 .search-btn {
