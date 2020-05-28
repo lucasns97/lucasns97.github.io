@@ -1,35 +1,56 @@
 <!DOCTYPE html>
-<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml">
+<html>
 <head>
-    <el-input placeholder="Please input" v-model="input_data" class="input-with-select">
-        <el-button slot="append" icon="el-icon-search"></el-button>
-    </el-input>
+    <meta charset="UTF-8">
+    <title>IA Experimental</title>
+    <!-- import CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <link rel="stylesheet" href="css/app.css">
 </head>
 
-<body >
-<div id="app">
+<body>
+    <div id="app">
+        <el-row class="menu__outer">
+            <el-menu
+                :default-active="activeMenu"
+                class="el-menu-demo"
+                mode="horizontal"
+                @select="handleMenu"
+                background-color="rgba(0,0,0,0)"
+                text-color="#8FC0A9"
+                active-text-color="#68B0AB">
+                <el-menu-item index="1" class="menu-text">Home</el-menu-item>
+                <el-menu-item index="2" class="menu-text">Pesquisa</el-menu-item>
+            </el-menu>
+        </el-row>
 
-<!-- scripts e estilos -->
-
-<!-- js do site -->
-<script src="./script/app.js"></script>
-
-<!-- JS-->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.js"></script>
-
-<!-- jquerry -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-
-<!-- bootstrap -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
-<!-- element ui -->
-<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
-<script src="https://unpkg.com/element-ui/lib/index.js"></script>
-
+        <div v-if="activeMenu === '1'">
+            Apresentação
+        </div>
+        <div v-else>
+            <el-row class="input-bar__outer" type="flex">
+                <el-col class="input-bar__inner">
+                    <el-input
+                        placeholder="Pesquise um tema" 
+                        v-model="inputData" 
+                        class="input-bar" 
+                        size="medium">
+                    </el-input>
+                </el-col>
+                <i class="material-icons search-btn">search</i>
+            </el-row>
+        </div>
+    </div>
 
 </body>
+    <!-- import Vue before Element -->
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <!-- import JavaScript -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    
+    <script src="script/app.js"></script>
 </html>
 
 

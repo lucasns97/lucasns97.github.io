@@ -1,14 +1,16 @@
-Vue.use(VueLazyload)
 
 const vm = new Vue({
     el: '#app',
     data: {
-        input_data: '',
+        inputData: '',
+        activeMenu: '1'
     },
     mounted() {},
-    methods: {},
-        
+    methods: {
+        handleMenu(key, keyPath) {
+            this.activeMenu = key;
+        }
+    },
+    filters: {},
+    computed: {}
 });
-
-//initialize page on collection 34
-vm.changeCollection()
