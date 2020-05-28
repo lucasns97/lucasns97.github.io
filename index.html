@@ -25,9 +25,15 @@
                 <el-menu-item index="2" class="menu-text">{{ dictData[language].menu2 }}</el-menu-item>
             </el-menu>
         </el-row>
-        <el-row>
-            <el-button @click="language = 'pt'">pt</el-button>
-            <el-button @click="language = 'en'">en</el-button>
+        <el-row class="language-menu__outer">
+            <div v-if="language == 'pt'" >
+                <img src="./src/assets/images/pt_flag.png" class="language-menu-img" id="active" @click="language = 'pt'">
+                <img src="./src/assets/images/en_flag.png" class="language-menu-img" @click="language = 'en'">
+            </div>
+            <div v-else >
+                <img src="./src/assets/images/pt_flag.png" class="language-menu-img" @click="language = 'pt'">
+                <img src="./src/assets/images/en_flag.png" class="language-menu-img" id="active" @click="language = 'en'">
+            </div>
         </el-row>
 
         <!-- home -->

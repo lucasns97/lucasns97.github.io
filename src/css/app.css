@@ -25,6 +25,29 @@ iframe {
     justify-content: center;
 }
 
+.language-menu__outer {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 10px;
+}
+
+.language-menu-img#active {
+    opacity: 1;
+}
+
+.language-menu-img {
+    cursor: pointer;
+    width: 25px;
+    opacity: 0.3;
+    transition: opacity 0.2s;
+}
+
+.language-menu-img:hover {
+    opacity: 0.7;
+}
+
+
 .input-bar__outer {
     display: flex;
     align-items: center;
