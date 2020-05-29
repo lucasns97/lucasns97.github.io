@@ -1,3 +1,4 @@
+const DICTONARY_URL = "https://raw.githubusercontent.com/lucasns97/lucasns97.github.io/master/src/json/dict.json"
 
 const vm = new Vue({
     el: '#app',
@@ -9,30 +10,27 @@ const vm = new Vue({
     },
     mounted() {
         var self = this;
-        this.loadJSON(function(response) {
-            // Parse JSON string into object
-            self.dictData = JSON.parse(response);
-        });
+
+        this.loadDict()
+            .then(function(dict) {
+
+                self.dictData = dict;
+
+            }).catch((e) => console.error(e))
+        
     },
     methods: {
         handleMenu(key, keyPath) {
             this.activeMenu = key;
         },
 
-        loadJSON(callback) {   
+        async loadDict() {   
 
-            var xobj = new XMLHttpRequest();
+            try {
+                const res = await axios.get(DICTONARY_URL);
+                return res.data;
 
-            xobj.overrideMimeType("application/json");
-            xobj.open('GET', 'https://raw.githubusercontent.com/lucasns97/lucasns97.github.io/master/src/json/dict.json', true);
-
-            xobj.onreadystatechange = function () {
-                if (xobj.readyState == 4 && xobj.status == "200") {
-                    // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
-                    callback(xobj.responseText);
-                }
-            };
-            xobj.send(null);  
+            } catch (e) {console.error(e);}
         }
     },
     filters: {},
