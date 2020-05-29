@@ -12,9 +12,6 @@
 
 <body>
     <div id="app">
-        <div id="floating-square">
-            <p>quadradao</p>
-        </div>
         <el-row class="menu__outer">
             <el-menu
                 :default-active="activeMenu"
@@ -41,7 +38,9 @@
 
         <!-- home -->
         <div v-if="activeMenu === '1'">
-            Apresentação
+            <p v-for="text in introductionCorpus[language]" :key="text">
+                {{ text }}
+            </p>
         </div>
 
         <!-- pesquisa -->

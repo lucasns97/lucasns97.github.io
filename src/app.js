@@ -7,16 +7,22 @@ const vm = new Vue({
         activeMenu: '1',
         dictData: '',
         language: 'pt',
+        introductionCorpus: {},
     },
-    mounted() {
+    async mounted() {
         var self = this;
 
-        this.loadDict()
+        await this.loadDict()
             .then(function(dict) {
 
                 self.dictData = dict;
 
             }).catch((e) => console.error(e))
+
+        this.ajustText(self.dictData.pt.introduction, 'pt')
+        this.ajustText(self.dictData.en.introduction, 'en')
+
+        console.log(this.introductionCorpus)
         
     },
     methods: {
@@ -31,6 +37,12 @@ const vm = new Vue({
                 return res.data;
 
             } catch (e) {console.error(e);}
+        },
+
+        ajustText(text, language) {
+
+            this.introductionCorpus[language] = text.split('\n');
+
         }
     },
     filters: {},

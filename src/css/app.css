@@ -99,12 +99,3 @@ iframe {
 .search-btn:hover {
     opacity: 1;
 }
-
-
-
-
-
-#floating-square {
-    border-style: dashed;
-    position: absolute;
-}
