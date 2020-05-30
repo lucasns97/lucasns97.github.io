@@ -38,9 +38,9 @@
 
         <!-- home -->
         <div v-if="activeMenu === '1'">
-            <p v-for="text in introductionCorpus[language]" :key="text">
-                {{ text }}
-            </p>
+            <div class="introduction-text__outer">
+                <el-row class="introduction-text" v-for="text in introductionCorpus[language]">{{ text }}</el-row>
+            </div>
         </div>
 
         <!-- pesquisa -->
@@ -54,7 +54,10 @@
                         size="medium">
                     </el-input>
                 </el-col>
-                <i class="material-icons search-btn">search</i>
+            </el-row>
+            <el-row class="button__outer" type="flex">
+                <el-button round><i class="material-icons btn-icon">device_unknown</i> Tópico aleatório</el-button>
+                <el-button round><i class="material-icons btn-icon">search</i> Buscar</el-button>
             </el-row>
         </div>
     </div>

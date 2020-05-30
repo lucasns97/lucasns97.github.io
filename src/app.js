@@ -12,17 +12,15 @@ const vm = new Vue({
     async mounted() {
         var self = this;
 
-        await this.loadDict()
+        this.loadDict()
             .then(function(dict) {
 
                 self.dictData = dict;
 
+                self.ajustText(self.dictData.pt.introduction, 'pt')
+                self.ajustText(self.dictData.en.introduction, 'en')
+
             }).catch((e) => console.error(e))
-
-        this.ajustText(self.dictData.pt.introduction, 'pt')
-        this.ajustText(self.dictData.en.introduction, 'en')
-
-        console.log(this.introductionCorpus)
         
     },
     methods: {
