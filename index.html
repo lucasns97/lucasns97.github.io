@@ -27,12 +27,12 @@
         </el-row>
         <el-row class="language-menu__outer">
             <div v-if="language == 'pt'" >
-                <img src="./src/assets/images/pt_flag.png" class="language-menu-img" id="active" @click="language = 'pt'">
-                <img src="./src/assets/images/en_flag.png" class="language-menu-img" @click="language = 'en'">
+                <img src="./src/assets/images/pt_flag.png" class="language-menu-img" id="active" @click="changeLanguage('pt')">
+                <img src="./src/assets/images/en_flag.png" class="language-menu-img" @click="changeLanguage('en')">
             </div>
             <div v-else >
-                <img src="./src/assets/images/pt_flag.png" class="language-menu-img" @click="language = 'pt'">
-                <img src="./src/assets/images/en_flag.png" class="language-menu-img" id="active" @click="language = 'en'">
+                <img src="./src/assets/images/pt_flag.png" class="language-menu-img" @click="changeLanguage('pt')">
+                <img src="./src/assets/images/en_flag.png" class="language-menu-img" id="active" @click="changeLanguage('en')">
             </div>
         </el-row>
 

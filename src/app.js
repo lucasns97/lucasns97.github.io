@@ -41,6 +41,10 @@ const vm = new Vue({
 
             this.introductionCorpus[language] = text.split('\n');
 
+        },
+
+        changeLanguage(lang) {
+            this.language = lang;
         }
     },
     filters: {},
