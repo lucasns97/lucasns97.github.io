@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
+    <!-- loading -->
+    <link rel="stylesheet" href="https://unpkg.com/vue-spinners@1.0.0/dist/vue-spinners.css">
+    <script src="https://unpkg.com/vue-spinners@1.0.0/dist/vue-spinners.browser.js"></script>
+
     <link rel="stylesheet" href="src/css/app.css">
 </head>
 
@@ -59,6 +63,42 @@
                 <el-button round><i class="material-icons btn-icon">device_unknown</i> {{ dictData[language].buttonRandom }}</el-button>
                 <el-button round><i class="material-icons btn-icon">search</i> {{ dictData[language].buttonSearch }}</el-button>
             </el-row>
+            <div class="card__outer">
+                <bounce class="loading__inner" :loading="loading"></bounce>
+                <el-row id="card-line__outer" type="flex" v-for="k in [1, 2, 3, 4, 5]">
+                    <el-col id="card-col__outer">
+                        <el-card shadow="hover" >
+                            <div @click="openDialog(2*k + 1)" shadow="hover">
+                                <h2>Título {{ 2*k - 1 }}</h2>
+                            <el-row type="flex">
+                                <el-badge v-for="i in [1, 2, 3, 4]" :value="`tag ${i}`" class="item"></el-badge>
+                            </el-row>
+                            </div>
+                        </el-card>
+                    </el-col>
+                    <el-col id="card-col__outer">
+                        <el-card shadow="hover" >
+                            <div @click="openDialog(2*k)" shadow="hover">
+                                <h2>Título {{ 2*k }}</h2>
+                            <el-row type="flex">
+                                <el-badge v-for="i in [1, 2, 3, 4]" :value="`tag ${i}`" class="item"></el-badge>
+                            </el-row>
+                            </div>
+                        </el-card>
+                    </el-col>
+                </el-row>
+            </div>
+
+            <el-dialog :title="`Título ${dialogId}`" :visible.sync="dialogVisible">
+                <el-row>
+                    <h1>Texto {{ dialogId }}</h1>
+                    <div style="height: 100%;">
+                        <iframe src='.\src\assets\graphics\drogas.html' frameborder="0" allign="middle"></iframe>
+                    </div>
+                </el-row>
+            </el-dialog>
+
+
         </div>
     </div>
 

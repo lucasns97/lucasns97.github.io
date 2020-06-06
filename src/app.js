@@ -1,5 +1,7 @@
 const DICTONARY_URL = "https://raw.githubusercontent.com/lucasns97/lucasns97.github.io/master/src/json/dict.json"
 
+Vue.use(VueSpinners)
+
 const vm = new Vue({
     el: '#app',
     data: {
@@ -8,9 +10,14 @@ const vm = new Vue({
         dictData: '',
         language: 'pt',
         introductionCorpus: {},
+        dialogVisible: false,
+        dialogId: '',
+        loading: false,
     },
     async mounted() {
         var self = this;
+
+        this.loading = true
 
         this.loadDict()
             .then(function(dict) {
@@ -20,10 +27,17 @@ const vm = new Vue({
                 self.ajustText(self.dictData.pt.introduction, 'pt')
                 self.ajustText(self.dictData.en.introduction, 'en')
 
+                self.loading = false
+
             }).catch((e) => console.error(e))
         
     },
     methods: {
+        openDialog(id) {
+            this.dialogId = id;
+            this.dialogVisible = true;
+        },
+
         handleMenu(key, keyPath) {
             this.activeMenu = key;
         },
@@ -38,9 +52,7 @@ const vm = new Vue({
         },
 
         ajustText(text, language) {
-
             this.introductionCorpus[language] = text.split('\n');
-
         },
 
         changeLanguage(lang) {

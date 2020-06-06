@@ -38,7 +38,8 @@ iframe {
 
 .language-menu-img {
     cursor: pointer;
-    width: 25px;
+    min-width: 23px;
+    max-width: 25px;
     opacity: 0.3;
     transition: all 0.2s ease;
 }
@@ -95,7 +96,7 @@ iframe {
     padding-left: 10px;
     color: #68B0AB;
 
-    transition: opacity 0.2s;
+    transition: opacity 0.2s ease;
 }
 
 .search-btn:hover {
@@ -103,11 +104,10 @@ iframe {
 }
 
 .introduction-text__outer {
-    position: fixed;
-        top: 1000px;
-        left: 50%;
-        margin-right: -50%;
-        transform: translate(-50%, -50%)
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .introduction-text {
@@ -145,4 +145,56 @@ iframe {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.card__outer {
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.el-row#card-line__outer{
+    width: 80%;
+}
+
+.el-col#card-col__outer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.el-card{
+    max-width: 100%;
+    width: 100%;
+    margin: 15px;
+    cursor: pointer;
+    background-color: rgba(143, 192, 169, 0.5);
+    opacity: 0.9;
+}
+
+.el-badge__content {
+    background-color: #68B0AB;
+    color: rgb(49, 51, 58);
+    opacity: 0.8;
+    transition: all 0.2s ease;
+    border: none;
+    margin: 2px;
+}
+
+.el-badge__content:hover {
+    opacity: 1;
+}
+
+.el-dialog {
+    width: 80%;
+    height: fit-content;
+}
+
+.loading__inner {
+    opacity: 0.7;
+    position: absolute;
+    transform: translateY(-300px);
+    z-index: 1000;
 }
