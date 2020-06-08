@@ -81,7 +81,7 @@ iframe {
 }
 
 .menu-text {
-    font-size: 20px;
+    font-size: 24px;
 }
 
 .el-menu-item:hover {
@@ -115,6 +115,7 @@ iframe {
 	text-justify: inter-word;
     margin: 20px;
     max-width: 1000px;
+    font-size: 25px;
 }
 
 /* BUTTON AREA */
@@ -154,6 +155,8 @@ iframe {
 
 .container-fluid#card__outer {
     margin-top: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
 }
 
 .el-card{
@@ -172,6 +175,7 @@ iframe {
     transition: all 0.2s ease;
     border: none;
     margin: 2px;
+    font-size: 15px;
 }
 
 .el-badge__content:hover {
