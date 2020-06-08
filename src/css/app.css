@@ -117,16 +117,19 @@ iframe {
     max-width: 1000px;
 }
 
+/* BUTTON AREA */
+
 .btn-icon {
     vertical-align: middle;
 }
 
 .el-button {
-    font-size: 17px;
+    font-size: 19px;
+    margin-top: 5px;
     background-color: rgba(200, 213, 185, 0.5);
     outline: none;
     border: none;
-    width: 200px;
+    width: 285px;
 }
 
 .el-button:hover {
@@ -140,35 +143,23 @@ iframe {
 }
 
 
-.button__outer {
+.container-fluid#button__outer {
     padding-top: 20px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.card__outer {
-    padding-top: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
+/* CARD AREA */
 
-.el-row#card-line__outer{
-    width: 80%;
-}
-
-.el-col#card-col__outer{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.container-fluid#card__outer {
+    margin-top: 20px;
 }
 
 .el-card{
-    max-width: 100%;
-    width: 100%;
     margin: 15px;
+    margin-left: 25px;
+    margin-right: 25px;
     cursor: pointer;
     background-color: rgba(143, 192, 169, 0.5);
     opacity: 0.9;
@@ -198,3 +189,11 @@ iframe {
     transform: translateY(-300px);
     z-index: 1000;
 }
+
+
+
+
+
+
+
+

@@ -11,6 +11,9 @@
     <link rel="stylesheet" href="https://unpkg.com/vue-spinners@1.0.0/dist/vue-spinners.css">
     <script src="https://unpkg.com/vue-spinners@1.0.0/dist/vue-spinners.browser.js"></script>
 
+    <!-- bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+
     <link rel="stylesheet" href="src/css/app.css">
 </head>
 
@@ -59,34 +62,31 @@
                     </el-input>
                 </el-col>
             </el-row>
-            <el-row class="button__outer" type="flex">
-                <el-button round><i class="material-icons btn-icon">device_unknown</i> {{ dictData[language].buttonRandom }}</el-button>
-                <el-button round><i class="material-icons btn-icon">search</i> {{ dictData[language].buttonSearch }}</el-button>
-            </el-row>
-            <div class="card__outer">
+            <div class="container-fluid" id="button__outer">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6">
+                        <el-button round><i class="material-icons btn-icon">device_unknown</i> {{ dictData[language].buttonRandom }}</el-button>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <el-button round><i class="material-icons btn-icon">search</i> {{ dictData[language].buttonSearch }}</el-button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid" id="card__outer">
                 <bounce class="loading__inner" :loading="loading"></bounce>
-                <el-row id="card-line__outer" type="flex" v-for="k in [1, 2, 3, 4, 5]">
-                    <el-col id="card-col__outer">
+                <div class="row">
+                    <div v-for="k in [1, 2, 3, 4, 5, 6]" class="col-xs-12 col-sm-12 col-lg-6 col-xl-6">
                         <el-card shadow="hover" >
-                            <div @click="openDialog(2*k + 1)" shadow="hover">
+                            <div @click="openDialog(2*k + 1)">
                                 <h2>Título {{ 2*k - 1 }}</h2>
-                            <el-row type="flex">
-                                <el-badge v-for="i in [1, 2, 3, 4]" :value="`tag ${i}`" class="item"></el-badge>
-                            </el-row>
+                                <el-row type="flex">
+                                    <el-badge v-for="i in [1, 2, 3, 4]" :value="`tag ${i}`" class="item"></el-badge>
+                                </el-row>
                             </div>
                         </el-card>
-                    </el-col>
-                    <el-col id="card-col__outer">
-                        <el-card shadow="hover" >
-                            <div @click="openDialog(2*k)" shadow="hover">
-                                <h2>Título {{ 2*k }}</h2>
-                            <el-row type="flex">
-                                <el-badge v-for="i in [1, 2, 3, 4]" :value="`tag ${i}`" class="item"></el-badge>
-                            </el-row>
-                            </div>
-                        </el-card>
-                    </el-col>
-                </el-row>
+                    </div>	   
+                </div>
             </div>
 
             <el-dialog :title="`Título ${dialogId}`" :visible.sync="dialogVisible">
