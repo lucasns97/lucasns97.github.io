@@ -30,6 +30,10 @@ const vm = new Vue({
                 self.loading = false
 
             }).catch((e) => console.error(e))
+
+        
+        var files = fs.readdirSync('/topics');
+        console.log(files)
         
     },
     methods: {
