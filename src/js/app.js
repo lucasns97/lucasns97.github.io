@@ -74,7 +74,16 @@ const vm = new Vue({
 
         navigateTo(path) {
             parent.window.location.href = path
-        }
+        },
+
+        getRandomTopic() {
+            console.log('Carregando tópico aleatório')
+        },
+
+        filterByText() {
+            console.log(`Buscando por ${this.inputData}`)
+        },
+
     },
     filters: {},
     computed: {}

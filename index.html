@@ -65,10 +65,14 @@
             <div class="container-fluid" id="button__outer">
                 <div class="row">
                     <div class="col-xs-12 col-sm-6">
-                        <el-button round><i class="material-icons btn-icon">device_unknown</i> {{ dictData[language].buttonRandom }}</el-button>
+                        <el-button round @click="getRandomTopic()">
+                            <i class="material-icons btn-icon">device_unknown</i> {{ dictData[language].buttonRandom }}
+                        </el-button>
                     </div>
                     <div class="col-xs-12 col-sm-6">
-                        <el-button round><i class="material-icons btn-icon">search</i> {{ dictData[language].buttonSearch }}</el-button>
+                        <el-button round @click="filterByText()">
+                            <i class="material-icons btn-icon">search</i> {{ dictData[language].buttonSearch }}
+                        </el-button>
                     </div>
                 </div>
             </div>
