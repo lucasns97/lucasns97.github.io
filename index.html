@@ -80,7 +80,7 @@
             <div class="container-fluid" id="card__outer">
                 <bounce class="loading__inner" :loading="loading"></bounce>
                 <div class="row">
-                    <div v-for="topic in topicsData" class="col-xs-12 col-sm-12 col-lg-6 col-xl-6">
+                    <div v-for="topic in filteredTopicsData" class="col-xs-12 col-sm-12 col-lg-6 col-xl-6">
                         <el-card shadow="hover" >
                             <div @click="navigateTo(topic.path)">
                                 <h3>{{ topic.title }}</h3>

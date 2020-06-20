@@ -12,7 +12,8 @@ const vm = new Vue({
         language: 'pt',
         introductionCorpus: {},
         loading: false,
-        topicsData: []
+        topicsData: [],
+        filteredTopicsData: [],
     },
     async mounted() {
 
@@ -36,7 +37,11 @@ const vm = new Vue({
             .then(function(data) {
 
                 self.topicsData = data;
-                console.log(self.topicsData)
+                Object.entries(self.topicsData).forEach(function(data) {
+                    let key = data[0]
+                    let values = data[1]
+                    self.filteredTopicsData[key] = values
+                })
 
             }).catch((e) => console.error(e))
 
@@ -78,10 +83,22 @@ const vm = new Vue({
 
         getRandomTopic() {
             console.log('Carregando tópico aleatório')
+
+            let randomIndex = Math.floor(Math.random() * Object.keys(this.topicsData).length)
+
+            this.navigateTo(this.topicsData[randomIndex].path)
         },
 
         filterByText() {
-            console.log(`Buscando por ${this.inputData}`)
+            var self = this
+            this.filteredTopicsData = {}
+            Object.entries(this.topicsData).forEach(function(data) {
+                let key = data[0]
+                let values = data[1]
+                if (values.text.indexOf(self.inputData.toLowerCase()) !== -1) {
+                    self.filteredTopicsData[key] = values
+                }
+            })
         },
 
     },
