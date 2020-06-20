@@ -110,5 +110,10 @@ const vm = new Vue({
 
     },
     filters: {},
-    computed: {}
+    computed: {},
+    watch: {
+        inputData: function() {
+            this.filterByText()
+        }
+    }
 });

@@ -97,11 +97,18 @@ if __name__ == "__main__":
     for i, filename in enumerate(filenames):
         html_lines = get_html_lines(filename)
 
+        title = get_topic_title(html_lines)
+        tags  = get_topic_tags(html_lines)
+        text  = title.lower() + ' ' + get_topic_text(html_lines)
+        for tag in tags:
+            text += f' {tag.lower()}'
+        path = f'topics/{filename}'
+
         json_data[i] = {
-            'title': get_topic_title(html_lines),
-            'tags': get_topic_tags(html_lines),
-            'text': get_topic_title(html_lines).lower() + ' ' + get_topic_text(html_lines),
-            'path': f'topics/{filename}'
+            'title': title,
+            'tags': tags,
+            'text': text,
+            'path': path
         }
 
     with open(JSON_ROOT_PATH+JSON_FILENAME, 'w') as json_file:
