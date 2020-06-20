@@ -105,7 +105,7 @@ const vm = new Vue({
 
                 let searchValues = self.inputData.split(' ')
                 searchValues.forEach(function(value) {
-                    if (values.text.indexOf(value.toLowerCase()) !== -1) {
+                    if (value !== "" && values.text.indexOf(value.toLowerCase()) !== -1) {
                         self.filteredTopicsData[key] = values
                     }
                 })
