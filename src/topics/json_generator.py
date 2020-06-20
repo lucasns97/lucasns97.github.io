@@ -101,6 +101,7 @@ if __name__ == "__main__":
             'title': get_topic_title(html_lines),
             'tags': get_topic_tags(html_lines),
             'text': get_topic_text(html_lines),
+            'path': f'topics/{filename}'
         }
 
     with open(JSON_ROOT_PATH+JSON_FILENAME, 'w') as json_file:
