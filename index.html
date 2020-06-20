@@ -78,8 +78,8 @@
                 <div class="row">
                     <div v-for="topic in topicsData" class="col-xs-12 col-sm-12 col-lg-6 col-xl-6">
                         <el-card shadow="hover" >
-                            <div>
-                                <a @click="openTopic(topic.path)">{{ topic.path }}</a>
+                            <div @click="openTopic(topic.path)">
+                                <h3>{{ topic.path }}</h3>
                                 <el-row type="flex">
                                     <el-badge v-for="i in [1, 2, 3, 4]" :value="`tag ${i}`" class="item"></el-badge>
                                 </el-row>
