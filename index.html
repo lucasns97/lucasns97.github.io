@@ -79,7 +79,6 @@
                     <div v-for="topic in topicsData" class="col-xs-12 col-sm-12 col-lg-6 col-xl-6">
                         <el-card shadow="hover" >
                             <div @click="navigateTo(topic.path)">
-                                <a href="">{{ topic.path }}</a>
                                 <h3>{{ topic.title }}</h3>
                                 <el-row type="flex">
                                     <el-badge v-for="tag in topic.tags" :value="tag" class="item"></el-badge>
