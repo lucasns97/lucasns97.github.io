@@ -52,35 +52,14 @@ const vm = new Vue({
 
             window.location.href = `https://lucasns97.github.io/topics/${topicName}`
         },
-        async loadRoot() {
+
+        async loadTopics() {   
 
             try {
-                const resRoot = await axios.get(GITHUB_API_REPO, {
-                    headers: {
-                        'Authorization': `Basic ${USERNAME}:${PASSWORD}`
-                    }
-                })
-                return resRoot.data
+                const res = await axios.get(DICTONARY_URL);
+                return res.data;
+
             } catch (e) {console.error(e);}
-        },
-
-        async loadTopics(){
-
-            let dataRoot = await this.loadRoot()
-
-            for (const [_, item] of dataRoot.tree.entries()) {
-                if (item.path === "topics") {
-                    try {
-                        const resTopics = await axios.get(item.url, {
-                            headers: {
-                                'Authorization': `Basic ${USERNAME}:${PASSWORD}`
-                            }
-                        })
-                        return resTopics.data.tree
-                    } catch (e) {console.error(e);}
-                }
-            }
-            
         },
 
         handleMenu(key, keyPath) {
