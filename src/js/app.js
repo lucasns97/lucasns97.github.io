@@ -102,9 +102,14 @@ const vm = new Vue({
             Object.entries(this.topicsData).forEach(function(data) {
                 let key = data[0]
                 let values = data[1]
-                if (values.text.indexOf(self.inputData.toLowerCase()) !== -1) {
-                    self.filteredTopicsData[key] = values
-                }
+
+                let searchValues = self.inputData.split(' ')
+                searchValues.forEach(function(value) {
+                    if (values.text.indexOf(value.toLowerCase()) !== -1) {
+                        self.filteredTopicsData[key] = values
+                    }
+                })
+                
             })
         },
 
