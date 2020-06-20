@@ -7,10 +7,6 @@
     <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 
-    <!-- loading -->
-    <link rel="stylesheet" href="https://unpkg.com/vue-spinners@1.0.0/dist/vue-spinners.css">
-    <script src="https://unpkg.com/vue-spinners@1.0.0/dist/vue-spinners.browser.js"></script>
-
     <!-- bootstrap -->
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
 
@@ -72,14 +68,31 @@
                     <div class="col-xs-12 col-sm-6">
                         <el-button round @click="filterByText()">
                             <i class="material-icons btn-icon">search</i> {{ dictData[language].buttonSearch }}
+                            <div style="position: absolute; top: 28px" v-loading="loading"></div>
                         </el-button>
                     </div>
                 </div>
             </div>
-
+            <div v-if="Object.keys(filteredTopicsData).length === 0 && !loading">
+                <div class="row" style="text-align: center; margin: 20px; opacity: 0.8; cursor: default">
+                    <h3 style="font-size: 35px">Oops!<i class="material-icons" style="font-size: 35px; vertical-align: middle">mood_bad</i></h3>
+                    <h3>Nenhum tópico encontrado</h3>
+                </div>
+            </div>
             <div class="container-fluid" id="card__outer">
-                <bounce class="loading__inner" :loading="loading"></bounce>
-                <div class="row">
+                <div class="row" v-if="loading">
+                    <div v-for="i in [1, 2, 3, 4, 5, 6, 7, 8]" class="col-xs-12 col-sm-12 col-lg-6 col-xl-6">
+                        <el-card shadow="hover" id="loading">
+                            <div>
+                                <h3 style="visibility: hidden">.</h3>
+                                <el-row type="flex">
+                                    <el-badge v-for="j in [1]" value="." class="item" id="loading"></el-badge>
+                                </el-row>
+                            </div>
+                        </el-card>
+                    </div>	   
+                </div>
+                <div class="row" v-else="loading">
                     <div v-for="topic in filteredTopicsData" class="col-xs-12 col-sm-12 col-lg-6 col-xl-6">
                         <el-card shadow="hover" >
                             <div @click="navigateTo(topic.path)">
@@ -91,6 +104,7 @@
                         </el-card>
                     </div>	   
                 </div>
+                
             </div>
         </div>
     </div>

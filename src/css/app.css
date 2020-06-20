@@ -166,6 +166,13 @@ iframe {
     cursor: pointer;
     background-color: rgba(143, 192, 169, 0.5);
     opacity: 0.9;
+    transition: opacity .5s linear;
+}
+
+#loading {
+    background-color: #C8D5B9;
+    opacity: 0.1;
+
 }
 
 .el-badge__content {

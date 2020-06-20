@@ -1,8 +1,6 @@
 const DICTONARY_URL = "https://raw.githubusercontent.com/lucasns97/lucasns97.github.io/master/src/json/dict.json"
 const TOPICS_URL = "https://raw.githubusercontent.com/lucasns97/lucasns97.github.io/master/src/json/topics.json"
 
-Vue.use(VueSpinners)
-
 const vm = new Vue({
     el: '#app',
     data: {
@@ -82,15 +80,24 @@ const vm = new Vue({
         },
 
         getRandomTopic() {
-            console.log('Carregando tópico aleatório')
+            this.loading = true
 
             let randomIndex = Math.floor(Math.random() * Object.keys(this.topicsData).length)
 
             this.navigateTo(this.topicsData[randomIndex].path)
+
+            this.loading = false
         },
 
         filterByText() {
+            this.loading = true
+
             var self = this
+
+            setTimeout(function() {
+                self.loading = false
+            }, 400)
+
             this.filteredTopicsData = {}
             Object.entries(this.topicsData).forEach(function(data) {
                 let key = data[0]
