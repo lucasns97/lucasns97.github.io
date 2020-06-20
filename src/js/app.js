@@ -70,6 +70,10 @@ const vm = new Vue({
 
         changeLanguage(lang) {
             this.language = lang;
+        },
+
+        navigateTo(path) {
+            parent.window.location.href = path
         }
     },
     filters: {},
