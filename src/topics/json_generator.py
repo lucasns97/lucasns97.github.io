@@ -100,7 +100,7 @@ if __name__ == "__main__":
         json_data[i] = {
             'title': get_topic_title(html_lines),
             'tags': get_topic_tags(html_lines),
-            'text': get_topic_text(html_lines),
+            'text': get_topic_title(html_lines).lower() + ' ' + get_topic_text(html_lines),
             'path': f'topics/{filename}'
         }
 
