@@ -114,6 +114,10 @@ const vm = new Vue({
             })
         },
 
+        filterByTag(tag) {
+            console.log(tag)
+        }
+
     },
     filters: {},
     computed: {},

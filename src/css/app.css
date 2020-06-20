@@ -169,9 +169,14 @@ iframe {
     transition: opacity .5s linear;
 }
 
-#loading {
+.el-card#loading {
+    margin: 15px;
+    margin-left: 25px;
+    margin-right: 25px;
+    cursor: default;
     background-color: #C8D5B9;
-    opacity: 0.1;
+    opacity: 0.4;
+    transition: opacity .5s linear;
 }
 
 .el-badge__content {
@@ -180,9 +185,12 @@ iframe {
     opacity: 0.8;
     transition: all 0.2s ease;
     border: none;
-    margin: 2px;
+    margin-bottom: 2px;
+    margin-top: 5px;
+    margin-right: 10px;
     font-size: 15px;
 }
+
 
 .el-badge__content:hover {
     opacity: 1;
