@@ -76,10 +76,10 @@
             <div class="container-fluid" id="card__outer">
                 <bounce class="loading__inner" :loading="loading"></bounce>
                 <div class="row">
-                    <div v-for="k in [1, 2, 3, 4, 5, 6]" class="col-xs-12 col-sm-12 col-lg-6 col-xl-6">
+                    <div v-for="topic in topicsData" class="col-xs-12 col-sm-12 col-lg-6 col-xl-6">
                         <el-card shadow="hover" >
-                            <div @click="openDialog(2*k + 1)">
-                                <h2>Título {{ 2*k - 1 }}</h2>
+                            <div>
+                                <a @click="openTopic(topic.path)">{{ topic.path }}</a>
                                 <el-row type="flex">
                                     <el-badge v-for="i in [1, 2, 3, 4]" :value="`tag ${i}`" class="item"></el-badge>
                                 </el-row>
@@ -88,21 +88,11 @@
                     </div>	   
                 </div>
             </div>
-
-            <el-dialog :title="`Título ${dialogId}`" :visible.sync="dialogVisible">
-                <el-row>
-                    <h1>Texto {{ dialogId }}</h1>
-                    <div style="height: 100%;">
-                        <iframe src='.\src\assets\graphics\drogas.html' frameborder="0" allign="middle"></iframe>
-                    </div>
-                </el-row>
-            </el-dialog>
-
-
         </div>
     </div>
 
 </body>
+
     <!-- import vue -->
     <script src="https://unpkg.com/vue/dist/vue.js"></script>
     <!-- import element ui -->
@@ -113,5 +103,4 @@
     <script src="src/js/app.js"></script>
     
 </html>
-
 

@@ -1,4 +1,12 @@
 const DICTONARY_URL = "https://raw.githubusercontent.com/lucasns97/lucasns97.github.io/master/src/json/dict.json"
+const GITHUB_API_REPO = "https://api.github.com/repos/lucasns97/lucasns97.github.io/git/trees/master"
+const USERNAME = 'lucasns97'
+const PASSWORD = '0db4a34334aa72093f2ace7c0a955b0113b32d0f'
+
+
+
+
+
 
 Vue.use(VueSpinners)
 
@@ -10,11 +18,11 @@ const vm = new Vue({
         dictData: '',
         language: 'pt',
         introductionCorpus: {},
-        dialogVisible: false,
-        dialogId: '',
         loading: false,
+        topicsData: []
     },
     async mounted() {
+
         var self = this;
 
         this.loading = true
@@ -30,16 +38,49 @@ const vm = new Vue({
                 self.loading = false
 
             }).catch((e) => console.error(e))
+        
+        this.loadTopics()
+            .then(function(data) {
 
-        
-        var files = fs.readdirSync('/topics');
-        console.log(files)
-        
+                self.topicsData = data;
+
+            }).catch((e) => console.error(e))
+
     },
     methods: {
-        openDialog(id) {
-            this.dialogId = id;
-            this.dialogVisible = true;
+        openTopic(topicName) {
+
+            window.location.href = `https://lucasns97.github.io/topics/${topicName}`
+        },
+        async loadRoot() {
+
+            try {
+                const resRoot = await axios.get(GITHUB_API_REPO, {
+                    headers: {
+                        'Authorization': `Basic ${USERNAME}:${PASSWORD}`
+                    }
+                })
+                return resRoot.data
+            } catch (e) {console.error(e);}
+        },
+
+        async loadTopics(){
+
+            let dataRoot = await this.loadRoot()
+
+            for (const [_, item] of dataRoot.tree.entries()) {
+                if (item.path === "topics") {
+                    try {
+                        const resTopics = await axios.get(item.url, {
+                            headers: {
+                                'Authorization': `Basic ${USERNAME}:${PASSWORD}`
+                            }
+                        })
+                        return resTopics.data.tree
+                    } catch (e) {console.error(e);}
+                }
+            }
+            
         },
 
         handleMenu(key, keyPath) {
