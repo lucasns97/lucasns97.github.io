@@ -2,14 +2,13 @@ const DICTONARY_URL = "https://raw.githubusercontent.com/lucasns97/lucasns97.git
 const TOPICS_URL = "https://raw.githubusercontent.com/lucasns97/lucasns97.github.io/master/src/json/topics.json"
 
 const vm = new Vue({
-    el: '#index',
+    el: '#search',
     data: {
         inputData: '',
-        activeMenu: '',
-        dictData: '',
+        activeMenu: '2',
         language: 'pt',
         introductionCorpus: {},
-        loading: false,
+        loading: true,
         topicsData: [],
         filteredTopicsData: [],
     },
@@ -19,30 +18,21 @@ const vm = new Vue({
 
         this.loading = true
 
-        this.loadDict()
-            .then(function(dict) {
+        setTimeout(function() {
+            self.loadTopics()
+                .then(function(data) {
 
-                self.dictData = dict;
+                    self.topicsData = data;
+                    Object.entries(self.topicsData).forEach(function(data) {
+                        let key = data[0]
+                        let values = data[1]
+                        self.filteredTopicsData[key] = values
+                    })
 
-                self.ajustText(self.dictData.pt.introduction, 'pt')
-                self.ajustText(self.dictData.en.introduction, 'en')
+                    self.loading = false
 
-                self.loading = false
-
-            }).catch((e) => console.error(e))
-        
-        this.loadTopics()
-            .then(function(data) {
-
-                self.topicsData = data;
-                Object.entries(self.topicsData).forEach(function(data) {
-                    let key = data[0]
-                    let values = data[1]
-                    self.filteredTopicsData[key] = values
-                })
-
-            }).catch((e) => console.error(e))
-
+                }).catch((e) => console.error(e))
+        }, 400)
     },
     methods: {
         async loadTopics() {   

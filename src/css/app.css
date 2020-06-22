@@ -104,6 +104,8 @@ iframe {
 }
 
 .introduction-text__outer {
+    margin-top: 100px;
+    margin-bottom: 100px;
     display: flex;
     align-items: center;
     justify-content: center;

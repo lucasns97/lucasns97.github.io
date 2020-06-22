@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <div id="app">
+    <div id="index">
         <el-row class="menu__outer">
             <el-menu
                 :default-active="activeMenu"
@@ -24,87 +24,19 @@
                 background-color="#FAF3DD"
                 text-color="#8FC0A9"
                 active-text-color="#68B0AB">
-                <el-menu-item index="1" class="menu-text">{{ dictData[language].menu1 }}</el-menu-item>
-                <el-menu-item index="2" class="menu-text">{{ dictData[language].menu2 }}</el-menu-item>
+                <el-menu-item index="1" class="menu-text" @click="navigateTo('index.html')">Home</el-menu-item>
+                <el-menu-item index="2" class="menu-text" @click="navigateTo('search.html')">Pesquise</el-menu-item>
             </el-menu>
         </el-row>
-        <el-row class="language-menu__outer">
-            <div v-if="language == 'pt'" >
-                <img src="./src/assets/images/pt_flag.png" class="language-menu-img" id="active" @click="changeLanguage('pt')">
-                <img src="./src/assets/images/en_flag.png" class="language-menu-img" @click="changeLanguage('en')">
-            </div>
-            <div v-else >
-                <img src="./src/assets/images/pt_flag.png" class="language-menu-img" @click="changeLanguage('pt')">
-                <img src="./src/assets/images/en_flag.png" class="language-menu-img" id="active" @click="changeLanguage('en')">
-            </div>
-        </el-row>
-
         <!-- home -->
-        <div v-if="activeMenu === '1'">
+        <div>
             <div class="introduction-text__outer">
-                <el-row class="introduction-text" v-for="text in introductionCorpus[language]">{{ text }}</el-row>
-            </div>
-        </div>
-
-        <!-- pesquisa -->
-        <div v-else>
-            <el-row class="input-bar__outer" type="flex">
-                <el-col class="input-bar__inner">
-                    <el-input
-                        :placeholder="dictData[language].inputPlaceholder" 
-                        v-model="inputData" 
-                        class="input-bar" 
-                        size="medium">
-                    </el-input>
-                </el-col>
-            </el-row>
-            <div class="container-fluid" id="button__outer">
-                <div class="row">
-                    <div class="col-xs-12 col-sm-6">
-                        <el-button round @click="getRandomTopic()">
-                            <i class="material-icons btn-icon">device_unknown</i> {{ dictData[language].buttonRandom }}
-                        </el-button>
-                    </div>
-                    <div class="col-xs-12 col-sm-6">
-                        <el-button round @click="filterByText()">
-                            <i class="material-icons btn-icon">search</i> {{ dictData[language].buttonSearch }}
-                            <div style="position: absolute; top: 28px" v-loading="loading"></div>
-                        </el-button>
-                    </div>
-                </div>
-            </div>
-            <div v-if="Object.keys(filteredTopicsData).length === 0 && !loading">
-                <div class="row" style="text-align: center; margin: 80px; opacity: 0.8; cursor: default">
-                    <h3 style="font-size: 35px">Oops!<i class="material-icons" style="font-size: 35px; vertical-align: middle">mood_bad</i></h3>
-                    <h3>Nenhum tópico encontrado</h3>
-                </div>
-            </div>
-            <div class="container-fluid" id="card__outer">
-                <div class="row" v-if="loading">
-                    <div v-for="i in [1, 2, 3, 4, 5, 6, 7, 8]" class="col-xs-12 col-sm-12 col-lg-6 col-xl-6">
-                        <el-card shadow="never" id="loading">
-                            <div>
-                                <h3 style="background-color: #8FC0A9; color: #8FC0A9; opacity: 0.8; width: 60%; border-radius: 5px">.</h3>
-                                <el-row type="flex">
-                                    <h3 v-for="i in [1, 2, 3]" style="margin: 0; margin-right: 10px; margin-bottom: 5px; line-height: 20px; background-color: #8FC0A9; color: #8FC0A9; opacity: 0.8; width: 15%; border-radius: 10px">.</h3>
-                                </el-row>
-                            </div>
-                        </el-card>
-                    </div>	   
-                </div>
-                <div class="row" v-else>
-                    <div v-for="topic in filteredTopicsData" class="col-xs-12 col-sm-12 col-lg-6 col-xl-6">
-                        <el-card shadow="hover" >
-                            <div @click="navigateTo(topic.path)">
-                                <h3>{{ topic.title }}</h3>
-                                <el-row type="flex">
-                                    <el-badge v-for="tag in topic.tags" :value="tag" class="item" @click="filterByTag(tag)"></el-badge>
-                                </el-row>
-                            </div>
-                        </el-card>
-                    </div>	   
-                </div>
-                
+                <el-row class="introduction-text">Ingressei na Universidade de São Paulo (<a href="https://www5.usp.br/" target="_blank">USP</a>) em 2017, no curso de Engenharia. Mas buscava algo mais interdisciplinar, o que me fez trocar de curso, para Ciências Moleculares. O curso exige que o/a aluno/aluna complete dois anos de ciclo básico, período em que me deparei com diferentes campos do conhecimento dentro das ciências exatas e biológicas; como neurociência, grafos em computação, cálculo, química orgânica etc. Os dois anos que se seguem (chamado de ciclo avançado) é o período que o/a aluno/aluna define um projeto de pesquisa a ser orientado por um/uma pesquisador/pesquisadora, como também as disciplinas que irá cursar, dando foco a, ao menos, uma área específica.</el-row>
+                <el-row class="introduction-text">Muito interessado por computação (mas também por artes), tinha em mente uma área da estatística para seguir estudo: o campo da Inteligência Artificial (IA). Meados de Abril de 2019, conheci o pesquisador e artista <a href="brunomoreschi.com" target="_blank">Bruno Moreschi</a>; que iniciava na USP uma residência artística que precedeu um pós doutorado – ele passou a ser meu orientador. Iniciei a pesquisa com leituras que estimulam a intersecção do campo das IAs com camadas humanas, como o projeto <a href="https://anatomyof.ai/" target="_blank">Anatomy of an AI System</a> de Kate Crawford e Vladan Joler; e o livro <a href="https://mitpress.mit.edu/books/machine-learners" target="_blank">Machine Learners: Archaeology of a Data Practice</a> de Adrian Mackenzie.</el-row>
+                <el-row class="introduction-text">O início das investigações que culminaram neste website deu-se graças ao professor <a href="http://sites.poli.usp.br/p/fabio.cozman/" target="_blank">Fabio Cozman</a> (POLI-USP), que inicialmente pode nos conceder uma pequena sala dentro do prédio do Centro de Inovação da USP, o <a href="https://inova.usp.br/" target="_blank">Inova USP</a>. Foi nessa sala que iniciamos as leituras e o ínicio do desenvolvimento deste material. Nossa ideia sempre foi que este projeto fosse algo que garantisse acessibilidade e conteúdo crítico complementar aos cursos de aprendizado de máquina online.</el-row>
+                <el-row class="introduction-text">Nessa plataforma você terá acesso a alguns tópicos relacionados ao aprendizado de máquina, incluindo relatos de experiências que realizamos neste processo. Não sabe o que é “aprendizado de máquina”? Sem problemas. Sugiro você começar por aqui. Vale ressaltar que o conteúdo está relacionado com uma perspectiva crítica de encarar processos que perpassam as IAs como algo já inserido na nossa sociedade, que por sua vez, possui implicações sociais. Nosso objetivo também é ampliar referências do campo para além do Norte Global.</el-row>
+                <el-row class="introduction-text">Esse projeto insere-se no <a href="https://sites.usp.br/gaia/quem-somos/" target="_blank">Grupo de Arte e Inteligência Artificial da USP</a> (GAIA), uma rede de pesquisadores e artistas interessados em refletir e problematizar as infraestruturas digitais contemporâneas de forma experimental e artística.</el-row>
+                <el-row class="introduction-text">Este trabalho compila dois anos de pesquisas e experimentações, em que foram produzidos artigos, seminários e workshops. O relato e a discussão crítica dessas ações são aqui pensados em forma de uma rede interligada de aproximações que, juntas, podem contribuir para perspectivas mais críticas e diversas em relação ao campo de aprendizado de máquina. Sempre levando em conta o contexto produzido deste trabalho: São Paulo, Brasil, América Latina, Sul Global. Boa visita!</el-row>
             </div>
         </div>
     </div>
@@ -118,7 +50,7 @@
     <!-- import axios -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <!-- import app -->
-    <script src="src/js/app.js"></script>
+    <script src="src/js/index.js"></script>
     
 </html>
 
