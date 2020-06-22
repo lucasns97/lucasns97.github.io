@@ -5,8 +5,6 @@ const vm = new Vue({
     data: {
         inputData: '',
         activeMenu: '1',
-        language: 'pt',
-        introductionCorpus: {},
         loading: false,
         topicsData: [],
         filteredTopicsData: [],

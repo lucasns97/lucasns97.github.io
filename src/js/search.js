@@ -5,8 +5,6 @@ const vm = new Vue({
     data: {
         inputData: '',
         activeMenu: '2',
-        language: 'pt',
-        introductionCorpus: {},
         loading: true,
         topicsData: [],
         filteredTopicsData: [],
@@ -23,13 +21,10 @@ const vm = new Vue({
 
                     self.topicsData = data;
                     var numOfTopics = data.length;
-                    console.log(numOfTopics)
                     await self.topicsData.forEach(function(topic) {
                         self.filteredTopicsData.push(topic)
                     })
-                    console.log(self.filteredTopicsData)
                     self.shuffleArray(self.filteredTopicsData)
-                    console.log(self.filteredTopicsData)
 
                     self.loading = false
 
@@ -105,9 +100,7 @@ const vm = new Vue({
 
             this.filteredTopicsData = []
             Object.entries(this.topicsData).forEach(function(data) {
-                let key = data[0]
                 let values = data[1]
-
                 let searchValues = self.inputData.trim().split(' ')
                 searchValues.forEach(function(value) {
                     if (searchValues.length > 1 && value === "") {return}
