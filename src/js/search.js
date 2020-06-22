@@ -1,4 +1,3 @@
-const DICTONARY_URL = "https://raw.githubusercontent.com/lucasns97/lucasns97.github.io/master/src/json/dict.json"
 const TOPICS_URL = "https://raw.githubusercontent.com/lucasns97/lucasns97.github.io/master/src/json/topics.json"
 
 const vm = new Vue({
@@ -20,14 +19,17 @@ const vm = new Vue({
 
         setTimeout(function() {
             self.loadTopics()
-                .then(function(data) {
+                .then(async function(data) {
 
                     self.topicsData = data;
-                    Object.entries(self.topicsData).forEach(function(data) {
-                        let key = data[0]
-                        let values = data[1]
-                        self.filteredTopicsData[key] = values
+                    var numOfTopics = data.length;
+                    console.log(numOfTopics)
+                    await self.topicsData.forEach(function(topic) {
+                        self.filteredTopicsData.push(topic)
                     })
+                    console.log(self.filteredTopicsData)
+                    self.shuffleArray(self.filteredTopicsData)
+                    console.log(self.filteredTopicsData)
 
                     self.loading = false
 
@@ -35,11 +37,24 @@ const vm = new Vue({
         }, 400)
     },
     methods: {
-        async loadTopics() {   
+        shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random()*i)
+                const temp = array[i]
+                array[i] = array[j]
+                array[j] = temp
+            }
+        },
 
+        async loadTopics() {   
+            
             try {
                 const res = await axios.get(TOPICS_URL);
-                return res.data;
+                var resArr = []
+                await Object.entries(res.data).forEach(function(topicData) {
+                    resArr.push(topicData[1])
+                })
+                return resArr;
 
             } catch (e) {console.error(e);}
         },
@@ -88,16 +103,16 @@ const vm = new Vue({
                 self.loading = false
             }, 400)
 
-            this.filteredTopicsData = {}
+            this.filteredTopicsData = []
             Object.entries(this.topicsData).forEach(function(data) {
                 let key = data[0]
                 let values = data[1]
 
-                let searchValues = self.inputData.split(' ')
+                let searchValues = self.inputData.trim().split(' ')
                 searchValues.forEach(function(value) {
                     if (searchValues.length > 1 && value === "") {return}
                     if (values.text.indexOf(value.toLowerCase()) !== -1) {
-                        self.filteredTopicsData[key] = values
+                        self.filteredTopicsData.push(values)
                     }
                 })
                 

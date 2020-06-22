@@ -69,7 +69,7 @@
                             <div>
                                 <h3 style="background-color: #8FC0A9; color: #8FC0A9; opacity: 0.8; width: 60%; border-radius: 5px">.</h3>
                                 <el-row type="flex">
-                                    <h3 v-for="i in [1, 2, 3]" style="margin: 0; margin-right: 10px; margin-bottom: 5px; line-height: 20px; background-color: #8FC0A9; color: #8FC0A9; opacity: 0.8; width: 15%; border-radius: 10px">.</h3>
+                                    <h3 v-for="i in [1, 2, 3]" style="margin: 0; margin-right: 10px; margin-bottom: 5px; line-height: 16px; background-color: #8FC0A9; color: #8FC0A9; opacity: 0.8; width: 15%; border-radius: 10px">.</h3>
                                 </el-row>
                             </div>
                         </el-card>
@@ -79,7 +79,7 @@
                     <div v-for="topic in filteredTopicsData" class="col-xs-12 col-sm-12 col-lg-6 col-xl-6">
                         <el-card shadow="hover" >
                             <div @click="navigateTo(topic.path)">
-                                <h3>{{ topic.title }}</h3>
+                                <h3 style="font-size: 20px">{{ topic.title }}</h3>
                                 <el-row type="flex">
                                     <el-badge v-for="tag in topic.tags" :value="tag" class="item" @click="filterByTag(tag)"></el-badge>
                                 </el-row>
