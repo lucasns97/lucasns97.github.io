@@ -193,6 +193,11 @@ iframe {
     font-size: 15px;
 }
 
+.gender {
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none !important;
+}
 
 .el-badge__content:hover {
     opacity: 1;
