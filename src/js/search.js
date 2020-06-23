@@ -99,15 +99,16 @@ const vm = new Vue({
             }, 400)
 
             this.filteredTopicsData = []
-            Object.entries(this.topicsData).forEach(function(data) {
+            Object.entries(this.topicsData).forEach(async function(data) {
                 let values = data[1]
                 let searchValues = self.inputData.trim().split(' ')
-                searchValues.forEach(function(value) {
+                await searchValues.forEach(function(value) {
                     if (searchValues.length > 1 && value === "") {return}
                     if (values.text.indexOf(value.toLowerCase()) !== -1) {
                         self.filteredTopicsData.push(values)
                     }
                 })
+                self.shuffleArray(self.filteredTopicsData)
                 
             })
         },
