@@ -152,7 +152,8 @@ iframe {
 .el-button {
     font-size: 19px;
     margin-top: 5px;
-    background-color: var(--orange_half);
+    background-color: var(--light-orange_half);
+    color: var(--strong-orange);
     outline: none;
     border: none;
     width: 285px;
@@ -160,12 +161,12 @@ iframe {
 
 .el-button:hover {
     color: var(--strong-orange);
-    background-color: var(--light-orange_half);
+    background-color: var(--light-orange_third);
 }
 
 .el-button:focus {
     color: var(--strong-orange);
-    background-color: var(--light-orange_half);
+    background-color: var(--light-orange_third);
 }
 
 
