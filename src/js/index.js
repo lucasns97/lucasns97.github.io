@@ -16,7 +16,7 @@ const vm = new Vue({
         selectedGender: 0,
     },
     async mounted() {
-        this.randomGender()
+        this.selectedGender = this.randomGender()
     },
     methods: {
 
