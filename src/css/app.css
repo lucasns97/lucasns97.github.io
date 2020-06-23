@@ -1,7 +1,4 @@
-body {
-    font-family: "Courier New", "Courier", monospace;
-    background-color: #FAF3DD;
-}
+
 /* 
 Paleta de cores
 
@@ -11,7 +8,48 @@ Paleta de cores
 #68B0AB
 #696D7D
 
+#4E598C
+#FFFFFF
+#F9C784
+#FCAF58
+#FF8C42
+
+
 */
+
+:root {
+    --white: #FFFFFF;
+    --light-orange: #F9C784;
+    --orange: #FCAF58;
+    --strong-orange: #FF8C42;
+    --blue: #4E598C;
+
+    --white_half: rgba(255, 255, 255, 0.5);
+    --light-orange_half: rgba(249, 198, 132, 0.5);
+    --orange_half: rgba(252, 175, 88, 0.5);
+    --strong-orange_half: rgba(255, 138, 66, 0.5);
+    --blue_half: rgba(78, 89, 140, 0.5);
+
+    --white_third: rgba(255, 255, 255, 0.333);
+    --light-orange_third: rgba(249, 198, 132, 0.333);
+    --orange_third: rgba(252, 175, 88, 0.333);
+    --strong-orange_third: rgba(255, 138, 66, 0.333);
+    --blue_third: rgba(78, 89, 140, 0.333);
+}
+
+body {
+    font-family: "Courier New", "Courier", monospace;
+    background-color: var(--white);
+    color: var(--blue);
+}
+
+a {
+    color: var(--strong-orange)
+}
+
+a:hover {
+    color: var(--orange)
+}
 
 iframe {
     border-width: 0;
@@ -73,11 +111,11 @@ iframe {
 }
 
 .el-input__inner:hover, .input-bar:hover {
-    box-shadow: 0px 0px 4px 1px rgba(104, 176, 171, 0.3);
+    box-shadow: 0px 0px 4px 1px var(--orange_half);
 }
 
 .el-input__inner:focus, .input-bar:focus {
-    border-color: #68B0AB;
+    border-color: var(--light-orange_third);
 }
 
 .menu-text {
@@ -85,22 +123,7 @@ iframe {
 }
 
 .el-menu-item:hover {
-    background-color: rgba(200, 213, 185, 0.3) !important;
-}
-
-.search-btn {
-    font-size: 35px;
-    opacity: 0.7;
-    cursor: pointer;
-    vertical-align: middle;
-    padding-left: 10px;
-    color: #68B0AB;
-
-    transition: opacity 0.2s ease;
-}
-
-.search-btn:hover {
-    opacity: 1;
+    background-color: var(--light-orange_third) !important;
 }
 
 .introduction-text__outer {
@@ -129,20 +152,20 @@ iframe {
 .el-button {
     font-size: 19px;
     margin-top: 5px;
-    background-color: rgba(200, 213, 185, 0.5);
+    background-color: var(--orange_half);
     outline: none;
     border: none;
     width: 285px;
 }
 
 .el-button:hover {
-    color: #68B0AB;
-    background-color: rgba(200, 213, 185, 0.2);
+    color: var(--strong-orange);
+    background-color: var(--light-orange_half);
 }
 
 .el-button:focus {
-    color: #68B0AB;
-    background-color: rgba(200, 213, 185, 0.2);
+    color: var(--strong-orange);
+    background-color: var(--light-orange_half);
 }
 
 
@@ -166,7 +189,7 @@ iframe {
     margin-left: 25px;
     margin-right: 25px;
     cursor: pointer;
-    background-color: rgba(143, 192, 169, 0.5);
+    background-color: var(--light-orange_half);
     opacity: 0.9;
     transition: opacity .5s linear;
 }
@@ -176,14 +199,14 @@ iframe {
     margin-left: 25px;
     margin-right: 25px;
     cursor: default;
-    background-color: #C8D5B9;
+    background-color: var(--light-orange_third);
     opacity: 0.4;
     transition: opacity .5s linear;
 }
 
 .el-badge__content {
-    background-color: #68B0AB;
-    color: rgb(49, 51, 58);
+    background-color: var(--blue);
+    color: var(--white);
     opacity: 0.8;
     transition: all 0.2s ease;
     border: none;
