@@ -64,13 +64,14 @@
             </div>
             <div class="container-fluid" id="card__outer">
                 <div class="row" v-if="loading">
-                    <div v-for="i in [1, 2, 3, 4, 5, 6, 7, 8]" class="col-xs-12 col-sm-12 col-lg-6 col-xl-6">
+                    <div v-for="i in [1, 2, 3, 4, 5, 6]" class="col-xs-12 col-sm-12 col-lg-6 col-xl-6">
                         <el-card shadow="never" id="loading">
                             <div>
                                 <h3 style="background-color: #4E598C; color: #4E598C; opacity: 0.333; width: 60%; border-radius: 5px">.</h3>
                                 <el-row type="flex">
-                                    <h3 v-for="i in [1, 2, 3]" style="margin: 0; margin-right: 10px; margin-bottom: 5px; line-height: 16px; background-color: #4E598C; color: #4E598C; opacity: 0.333; width: 15%; border-radius: 10px">.</h3>
+                                    <h3 v-for="i in [1, 2, 3]" style="margin: 0; margin-right: 10px; margin-bottom: 7px; line-height: 17px; background-color: #4E598C; color: #4E598C; opacity: 0.333; width: 15%; border-radius: 10px">.</h3>
                                 </el-row>
+                                <p style="background-color: #4E598C; color: #4E598C; opacity: 0.20; width: 10%; border-radius: 5px; margin: 0; padding: 0">.</p>
                             </div>
                         </el-card>
                     </div>	   
