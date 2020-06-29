@@ -44,14 +44,14 @@
             <div class="container-fluid" id="button__outer">
                 <div class="row" style="text-align: center">
                     <div class="col-xs-12 col-sm-6">
-                        <el-button round @click="getRandomTopic()">
-                            <i class="material-icons btn-icon">device_unknown</i> Tópico aleatório
-                        </el-button>
-                    </div>
-                    <div class="col-xs-12 col-sm-6">
                         <el-button round @click="filterByText()">
                             <i class="material-icons btn-icon">search</i> Buscar
                             <div style="position: absolute; top: 28px" v-loading="loading"></div>
+                        </el-button>
+                    </div>
+                    <div class="col-xs-12 col-sm-6">
+                        <el-button round @click="getRandomTopic()">
+                            <i class="material-icons btn-icon">device_unknown</i> Tópico aleatório
                         </el-button>
                     </div>
                 </div>
