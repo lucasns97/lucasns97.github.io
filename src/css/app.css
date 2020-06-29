@@ -218,6 +218,7 @@ iframe {
     margin-top: 5px;
     margin-right: 10px;
     font-size: 15px;
+    z-index: 100;
 }
 
 .gender {
@@ -242,10 +243,6 @@ iframe {
     z-index: 1000;
 }
 
-
-
-
-
-
-
-
+.material-icons{
+    vertical-align: middle;
+}

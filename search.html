@@ -78,13 +78,11 @@
                 <div class="row" v-else>
                     <div v-for="topic in filteredTopicsData" class="col-xs-12 col-sm-12 col-lg-6 col-xl-6">
                         <el-tooltip :content="topic.title" :visible-arrow="false" placement="top-start">
-                            <el-card shadow="hover">
-                                <div @click="navigateTo(topic.path)">
-                                    <h3 style="font-size: 20px">{{ topic.title }}</h3>
-                                    <el-row type="flex">
-                                        <el-badge v-for="tag in topic.tags" :value="tag" class="item" @click="filterByTag(tag)"></el-badge>
-                                    </el-row>
-                                </div>
+                            <el-card shadow="hover" @click.native="navigateTo(topic.path)">
+                                <h3 style="font-size: 20px">{{ topic.title }}</h3>
+                                <el-row type="flex">
+                                    <el-badge v-for="tag in topic.tags" :value="tag" class="item"></el-badge>
+                                </el-row>
                             </el-card>
                         </el-tooltip>
                     </div>	   

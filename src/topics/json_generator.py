@@ -56,7 +56,7 @@ def get_topic_text(html_lines):
 
     # Pega a linha q contêm o título
     for i, line in enumerate(html_lines):
-        if '<body>' in line:
+        if 'topic-text__outer' in line:
             i += 1
             line = html_lines[i]
             text_lines += f' {line.strip()}'
@@ -68,13 +68,26 @@ def get_topic_text(html_lines):
     
     return remove_tags(text_lines).strip().lower()
 
+def get_topic_time(html_lines):
+
+    for line in html_lines:
+        if 'id="clock"' in line:
+            time_full_text = remove_tags(line)
+
+    time_text = time_full_text.split(':')[-1].strip()
+    time_int = int(time_text.split()[0])
+
+    return {'time_int': time_int, 'time_text': time_text}
+
 def get_topic_tags(html_lines):
 
     tags = []
     for line in html_lines:
 
-        if 'class="tag"' in line:
-            tags.append(remove_tags(line).strip())
+        if 'class="tag' in line:
+            tag = remove_tags(line).strip()
+            if tag != '':
+                tags.append(tag)
 
     return tags
     
@@ -108,8 +121,11 @@ if __name__ == "__main__":
             'title': title,
             'tags': tags,
             'text': text,
-            'path': path
+            'path': path,
+            'read_time': get_topic_time(html_lines)
         }
+
+        get_topic_time(html_lines)
 
     with open(JSON_ROOT_PATH+JSON_FILENAME, 'w') as json_file:
         json.dump(json_data, json_file)
