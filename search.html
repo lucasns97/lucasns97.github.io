@@ -81,7 +81,10 @@
                             <el-card shadow="hover" @click.native="navigateTo(topic.path)">
                                 <h3 style="font-size: 20px">{{ topic.title }}</h3>
                                 <el-row type="flex">
-                                    <el-badge v-for="tag in topic.tags" :value="tag" class="item"></el-badge>
+                                    <el-badge id="tag" v-for="tag in topic.tags" :value="tag" class="item"></el-badge>
+                                </el-row>
+                                <el-row type="flex">
+                                    <p class="topic-time"><i class="material-icons">schedule</i> {{ topic.read_time.time_text }}</p>
                                 </el-row>
                             </el-card>
                         </el-tooltip>

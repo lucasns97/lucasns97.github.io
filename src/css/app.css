@@ -246,3 +246,15 @@ iframe {
 .material-icons{
     vertical-align: middle;
 }
+
+p.topic-time {
+    margin: 0;
+    padding: 0;
+    color: var(--blue);
+    opacity: 0.6;
+    transition: all 0.2s ease;
+}
+
+p.topic-time:hover {
+    opacity: 1;
+}
