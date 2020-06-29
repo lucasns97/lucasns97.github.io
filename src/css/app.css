@@ -165,7 +165,7 @@ iframe {
     margin-right: 40px;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
     .el-card {
         margin-left: 2px !important;
         margin-right: 2px !important;
