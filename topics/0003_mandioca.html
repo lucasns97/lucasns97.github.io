@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Mandioca</title>
+    <!-- import CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <link rel="stylesheet" href="./../src/css/app.css">
+    <link rel="stylesheet" href="./../src/css/topic.css">
+</head>
+
+<body>
+    <div id="topic">
+        <div style="text-align: center; margin-top: 20px; margin-bottom: 50px">
+            <el-button round @click="navigateTo('../search.html')"><i class="material-icons">reply</i> Voltar</el-button>
+        </div>
+        <div class="title__outer">
+            <h2 class="title-text">Mandioca</h2>
+        </div>
+        <div class="tags__outer">
+            <div class="row">
+                <h4 class="tag col-sm-5">Planta</h4>
+                <h4 class="tag col-sm-5">Raiz</h4>
+                <h4 class="tag col-sm-5">Fritura</h4>
+            </div>
+        </div>
+        
+        <div class="topic-time__outer">
+            <el-row class="topic-time">
+                <p><i class="material-icons" id="clock">schedule</i> Tempo de leitura: <strong>2 minutos</strong></p>
+            </el-row>
+        </div>
+        <div class="topic-text__outer">
+            <el-row class="topic-text">
+                Mandioca, macaxeira, aipim, castelinha, uaipi, mandioca-doce, mandioca-mansa, maniva, maniveira, pão-de-pobre, mandioca-brava e mandioca-amarga, são termos brasileiros para designar a espécie Manihot esculenta. Descrita por Crantz, é uma espécie de planta tuberosa da família das Euphorbiaceae.
+            </el-row>
+        </div>
+    </div>
+</body>
+    <!-- import vue -->
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <!-- import element ui -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <!-- import axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- import app -->
+    <script src="./../src/js/topic.js"></script>
+    
+</html>
+
+
