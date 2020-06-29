@@ -76,7 +76,8 @@ h4.tag {
   margin: 10px;
   cursor: default;
   transition: all 0.2s ease;
-  min-width: 150px;
+  min-width: 200px;
+  max-width: 200px;
 }
 
 h4.tag:hover {
