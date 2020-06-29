@@ -63,43 +63,19 @@ iframe {
     justify-content: center;
 }
 
-.language-menu__outer {
-    position: absolute;
-    right: 0;
-    top: 0;
-    margin: 10px;
-}
-
-.language-menu-img#active {
-    opacity: 1;
-}
-
-.language-menu-img {
-    cursor: pointer;
-    min-width: 23px;
-    max-width: 25px;
-    opacity: 0.3;
-    transition: all 0.2s ease;
-}
-
-.language-menu-img:hover {
-    opacity: 0.7;
-    transform: rotate(180deg);
-}
-
-
-
 .input-bar__outer {
     padding-top: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all 0.2s ease;
 }
 
 .input-bar__inner {
     max-width: 90%;
     width: 600px;
     vertical-align: middle;
+    transition: all 0.2s ease;
 }
 
 .el-input__inner, .input-bar {
@@ -109,6 +85,7 @@ iframe {
     line-height: 50px !important;
     height: 50px !important;
     border-color: var(--light-orange_third);
+    transition: all 0.2s ease;
     
 }
 
