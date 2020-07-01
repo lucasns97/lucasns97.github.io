@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./../src/css/app.css">
     <link rel="stylesheet" href="./../src/css/topic.css">
     <link rel="stylesheet" href="./../src/css/clock.css">
+    <link rel="stylesheet" href="./../src/modules/lightbox/lightbox.css">
 </head>
 
 <body>
@@ -31,7 +32,6 @@
                 <h4 class="tag col-sm-6">FFHQ</h4>
             </div>
         </div>
-        
         <div class="topic-time__outer">
             <el-row class="topic-time">
                 <p><i class="material-icons" id="clock">schedule</i> Tempo de leitura: <strong>8 minutos</strong></p>
@@ -50,7 +50,20 @@
                 </el-col>
             </el-row>
             <el-row class="topic-text">
-                Embora o seu trabalho seja precarizado, com um salário médio de apenas U$ 1,77/h, enquanto que a renda mínima nos EUA são U$ 7,25/h <a href="#ref2">[ref 2]</a>, correspondem à um dos grupos mais importantes no processo de construção de banco de dados etiquetados usados por grandes empresas como Facebook, Uber, Magazine Luiza e muitas outras.
+                <el-col :sm="24" :md="14">
+                    Embora o seu trabalho seja precarizado, com um salário médio de apenas U$ 1,77/h, enquanto que a renda mínima nos EUA são U$ 7,25/h <a href="#ref2">[ref 2]</a>, correspondem à um dos grupos mais importantes no processo de construção de banco de dados etiquetados usados por grandes empresas como Facebook, Uber, Magazine Luiza e muitas outras.
+                </el-col>
+                <el-col :sm="24" :md="10">
+                    <div class="card" id="right">
+                        <a href="../src/assets/images/turkers_anatomy_of_ai.png" data-lightbox="Anatomy of an AI System" data-title="Recorte de Anatomy of an AI System - Kate Crawford e Vladan Joler">
+                            <img class="image-link" src="../src/assets/images/turkers_anatomy_of_ai.png" alt="Avatar" style="width: 100%">
+                        </a>
+                        <div class="container">
+                            <p style="font-size: 14px; padding-top: 5px"><b>Fonte: <a href = "https://anatomyof.ai/" target="_blank">Anatomy of an AI System <i class="material-icons">open_in_new</i></a></b></p> 
+                            <p style="font-size: 14px">Kate Crawford e Vladan Joler</p> 
+                        </div>
+                    </div>
+                </el-col>
             </el-row>
             <el-row class="topic-text">
                 Um exemplo disso são os bancos de dados do Visual Genome <a href="#ref3">[ref 3]</a>, que relaciona objetos e ações em imagens e o Flickr-Faces-HQ (FFHQ) <a href="#ref4">[ref 4]</a> um banco de dados usado para reconhecimento facial.
@@ -103,6 +116,11 @@
     <script src="../src/js/topic.js"></script>
     <!-- import chartjs -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- lightbox -->
+    <script src="../src/modules/lightbox/lightbox.js"></script>
+    
 
     <script>
         var nacionalityLabels = ['EUA', 'Índia', 'Canadá', 'Filipinas', 'Reino Unido', 'Outras'];

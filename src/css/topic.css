@@ -118,4 +118,29 @@ h4.tag:hover {
   #canvas {
     max-width: 800px
   }
+  .card#right {
+    margin-left: 0px;
+  }
+  .card#left {
+    margin-right: 0px;
+  }
+}
+
+.card#right {
+  box-shadow: 0 1px 4px 0 var(--blue_third);
+  transition: 0.3s;
+  margin-left: 20px;
+}
+.card#left {
+  box-shadow: 0 1px 4px 0 var(--blue_third);
+  transition: 0.3s;
+  margin-right: 20px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 var(--blue_third);
+}
+
+.container {
+  padding: 2px 16px;
 }
