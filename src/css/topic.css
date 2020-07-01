@@ -30,15 +30,43 @@
 
 .topic-text__outer {
   margin-top: 20px;
-  margin-bottom: 100px;
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-bottom: 1px solid var(--strong-orange_third);
+}
+
+.topic-text {
+  text-align: justify;
+	text-justify: inter-word;
+  margin: 20px;
+  max-width: 1000px;
+  font-size: 20px;
+  transition: all 0.2s ease;
+}
+
+.topic-text#citation {
+  text-align: justify;
+	text-justify: inter-word;
+  margin: 20px;
+  max-width: 900px;
+  font-size: 18px;
+  font-style: italic;
+  transition: all 0.2s ease;
+}
+
+.topic-reference__outer {
+  margin-top: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
 }
 
-.topic-text {
-  text-align: justify;
+.topic-reference {
+  text-align: left;
 	text-justify: inter-word;
   margin: 20px;
   max-width: 1000px;
@@ -82,4 +110,12 @@ h4.tag {
 
 h4.tag:hover {
   box-shadow: 0 0 3px 1px var(--blue_third);
+}
+
+
+
+@media only screen and (max-width: 800px) {
+  #canvas {
+    max-width: 800px
+  }
 }
