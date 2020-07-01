@@ -148,3 +148,9 @@ h4.tag:hover {
 .container {
   padding: 2px 16px;
 }
+
+.back-to-text {
+  background-color: var(--light-orange_third);
+  padding: 5px;
+  border-radius: 50%; 
+}
