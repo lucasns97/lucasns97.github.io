@@ -273,6 +273,7 @@
 			}
 		};
 
+        // chartjs loading
         window.onload = function() {
 			let ctx = document.getElementById('canvas1').getContext('2d');
 			window.myLine = new Chart(ctx, nacionalityConfig);
@@ -280,6 +281,13 @@
             ctx = document.getElementById('canvas2').getContext('2d');
 			window.myLine = new Chart(ctx, genderConfig);
 		};
+
+        // lightbox options
+        lightbox.option({
+            'resizeDuration': 200,
+            'wrapAround': true,
+            'fadeDuration': 200,
+        })
     </script>
     
 </html>
