@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Experiência com Tradução Sequencial de Máquina</title>
+    <!-- import CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <link rel="stylesheet" href="./../src/css/app.css">
+    <link rel="stylesheet" href="./../src/css/topic.css">
+    <link rel="stylesheet" href="./../src/css/clock.css">
+    <link rel="stylesheet" href="./../src/modules/lightbox/lightbox.css">
+</head>
+
+<body>
+    <div id="topic">
+        <div style="text-align: center; margin-top: 20px; margin-bottom: 50px">
+            <el-button round @click="navigateTo('../search.html')"><i class="material-icons">reply</i> Voltar</el-button>
+        </div>
+        <div class="title__outer">
+            <h2 class="title-text">Experiência com Tradução Sequencial de Máquina</h2>
+        </div>
+        <div class="tags__outer">
+            <div class="row" style="margin: 0; padding: 0">
+                <h4 class="tag col-sm-6">Tradução</h4>
+                <h4 class="tag col-sm-6">Linguagem Natural</h4>
+                <h4 class="tag col-sm-6">Google Tradutor</h4>
+            </div>
+        </div>
+        <div class="topic-time__outer">
+            <el-row class="topic-time">
+                <p><i class="material-icons" id="clock">schedule</i> Tempo de leitura: <strong>8 minutos</strong></p>
+            </el-row>
+        </div>
+        <div class="topic-text__outer">
+            <el-row class="topic-text">
+                Os trabalhadores da Amazon Mechanical Turk (MTurk) espalham-se ao redor do globo, no entanto se concentram na sua maioria em países como EUA e Índia. Representam uma população constantemente crescente e ativa com mais de 600.000 trabalhadores, sendo a maioria composta pelo gênero feminino. <a id="ref1__text" href="#ref1">[ref 1]</a>
+            </el-row>
+            <el-row class="topic-text">
+                <canvas id="canvas1" style="width: 750px"></canvas> 
+            </el-row>
+            <el-row class="topic-text">
+                <el-col :sm="24" :md="14">
+                    Embora o seu trabalho seja precarizado, com um salário médio de apenas U$ 1,77/h, enquanto que a renda mínima nos EUA são U$ 7,25/h <a id="ref2__text" href="#ref2">[ref 2]</a>, correspondem à um dos grupos mais importantes no processo de construção de banco de dados etiquetados usados por grandes empresas como Facebook, Uber, Magazine Luiza e muitas outras.
+                </el-col>
+                <el-col :sm="24" :md="10">
+                    <div class="card" id="right">
+                        <a href="../src/assets/images/turkers_anatomy_of_ai.png" data-lightbox="Anatomy of an AI System" data-title="Recorte de Anatomy of an AI System - Kate Crawford e Vladan Joler">
+                            <img class="image-link" src="../src/assets/images/turkers_anatomy_of_ai.png" alt="Avatar" style="width: 100%">
+                        </a>
+                        <div class="container">
+                            <p style="font-size: 14px; padding-top: 5px"><b>Fonte: <a href = "https://anatomyof.ai/" target="_blank">Anatomy of an AI System <i class="material-icons">open_in_new</i></a></b></p> 
+                            <p style="font-size: 14px">Kate Crawford e Vladan Joler</p> 
+                        </div>
+                    </div>
+                </el-col>
+            </el-row>
+            <el-row class="topic-text">
+                Um exemplo disso são os bancos de dados do Visual Genome <a id="ref3__text" href="#ref3">[ref 3]</a>, que relaciona objetos e ações em imagens e o Flickr-Faces-HQ (FFHQ) <a id="ref4__text" href="#ref4">[ref 4]</a> um banco de dados usado para reconhecimento facial.
+            </el-row>
+            <el-row class="topic-text">
+                Essencialmente, <a class="gender" @click="changeGender()">{{ genderPairs['ao'][selectedGender] }}</a>s Turkers desempenham seus trabalhos de maneira remota, em suas próprias casas. Não há qualquer tipo de apoio logístico ou instrumental por parte da Amazon - empresa que administra os serviços da MTurk. A plataforma não viabiliza qualquer tipo de canal de intercomunicação entre <a class="gender" @click="changeGender()">{{ genderPairs['ao'][selectedGender] }}</a>s trabalhador<a class="gender" @click="changeGender()">{{ genderPairs['ae'][selectedGender] }}</a>s, que são simplesmente identificad<a class="gender" @click="changeGender()">{{ genderPairs['ao'][selectedGender] }}</a>s por um código. Para superar isso, <a class="gender" @click="changeGender()">{{ genderPairs['ao'][selectedGender] }}</a>s Turkers mantém comunicação via outros canais, como grupos de Whatsapp, muito utilizado por brasileir<a class="gender" @click="changeGender()">{{ genderPairs['ao'][selectedGender] }}</a>s <a id="ref5__text" href="#ref5">[ref 5]</a>.
+            </el-row>
+            <el-row class="topic-text">
+                Desempenham um trabalho repetitivo de classificação de dados, em que na maioria das vezes, não sabem para quem estão trabalhando fazendo o tratamento dos dados, muito menos para quê os dados serão utilizados. Além da desinformação d<a class="gender" @click="changeGender()">{{ genderPairs['ao'][selectedGender] }}</a>s trabalhador<a class="gender" @click="changeGender()">{{ genderPairs['ae'][selectedGender] }}</a>s por não saberem que tipo de conteúdo estão construindo, parte dos dados em que trabalham são constituídos por conteúdos violentos e até mesmo, pornográficos. Nesse sentido, é justamente a falta de moderação da Amazon sobre o conteúdo dos trabalhos disponíveis aos trabalhadores que, a médio e longo prazo, afetam negativamente na saúde dos próprios. O trabalho feito pelos pesquisadores Bruno Moreschi, Gabriel Pereira e Fabio Cozman - Trabalhadores brasileiros no Amazon Mechanical Turk: sonhos e realidades de “trabalhadores fantasmas” <a id="ref5__text" href="#ref5">[ref 5]</a>; cita alguns trechos ditos pel<a class="gender" @click="changeGender()">{{ genderPairs['ao'][selectedGender] }}</a>s própri<a class="gender" @click="changeGender()">{{ genderPairs['ao'][selectedGender] }}</a>s trabalhador<a class="gender" @click="changeGender()">{{ genderPairs['ae'][selectedGender] }}</a>s e revelam um pouco suas condições de trabalho:
+            </el-row>
+            <el-row class="topic-text" id="citation">
+                “Eu odeio esta plataforma. Tudo de errado com o mundo se resume aqui. Patrões que exploram e trabalhadores que se digladiam pra trabalharem que nem escravos” - Sem identificação.
+            </el-row>
+            <el-row class="topic-text" id="citation">
+                “É frustrante na maioria do tempo, parece que não consigo mais desligar, porque não ganho o suficiente e se eu for dormir aparecerá uma tarefa boa e vou estar dormindo. Até fiz uso de alguns remédios para conseguir descansar, meditação não ajudou. Quanto eu fazia um trabalho igual para outra empresa, mas com contrato por carga horária fechada, não cheguei nisso” - Sem identificação.
+            </el-row>
+            <el-row class="topic-text">
+                Depois dessa leitura, sugiro o seguinte questionamento, será que Turkers mais bem treinad<a class="gender" @click="changeGender()">{{ genderPairs['ao'][selectedGender] }}</a>s, informad<a class="gender" @click="changeGender()">{{ genderPairs['ao'][selectedGender] }}</a>s e com mais qualidade de vida não fariam um trabalho ainda melhor, podendo oferecer resultados de maior qualidade aos sistemas que utilizam IA, minimizando erros e vieses, e aumentam a eficiência das máquinas? 
+            </el-row>
+        </div>
+        <div class="topic-reference__outer">
+            <div class="title__outer">
+                <h3>Referências</h3>
+            </div>
+            <div class="topic-reference" id="ref1">
+                <a href="#ref1__text" class="back-to-text"><i class="material-icons">undo</i></a>
+                <b>[ref 1]</b> Ross, Joel & Zaldivar, Andrew & Irani, Lilly & Tomlinson, Bill. 2009. Who are the Turkers? Worker Demographics in Amazon Mechanical Turk. <a href = "https://www.researchgate.net/publication/268427703_Who_are_the_Turkers_Worker_Demographics_in_Amazon_Mechanical_Turk" target="_blank">Link de acesso <i class="material-icons">open_in_new</i></a>
+            </div>
+            <div class="topic-reference" id="ref2">
+                <a href="#ref2__text" class="back-to-text"><i class="material-icons">undo</i></a>
+                <b>[ref 2]</b> Kotaro Hara, Abigail Adams, Kristy Milland, Saiph Savage, Chris Callison-Burch, and Jeffrey P. Bigham. 2018. A Data-Driven Analysis of Workers’ Earnings on Amazon Mechanical Turk. In Proceedings of the 2018 CHI Conference on Human Factors in Computing Systems (CHI ’18). Association for Computing Machinery, New York, NY, USA, Paper 449, 1–14. <a href = "https://arxiv.org/pdf/1712.05796.pdf" target="_blank">Link de acesso <i class="material-icons">open_in_new</i></a>
+            </div>
+            <div class="topic-reference" id="ref3">
+                <a href="#ref3__text" class="back-to-text"><i class="material-icons">undo</i></a>
+                <b>[ref 3]</b> Krishna, Ranjay and Zhu, Yuke and Groth, Oliver and Johnson, Justin and Hata, Kenji and Kravitz, Joshua and Chen, Stephanie and Kalantidis, Yannis and Li, Li-Jia and Shamma, David A and Bernstein, Michael and Fei-Fei, Li. 2016. Visual Genome: Connecting Language and Vision Using Crowdsourced Dense Image Annotations. <a href = "https://arxiv.org/abs/1602.07332" target="_blank">Link de acesso <i class="material-icons">open_in_new</i></a>
+            </div>
+            <div class="topic-reference" id="ref4">
+                <a href="#ref4__text" class="back-to-text"><i class="material-icons">undo</i></a>
+                <b>[ref 4]</b> NVlabs/ffhq-dataset - Repositório Github. Flickr-Faces-HQ Dataset (FFHQ). Acesso em 01 de julho de 2020. <a href = "https://github.com/NVlabs/ffhq-dataset" target="_blank">Link de acesso <i class="material-icons">open_in_new</i></a>
+            </div>
+            <div class="topic-reference" id="ref5">
+                <a href="#ref5__text" class="back-to-text"><i class="material-icons">undo</i></a>
+                <b>[ref 5]</b> Bruno Moreschi, Gabriel Pereira, Fabio G. Cozman. 2020. Trabalhadores brasileiros no Amazon Mechanical Turk: sonhos e realidades de “trabalhadores fantasmas”. Contracampo, v. 39, n. 1. ISSN: 2238-2577. <a href = "https://periodicos.uff.br/contracampo/article/view/38252/html_pt" target="_blank">Link de acesso <i class="material-icons">open_in_new</i></a>
+            </div>
+        </div>
+    </div>
+</body>
+    <!-- import vue -->
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <!-- import element ui -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <!-- import axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- import app -->
+    <script src="../src/js/topic.js"></script>
+    <!-- import chartjs -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- lightbox -->
+    <script src="../src/modules/lightbox/lightbox.js"></script>
+    
+
+    <script>
+        var nacionalityLabels = ['DeepL', 'PROMT', 'PONS', 'Translate.com', 'ImTranslator.net', 'Google Tradutor'];
+        var nacionalityValues = [9, 20, 22, 53, 91, 103];
+        var nacionalityConfig = {
+			type: 'bar',
+			data: {
+				labels: nacionalityLabels,
+				datasets: [{
+					label: 'Serviços de tradução',
+					borderColor: 'white',
+					backgroundColor: ['#ae2f00', '#cf4e00', '#ffa022', '#ffdb5a', '#ffec6a', '#ffffa8'],
+					data: nacionalityValues
+				}]
+			},
+			options: {
+				title: {
+					display: true,
+					text: 'Serviços de tradução (2019)',
+                    fontSize: 16,
+				},
+                scales: {
+                    xAxes: [{
+                        gridLines: false,
+                        ticks: {
+                            display: true,
+                        }
+                    }],
+                    yAxes: [{
+                        gridLines: false,
+                        ticks: {
+                            display: false,
+                        }
+                        
+                    }]
+                },
+                legend: {
+                    display: false,
+                },
+                tooltips: {
+                    titleFontSize: 14,
+                    bodyFontSize: 14,
+                    callbacks: {
+                        title: function(tooltipItem, data) {
+                            return data['labels'][tooltipItem[0]['index']];
+                        },
+                        label: function(tooltipItem, data) {
+                            var dataset = data['datasets'][0];
+                            var value = dataset['data'][tooltipItem['index']]
+                            return ' ' + value + ' idiomas';
+                        },
+                    },
+                },
+			}
+		};
+
+        // chartjs loading
+        window.onload = function() {
+			let ctx = document.getElementById('canvas1').getContext('2d');
+			window.myLine = new Chart(ctx, nacionalityConfig);
+
+		};
+
+        // lightbox options
+        lightbox.option({
+            'resizeDuration': 200,
+            'wrapAround': true,
+            'fadeDuration': 200,
+        })
+    </script>
+    
+</html>
+
+
