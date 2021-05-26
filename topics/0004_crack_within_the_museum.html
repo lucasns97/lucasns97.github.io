@@ -14,15 +14,6 @@
     <link rel="stylesheet" href="./../src/css/topic.css">
     <link rel="stylesheet" href="./../src/css/clock.css">
 
-    <script>
-
-        // MyComponent.js
-        import images from './../js/images'
-
-        console.log(images)
-
-        { images.map(({id, src, title, description}) => <img key={id} src={src} title={title} alt={description} />) }
-    </script>
 </head>
 
 <body>
@@ -54,7 +45,7 @@
             <el-row class="topic-text">
                 <el-carousel indicator-position="outside">
                     <el-carousel-item v-for="page in 4" :key="page">
-                        <img src=`zine_mac-${("0" + page).slice(-2)}.jpg`>
+                        <img src="./../src/assets/pdf/zine_mac_img/zine_mac-01.jpg">
                         <h3>{{ ('0' + page).slice(-2) }}</h3>
                     </el-carousel-item>
                 </el-carousel>
