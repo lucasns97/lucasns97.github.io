@@ -49,8 +49,11 @@
                 Essa pesquisa resultou em dois workshops no início de 2020, ambos intitulados “A Crack Within the Museum”. O primeiro no evento <a href="http://ctrlz.ai/" target="_blank">CtrlZ.AI</a>, em Barcelona; em que selecionamos um conjunto de mais de 300 obras da coleção digital do museu do MACBA (Museu de Arte Contemporânea de Barcelona), e no evento, os participantes selecionaram coletivamente um conjunto de obras e seus respectivos resultados obtidos pelas IAs visando  destacar alguns dos vieses ideológicos presentes em alguns desses sistemas comerciais de visão computacional.
             </el-row>
             <el-row class="topic-text">
-                <el-card style="height: 845px">
-                    <el-carousel indicator-position="outside" :interval="20000" height="800px">
+                <el-card style="height: 910px" >
+                    <div slot="header" class="clearfix">
+                        <span>Zine: MACBA (Barcelona)</span>
+                    </div>
+                    <el-carousel indicator-position="none" :interval="20000" height="800px">
                         <el-carousel-item v-for="page in 
                             [
                                 '../src/assets/pdf/zine_macba_img/zine_macba-01.jpg',
@@ -111,8 +114,11 @@
                 O segundo workshop ocorreu durante o evento <a href="http://www.iea.usp.br/en/eventos/afetando-tecnologias-maquinando-inteligencias" target="_blank"></a>, que ocorreu na Universidade de São Paulo, com parceria do IEA (Instituto de Estudos Avançados), nesse evento utilizamos a coleção digital do MAC-USP (Museu de Arte Contemporânea da USP), e assim como no primeiro evento, os participantes selecionaram coletivamente um conjunto de resultados buscando destacar momentos críticos sobre a interpretação das IAs perante as imagens de obras de arte contemporânea.
             </el-row>
             <el-row class="topic-text">
-                <el-card style="height: 845px">
-                    <el-carousel indicator-position="outside" :interval="20000" height="800px">
+                <el-card style="height: 910px">
+                    <div slot="header" class="clearfix">
+                        <span>Zine: MAC (USP)</span>
+                    </div>
+                    <el-carousel indicator-position="none" :interval="20000" height="800px">
                         <el-carousel-item v-for="page in 
                             [
                                 '../src/assets/pdf/zine_mac_img/zine_mac-01.jpg',
