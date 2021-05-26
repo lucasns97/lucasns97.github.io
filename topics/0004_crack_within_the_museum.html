@@ -13,6 +13,14 @@
     <link rel="stylesheet" href="./../src/css/app.css">
     <link rel="stylesheet" href="./../src/css/topic.css">
     <link rel="stylesheet" href="./../src/css/clock.css">
+
+    <script>
+
+        // MyComponent.js
+        import images from './../js/images'
+
+        console.log(images)
+    </script>
 </head>
 
 <body>
@@ -44,6 +52,7 @@
             <el-row class="topic-text">
                 <el-carousel indicator-position="outside">
                     <el-carousel-item v-for="page in 4" :key="page">
+                        <img src="">
                         <h3>{{ ('0' + page).slice(-2) }}</h3>
                     </el-carousel-item>
                 </el-carousel>
