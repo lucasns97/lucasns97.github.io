@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Quais rostos a IA pode gerar?</title>
+    <!-- import CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <link rel="stylesheet" href="./../src/css/app.css">
+    <link rel="stylesheet" href="./../src/css/topic.css">
+    <link rel="stylesheet" href="./../src/css/clock.css">
+    <link rel="stylesheet" href="./../src/modules/lightbox/lightbox.css">
+</head>
+
+<body>
+    <div id="topic">
+        <div style="text-align: center; margin-top: 20px; margin-bottom: 50px">
+            <el-button round @click="navigateTo('../search.html')"><i class="material-icons">reply</i> Voltar</el-button>
+        </div>
+        <div class="title__outer">
+            <h2 class="title-text">Quais rostos a IA pode gerar?</h2>
+        </div>
+        <div class="tags__outer">
+            <div class="row" style="margin: 0; padding: 0">
+                <h4 class="tag col-sm-6">Visão Computacional</h4>
+                <h4 class="tag col-sm-6">This Person Does Not Exist</h4>
+                <h4 class="tag col-sm-6">Normatividade</h4>
+            </div>
+        </div>
+        <div class="topic-time__outer">
+            <el-row class="topic-time">
+                <p><i class="material-icons" id="clock">schedule</i> Tempo de leitura: <strong>8 minutos</strong></p>
+            </el-row>
+        </div>
+        <div class="topic-text__outer">
+            <el-row class="topic-text">
+                A ascensão da visão computacional (CV) gerou muita discussão, pois se materializa por meio do reconhecimento facial, carros autônomos e outras aplicações comerciais <a id="ref1__text" href="#ref1">[ref 1]</a>. Pesquisadores de diferentes partes do mundo alertam que o poder de decisão delegado a tais algoritmos pode causar graves impactos sociais, definidos pelo aumento do “capitalismo de vigilância” <a id="ref2__text" href="#ref2">[ref 2]</a> e “injustiças algorítmicas” <a id="ref3__text" href="#ref3">[ref 3]</a>, e inclusive em relação aos aspectos culturais <a id="ref4__text" href="#ref4">[ref 4]</a> ou a certos subgrupos fenotípicos <a id="ref5__text" href="#ref5">[ref 5]</a>.
+            </el-row>
+            <el-row class="topic-text">
+                Nesta pesquisa, mostramos os resultados de um trabalho interdisciplinar na qual auditamos rostos humanos falsos (deepfakes) gerados pelo site <a href="https://thispersondoesnotexist.com/" target="_blank">This Person Does Not Exist (TPDNE)</a>, e discutimos como este sistema pode ajudar a perpetuar normatividades. Nossa análise se concentra no "rosto genérico padrão" que criamos pela sobreposição de amostras aleatórias de rostos humanos falsos gerados pelos algoritmos do TPDNE. Os experimentos mostraram que, independentemente do grupo de rostos humanos falsos amostrados, o mesmo rosto branco genérico (a seguir) sempre apareceu como resultado, com traços femininos e que aparentemente expressa felicidade.
+            </el-row>
+            <el-row class="topic-text">
+                <div class="card" id="right" style="width: 400px">
+                    <a href="../src/assets/images/generic_face.png" data-lightbox="Generic Face" data-title="'Rosto genérico padrão' criado pela sobreposição de 3000 imagens aleatórias de rostos humanos falsos não repetidos gerados pelo This Person Does Not Exist">
+                        <img class="image-link" src="../src/assets/images/generic_face.png" alt="Avatar" style="width: 100%; display: block; margin-left: auto; margin-right: auto">
+                    </a>
+                    <div class="container">
+                        <p style="font-size: 14px; padding-top: 5px"><b>"Rosto genérico padrão"</b><br>Criado pela sobreposição de 3000 imagens<br>aleatórias de rostos humanos falsos<br>não repetidos gerados pelo<br><a href="https://thispersondoesnotexist.com/" target="_blank">This Person Does Not Exist <i class="material-icons">open_in_new</i></a>.</p> 
+                        <p style="font-size: 14px">B. Fontes e L. Nunes | GAIA</p> 
+                    </div>
+                </div>
+            </el-row>
+            <el-row class="topic-text">
+                Faces geradas algoritmicamente fazem parte das melhorias na área de CV desde 2014, com o desenvolvimento de uma infraestrutura de aprendizado de máquina denominada Generative Adversarial Network - GAN <a id="ref6__text" href="#ref5">[ref 6]</a>. O aumento da capacidade de processamento dos hardwares tornou o uso intensivo deste infraestrutura viável; e mais recentemente permitindo a construção de imagens mais realistas de humanos, animais e objetos dos novos GANs conhecidos como StyleGAN  <a id="ref7__text" href="#ref7">[ref 7]</a> e seu sucessor StyleGAN2 <a id="ref8__text" href="#ref8">[ref 8]</a>.
+            </el-row>
+            <el-row class="topic-text">
+                <el-col :sm="24" :md="14">
+                    O This Person Does Not Exist é o resultado do uso deste último GAN específico e só foi possível graças ao uso do banco de dados de rostos humanos reais retirado do banco de dados Flickr-Faces-HQ, com 70 mil imagens em alta definição. TPDNE é um site criado pelo engenheiro de software Phillip Wang em 2019. Toda vez que a página é atualizada, sua infraestrutura de Inteligência Artificial cria e processa um novo (e falso) rosto humano.
+                </el-col>
+                <el-col :sm="24" :md="10">
+                    <div class="card" id="right" style="width: 400px">
+                        <a href="../src/assets/images/all_faces_gif.gif" data-lightbox="TPDNE Faces" data-title="Amostra de rostos do TPDNE.">
+                            <img class="image-link" src="../src/assets/images/all_faces_gif.gif" alt="Avatar" style="width: 100%; display: block; margin-left: auto; margin-right: auto">
+                        </a>
+                        <div class="container">
+                            <p style="font-size: 14px; padding-top: 5px"><b>Amostra de rostos do TPDNE.</b></p> 
+                            <p style="font-size: 14px"><a href="https://thispersondoesnotexist.com/" target="_blank">This Person Does Not Exist <i class="material-icons">open_in_new</i></a></p> 
+                        </div>
+                    </div>
+                </el-col>
+            </el-row>
+            <el-row class="topic-text">
+                Para realizar esse conjunto de experimentos, primeiro construímos um banco de dados com 4100 rostos humanos falsos retirados do TPDNE site via web scraping. Nossas análises são baseadas no uso de imagens específicas criadas a partir de um subconjunto de rostos humanos falsos sobrepostos. Essas imagens resultantes, chamadas aqui de “imagens-conjunto”, foram feitas a partir da sobreposição de N imagens arbitrárias geradas pelo TPDNE. Em uma “imagem-conjunto”, cada pixel que a constitui representa uma média aritmética entre o pixel localizado na mesma posição nas outras imagens.
+            </el-row>
+            <el-row class="topic-text">
+                <div class="card" id="right" style="width: 400px">
+                    <a href="../src/assets/images/faces_gif.gif" data-lightbox="Cluster images" data-title="'Rosto genérico padrão' criado pela sobreposição de 3000 imagens aleatórias de rostos humanos falsos não repetidos gerados pelo This Person Does Not Exist">
+                        <img class="image-link" src="../src/assets/images/faces_gif.gif" alt="Avatar" style="width: 100%; display: block; margin-left: auto; margin-right: auto">
+                    </a>
+                    <div class="container">
+                        <p style="font-size: 14px; padding-top: 5px"><b>"Imagens-conjunto"</b><br>Criado pela sobreposição de 10, 30, 100, 300,<br>1000 e 3000 imagens.</p> 
+                        <p style="font-size: 14px">B. Fontes e L. Nunes | GAIA</p> 
+                    </div>
+                </div>
+            </el-row>
+            <el-row class="topic-text">
+                Mostramos nessa pesquisa que independentemente do conjunto de rostos retirados do TPDNE, a mesma “imagem-conjunto” é gerada (a partir de um determinado número de imagens utilizadas), a seguir podemos visualizar algumas das “imagens-conjunto” geradas selecionando diferentes números de rostos. E podemos observar, que aparentemente a partir de uma determinada quantidade de imagens, o rosto gerado converge ao mesmo rosto.
+            </el-row>
+            <el-row class="topic-text">
+                Para provarmos isso, geramos várias “imagens-conjunto” com diferentes valores de N e comparamos para cada N, as imagens geradas entre si, e pudemos concluir que de fato, a partir de 1000 imagens utilizadas para gerar a “imagem-conjunto”, podemos assumir que a imagem criada é o "rosto genérico padrão". Como mostra o gráfico abaixo, em que o eixo vertical nos indica quão diferente são as imagens entre si para cada valor de N fixado.
+            </el-row>
+            <el-row class="topic-text">
+                Além disso, analisamos a recorrência de rostos de pessoas pretas, observamos que das 4100 imagens coletadas do TPDNE, apenas 54 (1,4%) das imagens eram de fato desta etnia.
+            </el-row>
+            <el-row class="topic-text">
+                <div class="card" id="right" style="width: 400px">
+                    <a href="../src/assets/images/black_faces.png" data-lightbox="Black Cluster" data-title="'Imagem-conjunto' de pessoas pretas.">
+                        <img class="image-link" src="../src/assets/images/black_faces.png" alt="Avatar" style="width: 100%; display: block; margin-left: auto; margin-right: auto">
+                    </a>
+                    <div class="container">
+                        <p style="font-size: 14px; padding-top: 5px"><b>'Imagem-conjunto' de pessoas pretas.</b></p> 
+                        <p style="font-size: 14px">B. Fontes e L. Nunes | GAIA</p> 
+                    </div>
+                </div>
+            </el-row>
+            <el-row class="topic-text">
+                Esses resultados nos intrigam porque fazem parte de uma primeira geração de imagens realistas criadas sem o olho humano, uma vez que são sintetizados exclusivamente por algoritmos - um novo capítulo na história da pós-fotografia <a id="ref9__text" href="#ref9">[ref 9]</a>. Mas também, principalmente porque a falta de diversidade de TPDNE's faces geradas não é um bug nesta infraestrutura digital, mas uma dinâmica de padrões de reforço que historicamente regulam órgãos, territórios e práticas, inclusive as ciências da computação. Não é por acaso que Beiguelman (2020) também levanta a questão: são rostos humanos falsos o anúncio de uma nova era da eugenia das imagens?
+            </el-row>
+        </div>
+        <div class="topic-reference__outer">
+            <div class="title__outer">
+                <h3>Referências</h3>
+            </div>
+            <div class="topic-reference" id="ref1">
+                <a href="#ref1__text" class="back-to-text"><i class="material-icons">undo</i></a>
+                <b>[ref 1]</b> McCosker, A.; Wilken, R. (2020). Automating Vision: The Social Impact of the New Camera Consciousness. Routledge.
+            </div>
+            <div class="topic-reference" id="ref2">
+                <a href="#ref2__text" class="back-to-text"><i class="material-icons">undo</i></a>
+                <b>[ref 2]</b> Zuboff, S. (2018). Beginning Ending. Configuring Internal Controls for Software as a Service: Between Fragility and Forgiveness, 109.
+            </div>
+            <div class="topic-reference" id="ref3">
+                <a href="#ref3__text" class="back-to-text"><i class="material-icons">undo</i></a>
+                <b>[ref 3]</b> Hanna, A., Denton, E., Smart, A., & Smith-Loud, J. (2020, January). Towards a critical race methodology in algorithmic fairness. In Proceedings of the 2020 conference on fairness, accountability, and transparency (pp. 501-512).
+            </div>
+            <div class="topic-reference" id="ref3">
+                <a href="#ref4__text" class="back-to-text"><i class="material-icons">undo</i></a>
+                <b>[ref 4]</b> Mintz, A., Gobbo, B., Silva, T., & Pilipets, E. (2019, April 17). Interrogating Vision APIs. Retrieved March 18, 2021. <a href = "https://www.researchgate.net/publication/332910402_Interrogating_Vision_APIs/" target="_blank">Link de acesso <i class="material-icons">open_in_new</i></a>
+            </div>
+            <div class="topic-reference" id="ref5">
+                <a href="#ref5__text" class="back-to-text"><i class="material-icons">undo</i></a>
+                <b>[ref 5]</b> Buolamwini, J.; Gebru, T. Gender shades: Intersectional accuracy disparities in commercial gender classification. In: Conference on fairness, accountability and transparency. PMLR, 2018. p. 77-91.
+            </div>
+            <div class="topic-reference" id="ref6">
+                <a href="#ref6__text" class="back-to-text"><i class="material-icons">undo</i></a>
+                <b>[ref 6]</b> Goodfellow, I.; Pouget-Abadie, J.; Mirza, M.; Xu, B.; Warde-Farley, D.; Ozair, S.; Courville, A.; Bengio, Y. (2014). Generative Adversarial Networks (PDF). Proceedings of the International Conference on Neural Information Processing Systems (NIPS 2014). pp. 2672–2680.
+            </div>
+            <div class="topic-reference" id="ref7">
+                <a href="#ref7__text" class="back-to-text"><i class="material-icons">undo</i></a>
+                <b>[ref 7]</b> Karras, T., Laine, S., & Aila, T. (2019). A style-based generator architecture for generative adversarial networks. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (pp. 4401-4410)
+            </div>
+            <div class="topic-reference" id="ref8">
+                <a href="#ref8__text" class="back-to-text"><i class="material-icons">undo</i></a>
+                <b>[ref 8]</b> Karras, T., Laine, S., Aittala, M., Hellsten, J., Lehtinen, J., & Aila, T. (2020). Analyzing and improving the image quality of stylegan. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (pp. 8110-8119).
+            </div>
+            <div class="topic-reference" id="ref9">
+                <a href="#ref9__text" class="back-to-text"><i class="material-icons">undo</i></a>
+                <b>[ref 9]</b> Beiguelman, G. (2020). As verdades dos deepfakes. Retrieved March 25, 2021. <a href = "https://book.affecting-technologies.org/as-verdades-dos-deepfakes/" target="_blank">Link de acesso <i class="material-icons">open_in_new</i></a>
+            </div>
+
+            
+
+        </div>
+    </div>
+</body>
+    <!-- import vue -->
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <!-- import element ui -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <!-- import axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- import app -->
+    <script src="../src/js/topic.js"></script>
+    <!-- import chartjs -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- lightbox -->
+    <script src="../src/modules/lightbox/lightbox.js"></script>
+    <!-- ApexChat -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    
+
+    <script>
+
+        // lightbox options
+        lightbox.option({
+            'resizeDuration': 200,
+            'wrapAround': true,
+            'fadeDuration': 200,
+        })
+
+    </script>
+    
+</html>
+
+
