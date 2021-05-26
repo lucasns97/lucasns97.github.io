@@ -46,6 +46,7 @@
                 <el-carousel indicator-position="outside" :interval="4000" type="card" height="400px">
                     <el-carousel-item v-for="page in 4" :key="page">
                         <img src=`./../src/assets/pdf/zine_mac_img/zine_mac-${('0' + page).slice(-2)}.jpg` height='100%'>
+                        <div id="foo"></div>
                         <h3>{{ ('0' + page).slice(-2) }}</h3>
                     </el-carousel-item>
                 </el-carousel>
@@ -80,6 +81,14 @@
           background-color: #d3dce6;
         }
     </style>
+
+    <script type="text/javascript">
+
+        var page = 4;
+        
+        page = '0' + page.slice(-2)
+        document.getElementById('foo').innerHTML = '<img src="./../src/assets/pdf/zine_mac_img/zine_mac-'+ page +'.jpg" id="imageBox"/>';
+    </script>
     
 </html>
 
