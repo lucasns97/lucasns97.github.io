@@ -40,16 +40,131 @@
         </div>
         <div class="topic-text__outer">
             <el-row class="topic-text">
-                Mandioca, macaxeira, aipim, castelinha, uaipi, mandioca-doce, mandioca-mansa, maniva, maniveira, pão-de-pobre, mandioca-brava e mandioca-amarga, são termos brasileiros para designar a espécie Manihot esculenta. Descrita por Crantz, é uma espécie de planta tuberosa da família das Euphorbiaceae.
+                Nos últimos anos, sistemas comerciais baseados em inteligência artificial surgiram e vêm ganhando espaço no cotidiano de grandes cidades, porém quase imperceptivelmente para os usuários finais. Estamos em contato com esses sistemas quando usamos serviços de tradução, recomendação de produtos, detecção de objetos e pessoas e muitos outros serviços. 
             </el-row>
             <el-row class="topic-text">
-                <el-carousel indicator-position="outside" :interval="4000" type="card" height="400px">
-                    <el-carousel-item v-for="page in 4" :key="page">
-                        <img src=`./../src/assets/pdf/zine_mac_img/zine_mac-${('0' + page).slice(-2)}.jpg` height='100%'>
-                        <div id="foo"></div>
-                        <h3>{{ ('0' + page).slice(-2) }}</h3>
-                    </el-carousel-item>
-                </el-carousel>
+                Esses sistemas são treinados com grandes volumes de dados e, inevitavelmente, apresentam algum tipo de viés ideológico. Com isso, a partir da análise de figuras de obras de arte contemporâneas utilizando a Art Decoder (desenvolvida por Gabriel Pereira and Bernardo Fontes, membros do GAIA e que opera desde 2018 revelando comportamentos de IAs comerciais, tais como Amazon Rekognition, Google Cloud Vision, Microsoft Azure, ClarifAI, Densecap, Facebook Detectron, IBM Watson and Darknet YOLO APIs), percebemos a possibilidade de olhar para estes sistemas de uma perspectiva crítica explorando o comportamento dessas IAs ao se depararem com obras de arte contemporânea.
+            </el-row>
+            <el-row class="topic-text">
+                Essa pesquisa resultou em dois workshops no início de 2020, ambos intitulados “A Crack Within the Museum”. O primeiro no evento <a href="http://ctrlz.ai/" target="_blank">CtrlZ.AI</a>, em Barcelona; em que selecionamos um conjunto de mais de 300 obras da coleção digital do museu do MACBA (Museu de Arte Contemporânea de Barcelona), e no evento, os participantes selecionaram coletivamente um conjunto de obras e seus respectivos resultados obtidos pelas IAs visando  destacar alguns dos vieses ideológicos presentes em alguns desses sistemas comerciais de visão computacional.
+            </el-row>
+            <el-row class="topic-text">
+                <el-card style="height: 845px">
+                    <el-carousel indicator-position="outside" :interval="20000" height="800px">
+                        <el-carousel-item v-for="page in 
+                            [
+                                '../src/assets/pdf/zine_macba_img/zine_macba-01.jpg',
+                                '../src/assets/pdf/zine_macba_img/zine_macba-03.jpg',
+                                '../src/assets/pdf/zine_macba_img/zine_macba-06.jpg',
+                                '../src/assets/pdf/zine_macba_img/zine_macba-07.jpg',
+                                '../src/assets/pdf/zine_macba_img/zine_macba-08.jpg',
+                                '../src/assets/pdf/zine_macba_img/zine_macba-09.jpg',
+                                '../src/assets/pdf/zine_macba_img/zine_macba-10.jpg',
+                                '../src/assets/pdf/zine_macba_img/zine_macba-11.jpg',
+                                '../src/assets/pdf/zine_macba_img/zine_macba-12.jpg',
+                                '../src/assets/pdf/zine_macba_img/zine_macba-13.jpg',
+                                '../src/assets/pdf/zine_macba_img/zine_macba-14.jpg',
+                                '../src/assets/pdf/zine_macba_img/zine_macba-15.jpg',
+                                '../src/assets/pdf/zine_macba_img/zine_macba-16.jpg',
+                                '../src/assets/pdf/zine_macba_img/zine_macba-17.jpg',
+                                '../src/assets/pdf/zine_macba_img/zine_macba-18.jpg',
+                                '../src/assets/pdf/zine_macba_img/zine_macba-19.jpg',
+                                '../src/assets/pdf/zine_macba_img/zine_macba-20.jpg',
+                                '../src/assets/pdf/zine_macba_img/zine_macba-21.jpg',
+                                '../src/assets/pdf/zine_macba_img/zine_macba-22.jpg',
+                                '../src/assets/pdf/zine_macba_img/zine_macba-23.jpg',
+                                '../src/assets/pdf/zine_macba_img/zine_macba-24.jpg',
+                                '../src/assets/pdf/zine_macba_img/zine_macba-25.jpg',
+                                '../src/assets/pdf/zine_macba_img/zine_macba-26.jpg',
+                                '../src/assets/pdf/zine_macba_img/zine_macba-27.jpg',
+                                '../src/assets/pdf/zine_macba_img/zine_macba-28.jpg',
+                                '../src/assets/pdf/zine_macba_img/zine_macba-29.jpg',
+                                '../src/assets/pdf/zine_macba_img/zine_macba-30.jpg',
+                                '../src/assets/pdf/zine_macba_img/zine_macba-31.jpg',
+                                '../src/assets/pdf/zine_macba_img/zine_macba-32.jpg',
+                                '../src/assets/pdf/zine_macba_img/zine_macba-33.jpg',
+                                '../src/assets/pdf/zine_macba_img/zine_macba-34.jpg',
+                                '../src/assets/pdf/zine_macba_img/zine_macba-35.jpg',
+                                '../src/assets/pdf/zine_macba_img/zine_macba-36.jpg',
+                                '../src/assets/pdf/zine_macba_img/zine_macba-37.jpg',
+                                '../src/assets/pdf/zine_macba_img/zine_macba-38.jpg',
+                                '../src/assets/pdf/zine_macba_img/zine_macba-39.jpg',
+                                '../src/assets/pdf/zine_macba_img/zine_macba-40.jpg',
+                                '../src/assets/pdf/zine_macba_img/zine_macba-41.jpg',
+                                '../src/assets/pdf/zine_macba_img/zine_macba-42.jpg',
+                                '../src/assets/pdf/zine_macba_img/zine_macba-43.jpg',
+                                '../src/assets/pdf/zine_macba_img/zine_macba-44.jpg',
+                                '../src/assets/pdf/zine_macba_img/zine_macba-45.jpg',
+                                '../src/assets/pdf/zine_macba_img/zine_macba-46.jpg',
+                                '../src/assets/pdf/zine_macba_img/zine_macba-47.jpg',
+                            ]" 
+                            :key="page">
+                            <img :src=page height="100%">
+                        </el-carousel-item>
+                    </el-carousel>
+                </el-card>
+            </el-row>
+            <el-row class="topic-text">
+                Como temos observado em nossa pesquisa, segue um capitalista, consumista e às vezes lógica misógina. Além disso, destacamos outros momentos em que nosso plataforma é incapaz de entender obras de arte que resultam em interpretações de grande valor poético.
+            </el-row>
+            <el-row class="topic-text">
+                O segundo workshop ocorreu durante o evento <a href="http://www.iea.usp.br/en/eventos/afetando-tecnologias-maquinando-inteligencias" target="_blank"></a>, que ocorreu na Universidade de São Paulo, com parceria do IEA (Instituto de Estudos Avançados), nesse evento utilizamos a coleção digital do MAC-USP (Museu de Arte Contemporânea da USP), e assim como no primeiro evento, os participantes selecionaram coletivamente um conjunto de resultados buscando destacar momentos críticos sobre a interpretação das IAs perante as imagens de obras de arte contemporânea.
+            </el-row>
+            <el-row class="topic-text">
+                <el-card style="height: 845px">
+                    <el-carousel indicator-position="outside" :interval="20000" height="800px">
+                        <el-carousel-item v-for="page in 
+                            [
+                                '../src/assets/pdf/zine_mac_img/zine_mac-01.jpg',
+                                '../src/assets/pdf/zine_mac_img/zine_mac-03.jpg',
+                                '../src/assets/pdf/zine_mac_img/zine_mac-06.jpg',
+                                '../src/assets/pdf/zine_mac_img/zine_mac-07.jpg',
+                                '../src/assets/pdf/zine_mac_img/zine_mac-08.jpg',
+                                '../src/assets/pdf/zine_mac_img/zine_mac-09.jpg',
+                                '../src/assets/pdf/zine_mac_img/zine_mac-10.jpg',
+                                '../src/assets/pdf/zine_mac_img/zine_mac-11.jpg',
+                                '../src/assets/pdf/zine_mac_img/zine_mac-12.jpg',
+                                '../src/assets/pdf/zine_mac_img/zine_mac-13.jpg',
+                                '../src/assets/pdf/zine_mac_img/zine_mac-14.jpg',
+                                '../src/assets/pdf/zine_mac_img/zine_mac-15.jpg',
+                                '../src/assets/pdf/zine_mac_img/zine_mac-16.jpg',
+                                '../src/assets/pdf/zine_mac_img/zine_mac-17.jpg',
+                                '../src/assets/pdf/zine_mac_img/zine_mac-18.jpg',
+                                '../src/assets/pdf/zine_mac_img/zine_mac-19.jpg',
+                                '../src/assets/pdf/zine_mac_img/zine_mac-20.jpg',
+                                '../src/assets/pdf/zine_mac_img/zine_mac-21.jpg',
+                                '../src/assets/pdf/zine_mac_img/zine_mac-22.jpg',
+                                '../src/assets/pdf/zine_mac_img/zine_mac-23.jpg',
+                                '../src/assets/pdf/zine_mac_img/zine_mac-24.jpg',
+                                '../src/assets/pdf/zine_mac_img/zine_mac-25.jpg',
+                                '../src/assets/pdf/zine_mac_img/zine_mac-26.jpg',
+                                '../src/assets/pdf/zine_mac_img/zine_mac-27.jpg',
+                                '../src/assets/pdf/zine_mac_img/zine_mac-28.jpg',
+                                '../src/assets/pdf/zine_mac_img/zine_mac-29.jpg',
+                                '../src/assets/pdf/zine_mac_img/zine_mac-30.jpg',
+                                '../src/assets/pdf/zine_mac_img/zine_mac-31.jpg',
+                                '../src/assets/pdf/zine_mac_img/zine_mac-32.jpg',
+                                '../src/assets/pdf/zine_mac_img/zine_mac-33.jpg',
+                                '../src/assets/pdf/zine_mac_img/zine_mac-34.jpg',
+                                '../src/assets/pdf/zine_mac_img/zine_mac-35.jpg',
+                                '../src/assets/pdf/zine_mac_img/zine_mac-36.jpg',
+                                '../src/assets/pdf/zine_mac_img/zine_mac-37.jpg',
+                                '../src/assets/pdf/zine_mac_img/zine_mac-38.jpg',
+                                '../src/assets/pdf/zine_mac_img/zine_mac-39.jpg',
+                                '../src/assets/pdf/zine_mac_img/zine_mac-40.jpg',
+                                '../src/assets/pdf/zine_mac_img/zine_mac-41.jpg',
+                                '../src/assets/pdf/zine_mac_img/zine_mac-42.jpg',
+                                '../src/assets/pdf/zine_mac_img/zine_mac-43.jpg',
+                                '../src/assets/pdf/zine_mac_img/zine_mac-44.jpg',
+                                '../src/assets/pdf/zine_mac_img/zine_mac-45.jpg',
+                                '../src/assets/pdf/zine_mac_img/zine_mac-46.jpg',
+                                '../src/assets/pdf/zine_mac_img/zine_mac-47.jpg'
+                            ]" 
+                            :key="page">
+                            <img :src=page height="100%">
+                        </el-carousel-item>
+                    </el-carousel>
+                </el-card>
             </el-row>
         </div>
     </div>
@@ -65,6 +180,9 @@
     <script src="./../src/js/topic.js"></script>
 
     <style>
+        .el-carousel {
+            width: 563px;
+        }
         .el-carousel__item h3 {
           color: #475669;
           font-size: 14px;
@@ -81,14 +199,7 @@
           background-color: #d3dce6;
         }
     </style>
-
-    <script type="text/javascript">
-
-        var page = 4;
-        
-        page = '0' + page.slice(-2)
-        document.getElementById('foo').innerHTML = '<img src="./../src/assets/pdf/zine_mac_img/zine_mac-'+ page +'.jpg" id="imageBox"/>';
-    </script>
+  
     
 </html>
 
