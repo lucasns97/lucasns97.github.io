@@ -44,7 +44,7 @@
             <el-row class="topic-text">
                 <el-carousel indicator-position="outside">
                     <el-carousel-item v-for="page in 4" :key="page">
-                        <h3>{{ padLeadingZeros(page, 2) }}</h3>
+                        <h3>{{ ('0' + page).slice(-2) }}</h3>
                     </el-carousel-item>
                 </el-carousel>
             </el-row>
@@ -58,8 +58,6 @@
     <script src="https://unpkg.com/element-ui/lib/index.js"></script>
     <!-- import axios -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <!-- PDF Viwer -->
-    <script src="https://unpkg.com/vue-pdf@4.2.0/src/pdfjsWrapper.js"></script>
     <!-- import app -->
     <script src="./../src/js/topic.js"></script>
 
