@@ -43,9 +43,9 @@
                 Mandioca, macaxeira, aipim, castelinha, uaipi, mandioca-doce, mandioca-mansa, maniva, maniveira, pão-de-pobre, mandioca-brava e mandioca-amarga, são termos brasileiros para designar a espécie Manihot esculenta. Descrita por Crantz, é uma espécie de planta tuberosa da família das Euphorbiaceae.
             </el-row>
             <el-row class="topic-text">
-                <el-carousel indicator-position="outside">
+                <el-carousel indicator-position="outside" :interval="4000" type="card" height="400px">
                     <el-carousel-item v-for="page in 4" :key="page">
-                        <img src=`./../src/assets/pdf/zine_mac_img/zine_mac-${('0' + page).slice(-2)}.jpg`>
+                        <img src=`./../src/assets/pdf/zine_mac_img/zine_mac-${('0' + page).slice(-2)}.jpg` height='100%'>
                         <h3>{{ ('0' + page).slice(-2) }}</h3>
                     </el-carousel-item>
                 </el-carousel>
@@ -66,9 +66,9 @@
     <style>
         .el-carousel__item h3 {
           color: #475669;
-          font-size: 18px;
+          font-size: 14px;
           opacity: 0.75;
-          line-height: 300px;
+          line-height: 200px;
           margin: 0;
         }
       
