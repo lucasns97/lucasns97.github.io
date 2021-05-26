@@ -38,44 +38,71 @@
         </div>
         <div class="topic-text__outer">
             <el-row class="topic-text">
-                Os trabalhadores da Amazon Mechanical Turk (MTurk) espalham-se ao redor do globo, no entanto se concentram na sua maioria em países como EUA e Índia. Representam uma população constantemente crescente e ativa com mais de 600.000 trabalhadores, sendo a maioria composta pelo gênero feminino. <a id="ref1__text" href="#ref1">[ref 1]</a>
+                Algumas das primeiras traduções transformaram poemas sumérios em línguas asiáticas cerca de 4500 anos atrás <a id="ref1__text" href="#ref1">[ref 1]</a><a id="ref2__text" href="#ref2">[ref 2]</a>. Em 1440, com o desenvolvimento da imprensa, ficou mais fácil circular textos; consequentemente, os serviços de tradução se tornaram mais comuns. Desde a popularização da Internet, vivemos em um mundo onde a tradução é essencial com sistemas eficazes de tradução automática.
             </el-row>
             <el-row class="topic-text">
                 <canvas id="canvas1" style="width: 750px"></canvas> 
             </el-row>
             <el-row class="topic-text">
+                Nesta pesquisa, desejamos compreender as características dos sistemas de tradução automática multilinguística. E como foco, a tradução sequencial, que poderíamos descrever resumidamente como um conjunto de traduções passo a passo de um único texto em uma cadeia de idiomas diferentes, como se as máquinas fossem jogar uma espécie de “telefone sem fio”. Isso é, uma frase de entrada deve ser traduzida sequencialmente em diferentes idiomas em várias etapas, e nosso objetivo é ver o que acontece com os textos de saída. Imagine isso acontecendo em um mundo onde muitas máquinas operam em vários idiomas e a tradução pode ocorrer em vários saltos até chegar a um determinado agente. O que um agente há de esperar da mensagem de recebimento em comparação com o original?
+            </el-row>
+            <el-row class="topic-text">
+                Para realizar essa série de experimentos, usamos o Google Tradutor com cadeias de até 284 etapas de tradução, relacionando 71 idiomas distintos e investigando centenas de ordens de tradução diferentes; além disso, optamos por selecionar uma única frase inicial e avaliar o que acontece com ela ao longo das diferentes cadeias de tradução.
+            </el-row>
+            <el-row class="topic-text">
+                Observamos que além da tradução sequencial modificar completamente o significado da frase original, a tradução também encurta os textos, e um exemplo de uma das etapas de uma sequência de tradução ilustro a seguir:
+            </el-row>
+            <el-row class="topic-text">
+                <div style="height: 100%; width:600px">
+                    <el-steps direction="vertical">
+                        <el-step status="process" title="Passo 0/284" description="Texto Inicial"></el-step><el-card style="font-size: 17px; cursor: default">“For him, each reading of any text will always provide a new resizing and understanding of that text. Metaphorically speaking, he positions himself before the texts as the bather of the river of Heráclito, in which it is impossible to enter twice because his course is constantly changing.”</el-card></el-step>
+                        <el-step status="process" title="Passo 22/284" description="Maltês > Inglês"></el-step><el-card style="font-size: 17px; cursor: default">“Regular reading each time explaining the contents and its meaning. On stage, he changed his approach to the Bible and putting in a rock on the corner of Geraeli.”</el-card></el-step>
+                        <el-step status="process" title="Passo 78/284" description="Bósnio > Inglês"></el-step><el-card style="font-size: 17px; cursor: default">“Please read first. He put the Bible on a stone with a scroll.”</el-card></el-step>
+                        <el-step status="process" title="Passo 206/284" description="Tcheco > Inglês"></el-step><el-card style="font-size: 17px; cursor: default">“Read and forget the Bible.”</el-card></el-step>
+                        <el-step status="process" title="Passo 284/284" description="Pashto > Inglês"></el-step><el-card style="font-size: 17px; cursor: default">“Read the Bible and forget it.”</el-card></el-step>
+                    </el-steps>
+                </div>
+            </el-row>
+            <el-row class="topic-text">
+                Além disso, notamos que ao medir a qualidade de tradução utilizando uma métrica chamada GLEU (uma função que compara dois textos e avalia quão parecidos são) para comparar o grau de similaridade entre o texto original e a tradução, notamos que é possível representar o resultado através de uma lei matemática, e com isso apelidamos essa lei de AEL (do inglês: Lei de Acurácia Empírica), que é descrita da seguinte forma:
+            </el-row>
+            <el-row class="topic-text" id="citation" style="font-size: 23px;">
+                AEL(t) = (t + 1)<sup>-α</sup> 
+            </el-row>
+            <el-row class="topic-text">
+                Nesta expressão, consideramos que o valor de acurácia inicial (texto original) tem o valor 1; t refere-se à t-ésima tradução; α é um parâmetro que chamamos de fator de divergência semântica. Quanto maior é o valor de α, pior é a qualidade de tradução daquela cadeia de idiomas. E a seguir um dos resultados da pesquisa, em que comparamos os valores empíricos (em vermelho) obtidos através de uma série de cadeias de tradução, em comparação com a função teórica (linha tracejada).
+            </el-row>
+            <el-row class="topic-text">
+                <div class="card" id="right">
+                    <a href="../src/assets/images/ael_chart_tradutor.png" data-lightbox="Anatomy of an AI System" data-title="Comparação com os resultados empíricos e a curva AEL teórica">
+                        <img class="image-link" src="../src/assets/images/ael_chart_tradutor.png" alt="Avatar" style="width: 70%; display: block; margin-left: auto; margin-right: auto">
+                    </a>
+                    <div class="container">
+                        <p style="font-size: 14px; padding-top: 5px"><b>Fonte: <a href = "https://arxiv.org/abs/2003.02817" target="_blank">An Empirical Accuracy Law for Sequential Machine Translation: the Case of Google Translate <i class="material-icons">open_in_new</i></a></b></p> 
+                        <p style="font-size: 14px">L. Sequeira et. al.</p> 
+                    </div>
+                </div>
+            </el-row>
+            
+            <!-- <el-row class="topic-text">
                 <el-col :sm="24" :md="14">
                     Embora o seu trabalho seja precarizado, com um salário médio de apenas U$ 1,77/h, enquanto que a renda mínima nos EUA são U$ 7,25/h <a id="ref2__text" href="#ref2">[ref 2]</a>, correspondem à um dos grupos mais importantes no processo de construção de banco de dados etiquetados usados por grandes empresas como Facebook, Uber, Magazine Luiza e muitas outras.
                 </el-col>
                 <el-col :sm="24" :md="10">
                     <div class="card" id="right">
-                        <a href="../src/assets/images/turkers_anatomy_of_ai.png" data-lightbox="Anatomy of an AI System" data-title="Recorte de Anatomy of an AI System - Kate Crawford e Vladan Joler">
-                            <img class="image-link" src="../src/assets/images/turkers_anatomy_of_ai.png" alt="Avatar" style="width: 100%">
+                        <a href="../src/assets/images/languages_tree_sample.jpg" data-lightbox="Anatomy of an AI System" data-title="Recorte da árvore de família de idiomas">
+                            <img class="image-link" src="../src/assets/images/languages_tree_sample.jpg" alt="Avatar" style="width: 300px; display: block; margin-left: auto; margin-right: auto">
                         </a>
                         <div class="container">
-                            <p style="font-size: 14px; padding-top: 5px"><b>Fonte: <a href = "https://anatomyof.ai/" target="_blank">Anatomy of an AI System <i class="material-icons">open_in_new</i></a></b></p> 
-                            <p style="font-size: 14px">Kate Crawford e Vladan Joler</p> 
+                            <p style="font-size: 14px; padding-top: 5px"><b>Fonte: <a href = "https://www.mentalfloss.com/article/59665/feast-your-eyes-beautiful-linguistic-family-tree" target="_blank">Feast your eyes on this beautiful<br>linguistic family tree <i class="material-icons">open_in_new</i></a></b></p> 
+                            <p style="font-size: 14px"><b><a href = "https://www.mentalfloss.com/article/59665/feast-your-eyes-beautiful-linguistic-family-tree" target="_blank"></a></b></p> 
+                            <p style="font-size: 14px">A. Okrent</p> 
                         </div>
                     </div>
                 </el-col>
-            </el-row>
+            </el-row> -->
             <el-row class="topic-text">
-                Um exemplo disso são os bancos de dados do Visual Genome <a id="ref3__text" href="#ref3">[ref 3]</a>, que relaciona objetos e ações em imagens e o Flickr-Faces-HQ (FFHQ) <a id="ref4__text" href="#ref4">[ref 4]</a> um banco de dados usado para reconhecimento facial.
-            </el-row>
-            <el-row class="topic-text">
-                Essencialmente, <a class="gender" @click="changeGender()">{{ genderPairs['ao'][selectedGender] }}</a>s Turkers desempenham seus trabalhos de maneira remota, em suas próprias casas. Não há qualquer tipo de apoio logístico ou instrumental por parte da Amazon - empresa que administra os serviços da MTurk. A plataforma não viabiliza qualquer tipo de canal de intercomunicação entre <a class="gender" @click="changeGender()">{{ genderPairs['ao'][selectedGender] }}</a>s trabalhador<a class="gender" @click="changeGender()">{{ genderPairs['ae'][selectedGender] }}</a>s, que são simplesmente identificad<a class="gender" @click="changeGender()">{{ genderPairs['ao'][selectedGender] }}</a>s por um código. Para superar isso, <a class="gender" @click="changeGender()">{{ genderPairs['ao'][selectedGender] }}</a>s Turkers mantém comunicação via outros canais, como grupos de Whatsapp, muito utilizado por brasileir<a class="gender" @click="changeGender()">{{ genderPairs['ao'][selectedGender] }}</a>s <a id="ref5__text" href="#ref5">[ref 5]</a>.
-            </el-row>
-            <el-row class="topic-text">
-                Desempenham um trabalho repetitivo de classificação de dados, em que na maioria das vezes, não sabem para quem estão trabalhando fazendo o tratamento dos dados, muito menos para quê os dados serão utilizados. Além da desinformação d<a class="gender" @click="changeGender()">{{ genderPairs['ao'][selectedGender] }}</a>s trabalhador<a class="gender" @click="changeGender()">{{ genderPairs['ae'][selectedGender] }}</a>s por não saberem que tipo de conteúdo estão construindo, parte dos dados em que trabalham são constituídos por conteúdos violentos e até mesmo, pornográficos. Nesse sentido, é justamente a falta de moderação da Amazon sobre o conteúdo dos trabalhos disponíveis aos trabalhadores que, a médio e longo prazo, afetam negativamente na saúde dos próprios. O trabalho feito pelos pesquisadores Bruno Moreschi, Gabriel Pereira e Fabio Cozman - Trabalhadores brasileiros no Amazon Mechanical Turk: sonhos e realidades de “trabalhadores fantasmas” <a id="ref5__text" href="#ref5">[ref 5]</a>; cita alguns trechos ditos pel<a class="gender" @click="changeGender()">{{ genderPairs['ao'][selectedGender] }}</a>s própri<a class="gender" @click="changeGender()">{{ genderPairs['ao'][selectedGender] }}</a>s trabalhador<a class="gender" @click="changeGender()">{{ genderPairs['ae'][selectedGender] }}</a>s e revelam um pouco suas condições de trabalho:
-            </el-row>
-            <el-row class="topic-text" id="citation">
-                “Eu odeio esta plataforma. Tudo de errado com o mundo se resume aqui. Patrões que exploram e trabalhadores que se digladiam pra trabalharem que nem escravos” - Sem identificação.
-            </el-row>
-            <el-row class="topic-text" id="citation">
-                “É frustrante na maioria do tempo, parece que não consigo mais desligar, porque não ganho o suficiente e se eu for dormir aparecerá uma tarefa boa e vou estar dormindo. Até fiz uso de alguns remédios para conseguir descansar, meditação não ajudou. Quanto eu fazia um trabalho igual para outra empresa, mas com contrato por carga horária fechada, não cheguei nisso” - Sem identificação.
-            </el-row>
-            <el-row class="topic-text">
-                Depois dessa leitura, sugiro o seguinte questionamento, será que Turkers mais bem treinad<a class="gender" @click="changeGender()">{{ genderPairs['ao'][selectedGender] }}</a>s, informad<a class="gender" @click="changeGender()">{{ genderPairs['ao'][selectedGender] }}</a>s e com mais qualidade de vida não fariam um trabalho ainda melhor, podendo oferecer resultados de maior qualidade aos sistemas que utilizam IA, minimizando erros e vieses, e aumentam a eficiência das máquinas? 
+                E isso nos fez questionar sobre o impacto de diferentes subconjuntos de idiomas para construir a cadeia de tradução, por exemplo, selecionar idiomas que possuem uma pequena distância interlinguística ao invés de idiomas aleatórios, e assim por diante. Todos os resultados e proposições estão mais detalhados no artigo <a id="ref3__text" href="#ref3">[ref 3]</a>. No geral, este estudo descreve uma possível maneira de investigar as propriedades das técnicas de caixa preta de uma forma holística, e possibilitar novas perspectivas no tratamento e desenvolvimento de ferramentas e serviços de tradução automática.
             </el-row>
         </div>
         <div class="topic-reference__outer">
@@ -84,23 +111,15 @@
             </div>
             <div class="topic-reference" id="ref1">
                 <a href="#ref1__text" class="back-to-text"><i class="material-icons">undo</i></a>
-                <b>[ref 1]</b> Ross, Joel & Zaldivar, Andrew & Irani, Lilly & Tomlinson, Bill. 2009. Who are the Turkers? Worker Demographics in Amazon Mechanical Turk. <a href = "https://www.researchgate.net/publication/268427703_Who_are_the_Turkers_Worker_Demographics_in_Amazon_Mechanical_Turk" target="_blank">Link de acesso <i class="material-icons">open_in_new</i></a>
+                <b>[ref 1]</b>  B. Alster, “The harps that once...: Sumerian poetry in translation. Thorkild Jacobsen,” Journal of Near Eastern Studies, vol. 54, no. 2, pp. 148 – 150, 1995.                
             </div>
             <div class="topic-reference" id="ref2">
                 <a href="#ref2__text" class="back-to-text"><i class="material-icons">undo</i></a>
-                <b>[ref 2]</b> Kotaro Hara, Abigail Adams, Kristy Milland, Saiph Savage, Chris Callison-Burch, and Jeffrey P. Bigham. 2018. A Data-Driven Analysis of Workers’ Earnings on Amazon Mechanical Turk. In Proceedings of the 2018 CHI Conference on Human Factors in Computing Systems (CHI ’18). Association for Computing Machinery, New York, NY, USA, Paper 449, 1–14. <a href = "https://arxiv.org/pdf/1712.05796.pdf" target="_blank">Link de acesso <i class="material-icons">open_in_new</i></a>
+                <b>[ref 2]</b> W. J. Hutchins, “Machine translation: A brief history,” Concise History of the Language Sciences, p. 431–445, 1995
             </div>
             <div class="topic-reference" id="ref3">
                 <a href="#ref3__text" class="back-to-text"><i class="material-icons">undo</i></a>
-                <b>[ref 3]</b> Krishna, Ranjay and Zhu, Yuke and Groth, Oliver and Johnson, Justin and Hata, Kenji and Kravitz, Joshua and Chen, Stephanie and Kalantidis, Yannis and Li, Li-Jia and Shamma, David A and Bernstein, Michael and Fei-Fei, Li. 2016. Visual Genome: Connecting Language and Vision Using Crowdsourced Dense Image Annotations. <a href = "https://arxiv.org/abs/1602.07332" target="_blank">Link de acesso <i class="material-icons">open_in_new</i></a>
-            </div>
-            <div class="topic-reference" id="ref4">
-                <a href="#ref4__text" class="back-to-text"><i class="material-icons">undo</i></a>
-                <b>[ref 4]</b> NVlabs/ffhq-dataset - Repositório Github. Flickr-Faces-HQ Dataset (FFHQ). Acesso em 01 de julho de 2020. <a href = "https://github.com/NVlabs/ffhq-dataset" target="_blank">Link de acesso <i class="material-icons">open_in_new</i></a>
-            </div>
-            <div class="topic-reference" id="ref5">
-                <a href="#ref5__text" class="back-to-text"><i class="material-icons">undo</i></a>
-                <b>[ref 5]</b> Bruno Moreschi, Gabriel Pereira, Fabio G. Cozman. 2020. Trabalhadores brasileiros no Amazon Mechanical Turk: sonhos e realidades de “trabalhadores fantasmas”. Contracampo, v. 39, n. 1. ISSN: 2238-2577. <a href = "https://periodicos.uff.br/contracampo/article/view/38252/html_pt" target="_blank">Link de acesso <i class="material-icons">open_in_new</i></a>
+                <b>[ref 3]</b> Lucas Nunes Sequeira, Bruno Moreschi, Fabio Gagliardi Cozman, Bernardo Fontes. 2020. An Empirical Accuracy Law for Sequential Machine Translation: the Case of Google Translate. <a href = "https://arxiv.org/abs/2003.02817" target="_blank">Link de acesso <i class="material-icons">open_in_new</i></a>
             </div>
         </div>
     </div>
@@ -119,6 +138,8 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- lightbox -->
     <script src="../src/modules/lightbox/lightbox.js"></script>
+    <!-- ApexChat -->
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
     
 
     <script>
@@ -176,12 +197,6 @@
 			}
 		};
 
-        // chartjs loading
-        window.onload = function() {
-			let ctx = document.getElementById('canvas1').getContext('2d');
-			window.myLine = new Chart(ctx, nacionalityConfig);
-
-		};
 
         // lightbox options
         lightbox.option({
@@ -189,6 +204,14 @@
             'wrapAround': true,
             'fadeDuration': 200,
         })
+
+        // chartjs loading
+        window.onload = function() {
+			let ctx1 = document.getElementById('canvas1').getContext('2d');
+			window.myLine = new Chart(ctx1, nacionalityConfig);
+
+		};
+
     </script>
     
 </html>
