@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Trabalhos dos Turkers - HITs</title>
+    <!-- import CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <link rel="stylesheet" href="./../src/css/app.css">
+    <link rel="stylesheet" href="./../src/css/topic.css">
+    <link rel="stylesheet" href="./../src/css/clock.css">
+</head>
+
+<body>
+    <div id="topic">
+        <div style="text-align: center; margin-top: 20px; margin-bottom: 50px">
+            <el-button round @click="navigateTo('../search.html')"><i class="material-icons">reply</i> Voltar</el-button>
+        </div>
+        <div class="title__outer">
+            <h2 class="title-text">Trabalhos dos Turkers - HITs</h2>
+        </div>
+        <div class="tags__outer">
+            <div class="row" style="margin: 0; padding: 0;">
+                <h4 class="tag col-sm-5">MTurk</h4>
+                <h4 class="tag col-sm-5">HIT</h4>
+                <h4 class="tag col-sm-5">Banco de Dados</h4>
+            </div>
+        </div>
+        
+        <div class="topic-time__outer">
+            <el-row class="topic-time">
+                <p><i class="material-icons" id="clock">schedule</i> Tempo de leitura: <strong>2 minutos</strong></p>
+            </el-row>
+        </div>
+        <div class="topic-text__outer">
+            <el-row class="topic-text">
+                Por trás de muitos bancos de dados hoje utilizados para treinar modelos de inteligência artificial, existe uma camada humana que realiza o trabalho de preparação desses dados, como categorização de objetos em imagens, identificação de conteúdo em textos e muito mais - tudo isso através de tarefas e questionários. O exemplo que mais emprega pessoas para realização desse serviço é a plataforma Amazon Mechanical Turk (MTurk) (https://www.mturk.com/). Nela existem mais de 500.000 trabalhadores que, diariamente, atuam no desenvolvimento de bancos de dados (Moreschi, 2020 - https://periodicos.uff.br/contracampo/article/view/38252/html_pt) utilizados em diversas aplicações do nosso dia a dia. Além da MTurk, existem diversas outras plataformas que concorrem com serviços análogos, como o Clickworker, o Appen, o Survey Junkie, a Lovecrypto Inc, a InboxDollars, e muitos outros serviços.
+            </el-row>
+            <el-row class="topic-text">
+                Sobre a MTurk, existe uma API (Application Programming Interface) para utilização deste serviço, permitindo que as pessoas submetam tarefas para construção de banco de dados e que sejam “automaticamente” respondidos. No entanto, como sabemos, as tarefas não são executadas de maneira automática - por uma máquina, e sim por uma pessoa, ou várias pessoas espalhadas pelo globo; de certa forma, esse processo acaba por mascarar quem são de fato, as pessoas por trás do desenvolvimento de diversos bancos de dados.
+            </el-row>
+            <el-row class="topic-text">
+                Interessante ressaltar a própria origem do termo que dá o nome a esses trabalhadores, os Turkers. No final do século XVII, na áustria, um inventor chamado Wolfgang von Kempelen, construiu uma máquina - “The Turk” - que aparentemente jogava xadrez sozinha, conquistando admiração de muitas pessoas, no entanto, o que as pessoas que viam não sabiam, era o fato de que havia uma camada humana escondida dentro da própria máquina. Um mestre em xadrez que a operava - um “Turker”, ele ficava escondido e movia as peças do xadrez, fazendo parecer que elas se moviam sozinhas - pela própria máquina. Essa ilusão criada de que uma máquina mecânica podia jogar sozinha um jogo de xadrez, durou dezenas de anos, recebendo alguns “Turkers” que a operaram ao longo desses vários anos, uns foram reconhecidos, e outros são um mistério até hoje. (https://pt.wikipedia.org/wiki/O_Turco)
+            </el-row>
+            <el-row class="topic-text">
+                <div class="card" id="right" style="width: 400px">
+                    <a href="../src/assets/images/faces_gif.gif" data-lightbox="Cluster images" data-title="'Rosto genérico padrão' criado pela sobreposição de 3000 imagens aleatórias de rostos humanos falsos não repetidos gerados pelo This Person Does Not Exist">
+                        <img class="image-link" src="../src/assets/images/faces_gif.gif" alt="Avatar" style="width: 100%; display: block; margin-left: auto; margin-right: auto">
+                    </a>
+                    <div class="container">
+                        <p style="font-size: 14px; padding-top: 5px"><b>"Imagens-conjunto"</b><br>Criado pela sobreposição de 10, 30, 100, 300,<br>1000 e 3000 imagens.</p> 
+                        <p style="font-size: 14px">B. Fontes e L. Nunes | GAIA</p> 
+                    </div>
+                </div>
+            </el-row>
+            <el-row class="topic-text">
+                Hoje, a tarefa dos Turkers consistem em responder a diferentes tipos de tarefas e questionários sem qualquer tipo de contexto, os quais são intitulados de HITs (Human Intelligence Tasks, ou Tarefas de Inteligência Humana). Os HITs são os mais variados, e podem incluir conteúdos pornográficos e violentos (Moreschi, 2020). A seguir, apresento uma captura de tela do próprio painel de trabalho de um Turker, nela são listados diversos HITs, como:
+            </el-row>
+            <el-row class="topic-text">
+                <ul>
+                    <li>Coletar dados de um site;</li>
+                    <li>Classificar uma receita;</li>
+                    <li>Desenhar contorno de automóvel;</li>
+                    <li>Identificar emoções em arte, etc.</li>
+                </ul>
+            </el-row>
+            <el-row class="topic-text">
+                <div class="card" id="right" style="width: 400px">
+                    <a href="../src/assets/images/faces_gif.gif" data-lightbox="Cluster images" data-title="'Rosto genérico padrão' criado pela sobreposição de 3000 imagens aleatórias de rostos humanos falsos não repetidos gerados pelo This Person Does Not Exist">
+                        <img class="image-link" src="../src/assets/images/faces_gif.gif" alt="Avatar" style="width: 100%; display: block; margin-left: auto; margin-right: auto">
+                    </a>
+                    <div class="container">
+                        <p style="font-size: 14px; padding-top: 5px"><b>"Imagens-conjunto"</b><br>Criado pela sobreposição de 10, 30, 100, 300,<br>1000 e 3000 imagens.</p> 
+                        <p style="font-size: 14px">B. Fontes e L. Nunes | GAIA</p> 
+                    </div>
+                </div>
+            </el-row>
+            <el-row class="topic-text">
+                Além dos HITs supracitados, existem muitos outros como: “Analisar imagens sexuais”; “Apertar um botão para enviar SMS”; “Moderar fotos de sites de relacionamento”; “Fazer upload de suas fotos pessoais”; “Tirar fotos da calça, muitas vezes com pontos de vistas que incluem regiões íntimas”; “Assistir filmes pornográfico de até 30 minutos de duração”; “Descrever imagens com pessoas mortas, repletas de sangue”, etc. Apesar da plataforma garantir uma diversidade de conteúdo no qual os trabalhadores são expostos, o trabalho realizado na AMT induz um ambiente de trabalho repleto de tarefas e questionários que, a longo prazo, podem ter consequências negativas para a saúde desses trabalhadores. (Moreschi, 2020).
+            </el-row>
+            <el-row class="topic-text">
+                Para cada HIT é atribuída uma remuneração ao trabalhador, e costuma ser bastante baixa, como podemos ver na imagem, e a grande maioria é inferior a U$ 0,05. Além disso, o trabalhador deve ser qualificado para executar algumas tarefas - costumam ser as que possuem maior remuneração. Para cada HIT, a pessoa/empresa que solicita, pode ou não aceitar pagar pelo trabalho executado pelo Turker; quando o trabalhador recebe pelo trabalho feito, ainda mais de 20% do valor do HIT fica para Amazon (Feitosa, 2020 - https://gizmodo.uol.com.br/amazon-mechanical-turk-plataforma-bicos-ia/). No final, o trabalhador trabalha sem garantias de receber pelo seu serviço, recebe - na maioria das vezes - muito pouco pelo serviço, está sujeito a todo tipo de conteúdo e não tem conhecimento algum sobre o conteúdo que está criando - e eventualmente não tem conhecimento nem para quem.
+            </el-row>
+            <el-row class="topic-text">
+                Na pesquisa “Trabalhadores brasileiros no Amazon Mechanical Turk: sonhos e realidades de “trabalhadores fantasmas””, os pesquisadores entrevistaram alguns dos Turkers brasileiros, e um de seus relatos sobre as HITs foi:
+            </el-row>
+            <el-row class="topic-text" id="citation">
+                “Olha, tem de tudo. Teve um que era pra fazer quadrados nas cabeças de porcos. Dava pra entender que era pra contar os porcos dos caminhões, mas mesmo assim achei muito cabreiro, um monte de porquinhos filhotes amontoados. Também teve o de analisar os vídeo das pessoas realizando ações em frente à porta, esse dava pra saber que era pra julgar o trabalho dos outros, mas, nossa, era muito estranho, eles falavam que esses vídeos são super confidenciais, de repente eu me sentia invadindo a privacidade das pessoas. Tem também o de julgar as fotos dos aplicativos de paquera, pra falar se tem pênis explícito e tal. E ainda tive uma vez que ficar vendo um monte de russos e japoneses carregando armas, claramente menores de idade. Esse último me deixou bastante mal emocionalmente falando por semanas e semanas.”
+            </el-row>
+            <el-row class="topic-text">
+                Finalizo deixando uma pergunta em aberto: Turkers mais bem treinados, informados e com mais qualidade de vida não ofereceriam resultados de maior qualidade aos sistemas que utilizam IA, aumentam a “eficiência” das máquinas?
+            </el-row>
+        </div>
+    </div>
+</body>
+    <!-- import vue -->
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <!-- import element ui -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <!-- import axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- import app -->
+    <script src="./../src/js/topic.js"></script>
+    
+</html>
+
+
