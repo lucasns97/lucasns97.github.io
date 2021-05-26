@@ -93,7 +93,7 @@ def get_topic_tags(html_lines):
     
 def get_html_lines(filename):
 
-    with open(f'{TOPICS_ROOT_PATH}{filename}') as topic:
+    with open(f'{TOPICS_ROOT_PATH}{filename}', encoding="utf8") as topic:
         html_lines = topic.readlines()
 
     return html_lines
