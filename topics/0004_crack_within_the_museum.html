@@ -42,7 +42,7 @@
                 Mandioca, macaxeira, aipim, castelinha, uaipi, mandioca-doce, mandioca-mansa, maniva, maniveira, pão-de-pobre, mandioca-brava e mandioca-amarga, são termos brasileiros para designar a espécie Manihot esculenta. Descrita por Crantz, é uma espécie de planta tuberosa da família das Euphorbiaceae.
             </el-row>
             <el-row class="topic-text">
-                <demo></demo>
+                <div id="app"></div>
             </el-row>
         </div>
     </div>
@@ -54,17 +54,21 @@
     <!-- import axios -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <!-- PDF Viwer -->
-    <script src="https://unpkg.com/pdfvuer@1.8.3/dist/pdfvuer.umd.min.js"></script>
+    <script src="https://unpkg.com/vue-pdf@4.2.0/src/pdfjsWrapper.js"></script>
     <!-- import app -->
     <script src="./../src/js/topic.js"></script>
 
-    <script>
-        new Vue({
-          components: {
-            demo: pdfvuer
-          }
-        }).$mount('#app')
-    </script>
+    <script type="x-template" id="main">
+	<div>
+		<input type="number" v-model.number="page"> /{{numPages}}
+    <pdf src="https://cdn.mozilla.net/pdfjs/tracemonkey.pdf" 
+      :page="page" 
+      @num-pages="numPages = $event" 
+      style="width:75%"></pdf>
+  </div>
+</script>
+
+
     
 </html>
 
