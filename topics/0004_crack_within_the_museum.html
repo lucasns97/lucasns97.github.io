@@ -45,7 +45,7 @@
             <el-row class="topic-text">
                 <el-carousel indicator-position="outside">
                     <el-carousel-item v-for="page in 4" :key="page">
-                        <img src="./../src/assets/pdf/zine_mac_img/zine_mac-01.jpg">
+                        <img src=`./../src/assets/pdf/zine_mac_img/zine_mac-${('0' + page).slice(-2)}.jpg`>
                         <h3>{{ ('0' + page).slice(-2) }}</h3>
                     </el-carousel-item>
                 </el-carousel>
