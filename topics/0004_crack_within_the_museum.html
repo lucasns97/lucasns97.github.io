@@ -20,6 +20,8 @@
         import images from './../js/images'
 
         console.log(images)
+
+        { images.map(({id, src, title, description}) => <img key={id} src={src} title={title} alt={description} />) }
     </script>
 </head>
 
