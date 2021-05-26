@@ -7,7 +7,8 @@ const vm = new Vue({
         genderPairs: {
             'ao': ['a', 'o'],
             'ae': ['a', 'e'],
-            'a_': ['a', '•'],
+            'a_': ['a', ''],
+            '_o': ['', 'o'],
         },
         selectedGender: 0,
     },
