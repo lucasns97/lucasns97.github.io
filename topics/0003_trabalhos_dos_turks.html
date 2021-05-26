@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./../src/css/app.css">
     <link rel="stylesheet" href="./../src/css/topic.css">
     <link rel="stylesheet" href="./../src/css/clock.css">
+    <link rel="stylesheet" href="./../src/modules/lightbox/lightbox.css">
 </head>
 
 <body>
@@ -24,41 +25,40 @@
             <h2 class="title-text">Trabalhos dos Turkers - HITs</h2>
         </div>
         <div class="tags__outer">
-            <div class="row" style="margin: 0; padding: 0;">
+            <div class="row" style="margin: 0; padding: 0">
                 <h4 class="tag col-sm-5">MTurk</h4>
                 <h4 class="tag col-sm-5">HIT</h4>
                 <h4 class="tag col-sm-5">Banco de Dados</h4>
             </div>
         </div>
-        
         <div class="topic-time__outer">
             <el-row class="topic-time">
-                <p><i class="material-icons" id="clock">schedule</i> Tempo de leitura: <strong>2 minutos</strong></p>
+                <p><i class="material-icons" id="clock">schedule</i> Tempo de leitura: <strong>11 minutos</strong></p>
             </el-row>
         </div>
         <div class="topic-text__outer">
             <el-row class="topic-text">
-                Por trás de muitos bancos de dados hoje utilizados para treinar modelos de inteligência artificial, existe uma camada humana que realiza o trabalho de preparação desses dados, como categorização de objetos em imagens, identificação de conteúdo em textos e muito mais - tudo isso através de tarefas e questionários. O exemplo que mais emprega pessoas para realização desse serviço é a plataforma Amazon Mechanical Turk (MTurk) (https://www.mturk.com/). Nela existem mais de 500.000 trabalhadores que, diariamente, atuam no desenvolvimento de bancos de dados (Moreschi, 2020 - https://periodicos.uff.br/contracampo/article/view/38252/html_pt) utilizados em diversas aplicações do nosso dia a dia. Além da MTurk, existem diversas outras plataformas que concorrem com serviços análogos, como o Clickworker, o Appen, o Survey Junkie, a Lovecrypto Inc, a InboxDollars, e muitos outros serviços.
+                Por trás de muitos bancos de dados hoje utilizados para treinar modelos de inteligência artificial, existe uma camada humana que realiza o trabalho de preparação desses dados, como categorização de objetos em imagens, identificação de conteúdo em textos e muito mais - tudo isso através de tarefas e questionários. O exemplo que mais emprega pessoas para realização desse serviço é a plataforma <a href="https://www.mturk.com/" target="_blank">Amazon Mechanical Turk (MTurk)</a>. Nela existem mais de 500.000 trabalhadores que, diariamente, atuam no desenvolvimento de bancos de dados <a id="ref1__text" href="#ref1">[ref 1]</a> utilizados em diversas aplicações do nosso dia a dia. Além da MTurk, existem diversas outras plataformas que concorrem com serviços análogos, como o Clickworker, o Appen, o Survey Junkie, a Lovecrypto Inc, a InboxDollars, e muitos outros serviços.
             </el-row>
             <el-row class="topic-text">
                 Sobre a MTurk, existe uma API (Application Programming Interface) para utilização deste serviço, permitindo que as pessoas submetam tarefas para construção de banco de dados e que sejam “automaticamente” respondidos. No entanto, como sabemos, as tarefas não são executadas de maneira automática - por uma máquina, e sim por uma pessoa, ou várias pessoas espalhadas pelo globo; de certa forma, esse processo acaba por mascarar quem são de fato, as pessoas por trás do desenvolvimento de diversos bancos de dados.
             </el-row>
             <el-row class="topic-text">
-                Interessante ressaltar a própria origem do termo que dá o nome a esses trabalhadores, os Turkers. No final do século XVII, na áustria, um inventor chamado Wolfgang von Kempelen, construiu uma máquina - “The Turk” - que aparentemente jogava xadrez sozinha, conquistando admiração de muitas pessoas, no entanto, o que as pessoas que viam não sabiam, era o fato de que havia uma camada humana escondida dentro da própria máquina. Um mestre em xadrez que a operava - um “Turker”, ele ficava escondido e movia as peças do xadrez, fazendo parecer que elas se moviam sozinhas - pela própria máquina. Essa ilusão criada de que uma máquina mecânica podia jogar sozinha um jogo de xadrez, durou dezenas de anos, recebendo alguns “Turkers” que a operaram ao longo desses vários anos, uns foram reconhecidos, e outros são um mistério até hoje. (https://pt.wikipedia.org/wiki/O_Turco)
+                Interessante ressaltar a própria origem do termo que dá o nome a esses trabalhadores, os Turkers. No final do século XVII, na áustria, um inventor chamado Wolfgang von Kempelen, construiu uma máquina - <a href="https://pt.wikipedia.org/wiki/O_Turco" target="_blank">“The Turk”</a> - que aparentemente jogava xadrez sozinha, conquistando admiração de muitas pessoas, no entanto, o que as pessoas que viam não sabiam, era o fato de que havia uma camada humana escondida dentro da própria máquina. Um mestre em xadrez que a operava - um “Turker”, ele ficava escondido e movia as peças do xadrez, fazendo parecer que elas se moviam sozinhas - pela própria máquina. Essa ilusão criada de que uma máquina mecânica podia jogar sozinha um jogo de xadrez, durou dezenas de anos, recebendo alguns “Turkers” que a operaram ao longo desses vários anos, uns foram reconhecidos, e outros são um mistério até hoje.
             </el-row>
             <el-row class="topic-text">
                 <div class="card" id="right" style="width: 400px">
-                    <a href="../src/assets/images/faces_gif.gif" data-lightbox="Cluster images" data-title="'Rosto genérico padrão' criado pela sobreposição de 3000 imagens aleatórias de rostos humanos falsos não repetidos gerados pelo This Person Does Not Exist">
-                        <img class="image-link" src="../src/assets/images/faces_gif.gif" alt="Avatar" style="width: 100%; display: block; margin-left: auto; margin-right: auto">
+                    <a href="../src/assets/images/m_turk.jpg" data-lightbox="The Turk" data-title="'The Turk', representação da figura criada por Wolfgang von Kempelen">
+                        <img class="image-link" src="../src/assets/images/m_turk.jpg" alt="Avatar" style="width: 100%; display: block; margin-left: auto; margin-right: auto">
                     </a>
                     <div class="container">
-                        <p style="font-size: 14px; padding-top: 5px"><b>"Imagens-conjunto"</b><br>Criado pela sobreposição de 10, 30, 100, 300,<br>1000 e 3000 imagens.</p> 
-                        <p style="font-size: 14px">B. Fontes e L. Nunes | GAIA</p> 
+                        <p style="font-size: 14px; padding-top: 5px"><b>"The Turk"</b></p> 
+                        <p style="font-size: 14px">Wikipédia</p> 
                     </div>
                 </div>
             </el-row>
             <el-row class="topic-text">
-                Hoje, a tarefa dos Turkers consistem em responder a diferentes tipos de tarefas e questionários sem qualquer tipo de contexto, os quais são intitulados de HITs (Human Intelligence Tasks, ou Tarefas de Inteligência Humana). Os HITs são os mais variados, e podem incluir conteúdos pornográficos e violentos (Moreschi, 2020). A seguir, apresento uma captura de tela do próprio painel de trabalho de um Turker, nela são listados diversos HITs, como:
+                Hoje, a tarefa dos Turkers consistem em responder a diferentes tipos de tarefas e questionários sem qualquer tipo de contexto, os quais são intitulados de HITs (Human Intelligence Tasks, ou Tarefas de Inteligência Humana). Os HITs são os mais variados, e podem incluir conteúdos pornográficos e violentos <a id="ref1__text" href="#ref1">[ref 1]</a>. A seguir, apresento uma captura de tela do próprio painel de trabalho de um Turker, nela são listados diversos HITs, como:
             </el-row>
             <el-row class="topic-text">
                 <ul>
@@ -69,21 +69,21 @@
                 </ul>
             </el-row>
             <el-row class="topic-text">
-                <div class="card" id="right" style="width: 400px">
-                    <a href="../src/assets/images/faces_gif.gif" data-lightbox="Cluster images" data-title="'Rosto genérico padrão' criado pela sobreposição de 3000 imagens aleatórias de rostos humanos falsos não repetidos gerados pelo This Person Does Not Exist">
-                        <img class="image-link" src="../src/assets/images/faces_gif.gif" alt="Avatar" style="width: 100%; display: block; margin-left: auto; margin-right: auto">
+                <div class="card" id="right">
+                    <a href="../src/assets/images/mturk_platform.JPG" data-lightbox="Plataform MTurk" data-title="Captura de tela da plataforma MTurk.">
+                        <img class="image-link" src="../src/assets/images/mturk_platform.JPG" alt="Avatar" style="width: 100%; display: block; margin-left: auto; margin-right: auto">
                     </a>
                     <div class="container">
-                        <p style="font-size: 14px; padding-top: 5px"><b>"Imagens-conjunto"</b><br>Criado pela sobreposição de 10, 30, 100, 300,<br>1000 e 3000 imagens.</p> 
-                        <p style="font-size: 14px">B. Fontes e L. Nunes | GAIA</p> 
+                        <p style="font-size: 14px; padding-top: 5px"><b>Captura de tela da plataforma MTurk.</b></p> 
+                        <p style="font-size: 14px">B. Moreschi</p> 
                     </div>
                 </div>
             </el-row>
             <el-row class="topic-text">
-                Além dos HITs supracitados, existem muitos outros como: “Analisar imagens sexuais”; “Apertar um botão para enviar SMS”; “Moderar fotos de sites de relacionamento”; “Fazer upload de suas fotos pessoais”; “Tirar fotos da calça, muitas vezes com pontos de vistas que incluem regiões íntimas”; “Assistir filmes pornográfico de até 30 minutos de duração”; “Descrever imagens com pessoas mortas, repletas de sangue”, etc. Apesar da plataforma garantir uma diversidade de conteúdo no qual os trabalhadores são expostos, o trabalho realizado na AMT induz um ambiente de trabalho repleto de tarefas e questionários que, a longo prazo, podem ter consequências negativas para a saúde desses trabalhadores. (Moreschi, 2020).
+                Além dos HITs supracitados, existem muitos outros como: “Analisar imagens sexuais”; “Apertar um botão para enviar SMS”; “Moderar fotos de sites de relacionamento”; “Fazer upload de suas fotos pessoais”; “Tirar fotos da calça, muitas vezes com pontos de vistas que incluem regiões íntimas”; “Assistir filmes pornográfico de até 30 minutos de duração”; “Descrever imagens com pessoas mortas, repletas de sangue”, etc. Apesar da plataforma garantir uma diversidade de conteúdo no qual os trabalhadores são expostos, o trabalho realizado na AMT induz um ambiente de trabalho repleto de tarefas e questionários que, a longo prazo, podem ter consequências negativas para a saúde desses trabalhadores <a id="ref1__text" href="#ref1">[ref 1]</a>.
             </el-row>
             <el-row class="topic-text">
-                Para cada HIT é atribuída uma remuneração ao trabalhador, e costuma ser bastante baixa, como podemos ver na imagem, e a grande maioria é inferior a U$ 0,05. Além disso, o trabalhador deve ser qualificado para executar algumas tarefas - costumam ser as que possuem maior remuneração. Para cada HIT, a pessoa/empresa que solicita, pode ou não aceitar pagar pelo trabalho executado pelo Turker; quando o trabalhador recebe pelo trabalho feito, ainda mais de 20% do valor do HIT fica para Amazon (Feitosa, 2020 - https://gizmodo.uol.com.br/amazon-mechanical-turk-plataforma-bicos-ia/). No final, o trabalhador trabalha sem garantias de receber pelo seu serviço, recebe - na maioria das vezes - muito pouco pelo serviço, está sujeito a todo tipo de conteúdo e não tem conhecimento algum sobre o conteúdo que está criando - e eventualmente não tem conhecimento nem para quem.
+                Para cada HIT é atribuída uma remuneração ao trabalhador, e costuma ser bastante baixa, como podemos ver na imagem, e a grande maioria é inferior a U$ 0,05. Além disso, o trabalhador deve ser qualificado para executar algumas tarefas - costumam ser as que possuem maior remuneração. Para cada HIT, a pessoa/empresa que solicita, pode ou não aceitar pagar pelo trabalho executado pelo Turker; quando o trabalhador recebe pelo trabalho feito, ainda mais de 20% do valor do HIT fica para Amazon <a id="ref2__text" href="#ref2">[ref 2]</a>. No final, o trabalhador trabalha sem garantias de receber pelo seu serviço, recebe - na maioria das vezes - muito pouco pelo serviço, está sujeito a todo tipo de conteúdo e não tem conhecimento algum sobre o conteúdo que está criando - e eventualmente não tem conhecimento nem para quem.
             </el-row>
             <el-row class="topic-text">
                 Na pesquisa “Trabalhadores brasileiros no Amazon Mechanical Turk: sonhos e realidades de “trabalhadores fantasmas””, os pesquisadores entrevistaram alguns dos Turkers brasileiros, e um de seus relatos sobre as HITs foi:
@@ -95,6 +95,19 @@
                 Finalizo deixando uma pergunta em aberto: Turkers mais bem treinados, informados e com mais qualidade de vida não ofereceriam resultados de maior qualidade aos sistemas que utilizam IA, aumentam a “eficiência” das máquinas?
             </el-row>
         </div>
+        <div class="topic-reference__outer">
+            <div class="title__outer">
+                <h3>Referências</h3>
+            </div>
+            <div class="topic-reference" id="ref1">
+                <a href="#ref1__text" class="back-to-text"><i class="material-icons">undo</i></a>
+                <b>[ref 1]</b> Moreschi, B., Pereira, G., & Cozman, F. G. Trabalhadores brasileiros no Amazon Mechanical Turk: sonhos e realidades de “trabalhadores fantasmas”. <a href = "https://periodicos.uff.br/contracampo/article/view/38252/html_pt" target="_blank">Link de acesso <i class="material-icons">open_in_new</i></a>
+            </div>
+            <div class="topic-reference" id="ref2">
+                <a href="#ref2__text" class="back-to-text"><i class="material-icons">undo</i></a>
+                <b>[ref 2]</b> Alessandro Feitosa Jr. 2020. MTurk: quem são e o que fazem os brasileiros que estão na plataforma de “bicos” da Amazon. Gizmodo, Brasil. <a href = "https://gizmodo.uol.com.br/amazon-mechanical-turk-plataforma-bicos-ia/" target="_blank">Link de acesso <i class="material-icons">open_in_new</i></a>
+            </div>
+        </div>
     </div>
 </body>
     <!-- import vue -->
@@ -104,7 +117,182 @@
     <!-- import axios -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <!-- import app -->
-    <script src="./../src/js/topic.js"></script>
+    <script src="../src/js/topic.js"></script>
+    <!-- import chartjs -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- lightbox -->
+    <script src="../src/modules/lightbox/lightbox.js"></script>
+    
+
+    <script>
+        var nacionalityLabels = ['EUA', 'Índia', 'Canadá', 'Filipinas', 'Reino Unido', 'Outras'];
+        var nacionalityValues = [57, 32, 3, 1, 1, 6];
+        var nacionalityConfig = {
+			type: 'doughnut',
+			data: {
+				labels: nacionalityLabels,
+				datasets: [{
+					label: 'Nacionalidade',
+					fill: false,
+					borderColor: 'white',
+					backgroundColor: ['#ae2f00', '#cf4e00', '#ffa022', '#ffdb5a', '#ffec6a', '#ffffa8'],
+					data: nacionalityValues
+				}]
+			},
+			options: {
+				title: {
+					display: true,
+					text: 'Nacionalidade',
+                    fontSize: 16,
+				},
+                scales: {
+                    xAxes: [{
+                        gridLines: false,
+                        ticks: {
+                            display: false,
+                        }
+                    }],
+                    yAxes: [{
+                        gridLines: false,
+                        ticks: {
+                            display: false,
+                        }
+                        
+                    }]
+                },
+                legend: {
+                    position: 'left',
+                    display: true,
+                    onHover: function (event, legendItem) {
+                        document.body.style.cursor = "pointer";
+                        if (!legendItem.hidden) {
+                            var chart = this.chart;
+                            var index = legendItem.index;
+                            var segment = chart.getDatasetMeta(0).data[index];
+                            chart.tooltip._active = [segment]
+                            chart.tooltip.update()
+                            chart.draw()
+                        }
+                    },
+                    onLeave: function (event, legendItem) {
+                        var chart = this.chart;
+                        var index = legendItem.index;
+                        chart.tooltip._active = []
+                        chart.tooltip.update()
+                        chart.draw()
+                        document.body.style.cursor = "default";
+                    }
+                },
+                tooltips: {
+                    titleFontSize: 14,
+                    bodyFontSize: 14,
+                    callbacks: {
+                        title: function(tooltipItem, data) {
+                            return data['labels'][tooltipItem[0]['index']];
+                        },
+                        label: function(tooltipItem, data) {
+                            var dataset = data['datasets'][0];
+                            var value = dataset['data'][tooltipItem['index']]
+                            return ' ' + value + '%';
+                        },
+                    },
+                },
+			}
+		};
+
+        var genderLabels = ['Feminino', 'Masculino'];
+        var genderValues = [55, 45];
+        var genderConfig = {
+			type: 'doughnut',
+			data: {
+				labels: genderLabels,
+				datasets: [{
+					label: 'Gênero',
+					fill: false,
+					borderColor: 'white',
+					backgroundColor: ['#cf4e00','#ffec6a'],
+					data: genderValues
+				}]
+			},
+			options: {
+				title: {
+					display: true,
+					text: 'Gênero',
+                    fontSize: 16,
+				},
+                scales: {
+                    xAxes: [{
+                        gridLines: false,
+                        ticks: {
+                            display: false,
+                        }
+                    }],
+                    yAxes: [{
+                        gridLines: false,
+                        ticks: {
+                            display: false,
+                        }
+                        
+                    }]
+                },
+                legend: {
+                    position: 'right',
+                    display: true,
+                    onHover: function (event, legendItem) {
+                        document.body.style.cursor = "pointer";
+                        if (!legendItem.hidden) {
+                            var chart = this.chart;
+                            var index = legendItem.index;
+                            var segment = chart.getDatasetMeta(0).data[index];
+                            chart.tooltip._active = [segment]
+                            chart.tooltip.update()
+                            chart.draw()
+                        }
+                    },
+                    onLeave: function (event, legendItem) {
+                        var chart = this.chart;
+                        var index = legendItem.index;
+                        chart.tooltip._active = []
+                        chart.tooltip.update()
+                        chart.draw()
+                        document.body.style.cursor = "default";
+                    }
+                },
+                tooltips: {
+                    titleFontSize: 14,
+                    bodyFontSize: 14,
+                    callbacks: {
+                        title: function(tooltipItem, data) {
+                            return data['labels'][tooltipItem[0]['index']];
+                        },
+                        label: function(tooltipItem, data) {
+                            var dataset = data['datasets'][0];
+                            var value = dataset['data'][tooltipItem['index']]
+                            return ' ' + value + '%';
+                        },
+                    },
+                },
+			}
+		};
+
+        // chartjs loading
+        window.onload = function() {
+			let ctx = document.getElementById('canvas1').getContext('2d');
+			window.myLine = new Chart(ctx, nacionalityConfig);
+
+            ctx = document.getElementById('canvas2').getContext('2d');
+			window.myLine = new Chart(ctx, genderConfig);
+		};
+
+        // lightbox options
+        lightbox.option({
+            'resizeDuration': 200,
+            'wrapAround': true,
+            'fadeDuration': 200,
+        })
+    </script>
     
 </html>
 
