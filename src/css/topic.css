@@ -74,6 +74,25 @@
   transition: all 0.2s ease;
 }
 
+.topic-sugestions__outer {
+  margin-top: 20px;
+  padding-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-bottom: 1px solid var(--strong-orange_third);
+}
+
+.topic-sugestions {
+  text-align: left;
+	text-justify: inter-word;
+  margin: 20px;
+  max-width: 1000px;
+  font-size: 20px;
+  transition: all 0.2s ease;
+}
+
 .topic-time__outer {
   margin-top: 20px;
   display: flex;
