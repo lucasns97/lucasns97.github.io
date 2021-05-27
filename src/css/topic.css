@@ -43,7 +43,7 @@
 	text-justify: inter-word;
   margin: 20px;
   max-width: 1000px;
-  font-size: 20px;
+  font-size: 18px;
   transition: all 0.2s ease;
 }
 
@@ -52,7 +52,7 @@
 	text-justify: inter-word;
   margin: 20px;
   max-width: 900px;
-  font-size: 18px;
+  font-size: 16px;
   font-style: italic;
   transition: all 0.2s ease;
 }
