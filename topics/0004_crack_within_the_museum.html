@@ -177,14 +177,94 @@
             <div class="title__outer">
                 <h3>Sugestões de leitura</h3>
             </div>
-            <div class="topic-sugestions">
-                <a href="http://www.iea.usp.br/en/eventos/afetando-tecnologias-maquinando-inteligencias" class="back-to-text"><i class="material-icons">menu_book</i></a>
-                <b>Afetando Tecnologias, Maquinando Inteligências</b>
-            </div>
-            <div class="topic-sugestions">
-                <a href="https://lucasns97.github.io/topics/0006_this_person_does_not_exist" class="back-to-text"><i class="material-icons">menu_book</i></a>
-                <b>Quais rostos a IA pode gerar?</b>
-            </div>
+            <el-row class="topic-sugestions__items">
+                <el-col :sm="24" :md="24">
+                    <a href="http://www.iea.usp.br/en/eventos/afetando-tecnologias-maquinando-inteligencias" target="_blank">
+                        <el-card shadow="hover">
+                            <h3 style="font-size: 18px; margin-top: 5px">Afetando Tecnologias, Maquinando Inteligências</h3>
+                            <el-row type="flex">
+                                <el-badge value="IEA-USP" class="item"></el-badge>
+                                <el-badge value="GAIA" class="item"></el-badge>
+                                <el-badge value="C4AI" class="item"></el-badge>
+                            </el-row>
+                        </el-card>
+                    </a>
+                </el-col>
+                <el-col :sm="24" :md="24">
+                    <a href="https://lucasns97.github.io/topics/0006_this_person_does_not_exist" target="_blank">
+                        <el-card shadow="hover">
+                            <h3 style="font-size: 18px; margin-top: 5px">Quais rostos a IA pode gerar?</h3>
+                            <el-row type="flex">
+                                <el-badge value="Lucas N. Sequeira" class="item"></el-badge>
+                                <el-badge value="Bruno S. Moreschi" class="item"></el-badge>
+                                <el-badge value="Amanda Jurno" class="item"></el-badge>
+                                <el-badge value="Vinícius A. A. dos Santos" class="item"></el-badge>
+                            </el-row>
+                        </el-card>
+                    </a>
+                </el-col>
+                <el-col :sm="24" :md="24">
+                    <a href="https://books.google.com.br/books?hl=pt-BR&lr=&id=-ThDDwAAQBAJ&oi=fnd&pg=PP9&dq=NOBLE,+S.+U.+Algorithms+of+oppression:+how+search+engines+reinforce+racism.+New+York:+New+York+University+Press,+2018.+&ots=gBvnZpN_O1&sig=nkf0XJjl4Y32z7BZ6k8WlCc8_0o#v=onepage&q=NOBLE%2C%20S.%20U.%20Algorithms%20of%20oppression%3A%20how%20search%20engines%20reinforce%20racism.%20New%20York%3A%20New%20York%20University%20Press%2C%202018.&f=false" target="_blank">
+                        <el-card shadow="hover">
+                            <h3 style="font-size: 18px; margin-top: 5px">Algorithms of Opression: How Search Engines Reinforce Racism</h3>
+                            <el-row type="flex">
+                                <el-badge value="Safiya U. Noble" class="item"></el-badge>
+                            </el-row>
+                        </el-card>
+                    </a>
+                </el-col>
+                <el-col :sm="24" :md="24">
+                    <a href="https://www.e-flux.com/journal/10/61362/in-defense-of-the-poor-image/" target="_blank">
+                        <el-card shadow="hover">
+                            <h3 style="font-size: 18px; margin-top: 5px">In Defense of the Poor Image</h3>
+                            <el-row type="flex">
+                                <el-badge value="Hito Steyerl" class="item"></el-badge>
+                            </el-row>
+                        </el-card>
+                    </a>
+                </el-col>
+                <el-col :sm="24" :md="24">
+                    <a href="https://www.ceros.com/inspire/originals/recaptcha-waymo-future-of-self-driving-cars/" target="_blank">
+                        <el-card shadow="hover">
+                            <h3 style="font-size: 18px; margin-top: 5px">Recaptcha: Waymo Future of Self-Driving Cars</h3>
+                            <el-row type="flex">
+                                <el-badge value="Ceros" class="item"></el-badge>
+                            </el-row>
+                        </el-card>
+                    </a>
+                </el-col>
+                <el-col :sm="24" :md="24">
+                    <a href="https://comunicacaoeidentidades.files.wordpress.com/2014/07/pg-18-a-51-maquinas-de-ver-modos-de-ser.pdf" target="_blank">
+                        <el-card shadow="hover">
+                            <h3 style="font-size: 18px; margin-top: 5px">Máquinas de Ver, Modos de Ser: Vigilância, Tecnologia e Subjetividade</h3>
+                            <el-row type="flex">
+                                <el-badge value="Fernanda Bruno" class="item"></el-badge>
+                            </el-row>
+                        </el-card>
+                    </a>
+                </el-col>
+                <el-col :sm="24" :md="24">
+                    <a href="https://www.google.com.br/books/edition/Ways_of_Seeing/ilu4K-Xp0v4C?hl=pt-BR" target="_blank">
+                        <el-card shadow="hover">
+                            <h3 style="font-size: 18px; margin-top: 5px">Ways of Seeing</h3>
+                            <el-row type="flex">
+                                <el-badge value="John Berger" class="item"></el-badge>
+                            </el-row>
+                        </el-card>
+                    </a>
+                </el-col>
+                <el-col :sm="24" :md="24">
+                    <a href="https://philpapers.org/rec/PERAIA-7" target="_blank">
+                        <el-card shadow="hover">
+                            <h3 style="font-size: 18px; margin-top: 5px">Artificial Intelligence and Institutional Critique 2.0: Unexpected Ways of Seeing with Computer Vision</h3>
+                            <el-row type="flex">
+                                <el-badge value="Gabriel Pereira" class="item"></el-badge>
+                                <el-badge value="Bruno S. Moreschi" class="item"></el-badge>
+                            </el-row>
+                        </el-card>
+                    </a>
+                </el-col>
+            </el-row>
         </div>
     </div>
     

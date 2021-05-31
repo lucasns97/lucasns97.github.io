@@ -93,6 +93,13 @@
   transition: all 0.2s ease;
 }
 
+.topic-sugestions__items {
+  margin: 20px;
+  max-width: 1000px;
+  font-size: 18px;
+  transition: all 0.2s ease;
+}
+
 .topic-time__outer {
   margin-top: 20px;
   display: flex;

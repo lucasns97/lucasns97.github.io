@@ -115,22 +115,97 @@
             <div class="title__outer">
                 <h3>Sugestões de leitura</h3>
             </div>
-            <div class="topic-sugestions">
-                <a href="https://thispersondoesnotexist.com/" class="back-to-text"><i class="material-icons">menu_book</i></a>
-                <b>This Person Does Not Exist</b>
-            </div>
-            <div class="topic-sugestions">
-                <a href="https://lucasns97.github.io/topics/0004_crack_within_the_museum.html" class="back-to-text"><i class="material-icons">menu_book</i></a>
-                <b>Visão Computacional e Arte Contemporânea</b>
-            </div>
-            <div class="topic-sugestions">
-                <a href="https://www.deeplearningbook.com.br/introducao-as-redes-adversarias-generativas-gans-generative-adversarial-networks/" class="back-to-text"><i class="material-icons">menu_book</i></a>
-                <b>Introdução às Redes Adversárias Generativas (GANs)</b>
-            </div>
-            <div class="topic-sugestions">
-                <a href="http://gendershades.org/" class="back-to-text"><i class="material-icons">menu_book</i></a>
-                <b>Gender Shades</b>
-            </div>
+            <el-row class="topic-sugestions__items">
+                <el-col :sm="24" :md="24">
+                    <a href="https://thispersondoesnotexist.com/" target="_blank">
+                        <el-card shadow="hover">
+                            <h3 style="font-size: 18px; margin-top: 5px">This Person Does Not Exist</h3>
+                            <el-row type="flex">
+                                <el-badge value="Phillip Wang" class="item"></el-badge>
+                            </el-row>
+                        </el-card>
+                    </a>
+                </el-col>
+                <el-col :sm="24" :md="24">
+                    <a href="https://lucasns97.github.io/topics/0004_crack_within_the_museum.html" target="_blank">
+                        <el-card shadow="hover">
+                            <h3 style="font-size: 18px; margin-top: 5px">Visão Computacional e Arte</h3>
+                            <el-row type="flex">
+                                <el-badge value="Lucas N. Sequeira" class="item"></el-badge>
+                                <el-badge value="Bruno S. Moreschi" class="item"></el-badge>
+                            </el-row>
+                        </el-card>
+                    </a>
+                </el-col>
+                <el-col :sm="24" :md="24">
+                    <a href="https://www.deeplearningbook.com.br/introducao-as-redes-adversarias-generativas-gans-generative-adversarial-networks/" target="_blank">
+                        <el-card shadow="hover">
+                            <h3 style="font-size: 18px; margin-top: 5px">Introdução às Redes Adversárias Generativas (GANs)</h3>
+                            <el-row type="flex">
+                                <el-badge value="Ian Goodfellow" class="item"></el-badge>
+                            </el-row>
+                        </el-card>
+                    </a>
+                </el-col>
+                <el-col :sm="24" :md="24">
+                    <a href="http://gendershades.org/" target="_blank">
+                        <el-card shadow="hover">
+                            <h3 style="font-size: 18px; margin-top: 5px">Gender Shades</h3>
+                            <el-row type="flex">
+                                <el-badge value="Joy Buolamwini" class="item"></el-badge>
+                                <el-badge value="Timnit Gebru" class="item"></el-badge>
+                                <el-badge value="Helen Raynham" class="item"></el-badge>
+                                <el-badge value="Deborah Raji" class="item"></el-badge>
+                                <el-badge value="Ethan Zuckerman" class="item"></el-badge>
+                            </el-row>
+                        </el-card>
+                    </a>
+                </el-col>
+                <el-col :sm="24" :md="24">
+                    <a href="https://book.affecting-technologies.org/as-verdades-dos-deepfakes/" target="_blank">
+                        <el-card shadow="hover">
+                            <h3 style="font-size: 18px; margin-top: 5px">As Verdades dos Deepfakes</h3>
+                            <el-row type="flex">
+                                <el-badge value="Giselle Beiguelman" class="item"></el-badge>
+                            </el-row>
+                        </el-card>
+                    </a>
+                </el-col>
+                <el-col :sm="24" :md="24">
+                    <a href="https://library.oapen.org/handle/20.500.12657/23435" target="_blank">
+                        <el-card shadow="hover">
+                            <h3 style="font-size: 18px; margin-top: 5px">Portraits of Automated Facial Recognition: On Machinic Ways of Seeing the Face</h3>
+                            <el-row type="flex">
+                                <el-badge value="Lila Lee-Morrison" class="item"></el-badge>
+                            </el-row>
+                        </el-card>
+                    </a>
+                </el-col>
+                <el-col :sm="24" :md="24">
+                    <a href="https://logicmag.io/commons/lines-of-sight/" target="_blank">
+                        <el-card shadow="hover">
+                            <h3 style="font-size: 18px; margin-top: 5px">Lines of Sight</h3>
+                            <el-row type="flex">
+                                <el-badge value="Alex Hanna" class="item"></el-badge>
+                                <el-badge value="Emily Denton" class="item"></el-badge>
+                                <el-badge value="Razvan Amironesei" class="item"></el-badge>
+                                <el-badge value="Andrew Smart" class="item"></el-badge>
+                                <el-badge value="Hilary Nicole" class="item"></el-badge>
+                            </el-row>
+                        </el-card>
+                    </a>
+                </el-col>
+                <el-col :sm="24" :md="24">
+                    <a href="https://www.image-net.org/" target="_blank">
+                        <el-card shadow="hover">
+                            <h3 style="font-size: 18px; margin-top: 5px">ImageNet</h3>
+                            <el-row type="flex">
+                                <el-badge value="ImageNet" class="item"></el-badge>
+                            </el-row>
+                        </el-card>
+                    </a>
+                </el-col>
+            </el-row>
         </div>
         <div class="topic-reference__outer">
             <div class="title__outer">

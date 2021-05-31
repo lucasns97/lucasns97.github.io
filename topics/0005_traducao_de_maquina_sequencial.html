@@ -91,18 +91,51 @@
             <div class="title__outer">
                 <h3>Sugestões de leitura</h3>
             </div>
-            <div class="topic-sugestions">
-                <a href="https://medium.com/botsbrasil/o-que-%C3%A9-o-processamento-de-linguagem-natural-49ece9371cff" class="back-to-text"><i class="material-icons">menu_book</i></a>
-                <b>O que é o Processamento de Linguagem Natural?</b>
-            </div>
-            <div class="topic-sugestions">
-                <a href="https://lucasns97.github.io/topics/0001_turkers_trabalhadores_invisibilizados_das_ias" class="back-to-text"><i class="material-icons">menu_book</i></a>
-                <b>Turkers: os trabalhadores invisibilizados das IAs</b>
-            </div>
-            <div class="topic-sugestions">
-                <a href="https://arxiv.org/abs/2003.02817" class="back-to-text"><i class="material-icons">menu_book</i></a>
-                <b>An Empirical Accuracy Law for Sequential Machine Translation: the Case of Google Translate</b>
-            </div>
+            <el-row class="topic-sugestions__items">
+                <el-col :sm="24" :md="24">
+                    <a href="https://medium.com/botsbrasil/o-que-%C3%A9-o-processamento-de-linguagem-natural-49ece9371cff" target="_blank">
+                        <el-card shadow="hover">
+                            <h3 style="font-size: 18px; margin-top: 5px">O que é o Processamento de Linguagem Natural?</h3>
+                            <el-row type="flex">
+                                <el-badge value="Jéssica Rodrigues" class="item"></el-badge>
+                            </el-row>
+                        </el-card>
+                    </a>
+                </el-col>
+                <el-col :sm="24" :md="24">
+                    <a href="https://arxiv.org/abs/2003.02817" target="_blank">
+                        <el-card shadow="hover">
+                            <h3 style="font-size: 18px; margin-top: 5px">An Empirical Accuracy Law for Sequential Machine Translation: the Case of Google Translate</h3>
+                            <el-row type="flex">
+                                <el-badge value="Lucas N. Sequeira" class="item"></el-badge>
+                                <el-badge value="Bruno S. Moreschi" class="item"></el-badge>
+                                <el-badge value="Fabio G. Cozman" class="item"></el-badge>
+                                <el-badge value="Bernardo Fontes" class="item"></el-badge>
+                            </el-row>
+                        </el-card>
+                    </a>
+                </el-col>
+                <el-col :sm="24" :md="24">
+                    <a href="https://imasters.com.br/data/um-mergulho-profundo-nas-redes-neurais-recorrentes" target="_blank">
+                        <el-card shadow="hover">
+                            <h3 style="font-size: 18px; margin-top: 5px">Um Mergulho Profundo nas Redes Neurais Recorrentes</h3>
+                            <el-row type="flex">
+                                <el-badge value="M. Tim Jones" class="item"></el-badge>
+                            </el-row>
+                        </el-card>
+                    </a>
+                </el-col>
+                <el-col :sm="24" :md="24">
+                    <a href="https://www.google.com.br/books/edition/Concise_History_of_the_Language_Sciences/VCqLBQAAQBAJ?hl=pt-BR&gbpv=0" target="_blank">
+                        <el-card shadow="hover">
+                            <h3 style="font-size: 18px; margin-top: 5px">Concise History of the Language Sciences</h3>
+                            <el-row type="flex">
+                                <el-badge value="R. E. Asher" class="item"></el-badge>
+                            </el-row>
+                        </el-card>
+                    </a>
+                </el-col>
+            </el-row>
         </div>
         <div class="topic-reference__outer">
             <div class="title__outer">
@@ -114,7 +147,7 @@
             </div>
             <div class="topic-reference" id="ref2">
                 <a href="#ref2__text" class="back-to-text"><i class="material-icons">undo</i></a>
-                <b>[ref 2]</b> W. J. Hutchins, “Machine translation: A brief history,” Concise History of the Language Sciences, p. 431–445, 1995
+                <b>[ref 2]</b> W. J. Hutchins, “Machine translation: A brief history” Concise History of the Language Sciences, p. 431–445, 1995
             </div>
             <div class="topic-reference" id="ref3">
                 <a href="#ref3__text" class="back-to-text"><i class="material-icons">undo</i></a>

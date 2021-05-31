@@ -88,14 +88,96 @@
             <div class="title__outer">
                 <h3>Sugestões de leitura</h3>
             </div>
-            <div class="topic-sugestions">
-                <a href="https://lucasns97.github.io/topics/0003_trabalhos_dos_turks.html" class="back-to-text"><i class="material-icons">menu_book</i></a>
-                <b>Trabalhos dos Turkers - HITs</b>
-            </div>
-            <div class="topic-sugestions">
-                <a href="https://periodicos.uff.br/contracampo/article/view/38252" class="back-to-text"><i class="material-icons">menu_book</i></a>
-                <b>Os trabalhadores brasileiros na Amazon Mechanical Turk: sonhos e realidades de trabalhadores fantasmas</b>
-            </div>
+            <el-row class="topic-sugestions__items">
+                <el-col :sm="24" :md="24">
+                    <a href="https://lucasns97.github.io/topics/0003_trabalhos_dos_turks.html" target="_blank">
+                        <el-card shadow="hover">
+                            <h3 style="font-size: 18px; margin-top: 5px">Trabalhos dos Turkers - HITs</h3>
+                            <el-row type="flex">
+                                <el-badge value="Lucas N. Sequeira" class="item"></el-badge>
+                                <el-badge value="Bruno S. Moreschi" class="item"></el-badge>
+                            </el-row>
+                        </el-card>
+                    </a>
+                </el-col>
+                <el-col :sm="24" :md="24">
+                    <a href="https://periodicos.uff.br/contracampo/article/view/38252" target="_blank">
+                        <el-card shadow="hover">
+                            <h3 style="font-size: 18px; margin-top: 5px">Os Trabalhadores Brasileiros na Amazon Mechanical Turk: Sonhos e Realidades de Trabalhadores Fantasmas</h3>
+                            <el-row type="flex">
+                                <el-badge value="Bruno S. Moreschi" class="item"></el-badge>
+                                <el-badge value="Gabriel Pereira" class="item"></el-badge>
+                                <el-badge value="Fabio G. Cozman" class="item"></el-badge>
+                            </el-row>
+                        </el-card>
+                    </a>
+                </el-col>
+                <el-col :sm="24" :md="24">
+                    <a href="https://anatomyof.ai/" target="_blank">
+                        <el-card shadow="hover">
+                            <h3 style="font-size: 18px; margin-top: 5px">Anatomy of an AI System</h3>
+                            <el-row type="flex">
+                                <el-badge value="Kate Crawford" class="item"></el-badge>
+                                <el-badge value="Vladan Joler" class="item"></el-badge>
+                            </el-row>
+                        </el-card>
+                    </a>
+                </el-col>
+                <el-col :sm="24" :md="24">
+                    <a href="https://www.google.com.br/books/edition/Digital_Labour_and_Karl_Marx/BoJ1oAEACAAJ?hl=pt-BR" target="_blank">
+                        <el-card shadow="hover">
+                            <h3 style="font-size: 18px; margin-top: 5px">Digital Labour and Karl Marx</h3>
+                            <el-row type="flex">
+                                <el-badge value="Christian Fuchs" class="item"></el-badge>
+                            </el-row>
+                        </el-card>
+                    </a>
+                </el-col>
+                <el-col :sm="24" :md="24">
+                    <a href="https://exchanges.withturkers.net/" target="_blank">
+                        <el-card shadow="hover">
+                            <h3 style="font-size: 18px; margin-top: 5px">Exchanges w/ Turkers</h3>
+                            <el-row type="flex">
+                                <el-badge value="Bruno S. Moreschi" class="item"></el-badge>
+                                <el-badge value="Bernardo Fontes" class="item"></el-badge>
+                                <el-badge value="Guilherme Falcão" class="item"></el-badge>
+                                <el-badge value="Gabriel Pereira" class="item"></el-badge>
+                            </el-row>
+                        </el-card>
+                    </a>
+                </el-col>
+                <el-col :sm="24" :md="24">
+                    <a href="https://www.google.com.br/books/edition/Ghost_Work/8AmXDwAAQBAJ?hl=pt-BR&gbpv=0" target="_blank">
+                        <el-card shadow="hover">
+                            <h3 style="font-size: 18px; margin-top: 5px">Ghost Work: How to Stop Silicon Valley from Building a New Global Underclass</h3>
+                            <el-row type="flex">
+                                <el-badge value="Mary L. Gray" class="item"></el-badge>
+                                <el-badge value="Siddharth Suri" class="item"></el-badge>
+                            </el-row>
+                        </el-card>
+                    </a>
+                </el-col>
+                <el-col :sm="24" :md="24">
+                    <a href="https://turkopticon.ucsd.edu/" target="_blank">
+                        <el-card shadow="hover">
+                            <h3 style="font-size: 18px; margin-top: 5px">Turkopticon</h3>
+                            <el-row type="flex">
+                                <el-badge value="Turkopticon" class="item"></el-badge>
+                            </el-row>
+                        </el-card>
+                    </a>
+                </el-col>
+                <el-col :sm="24" :md="24">
+                    <a href="https://dl.acm.org/doi/10.1145/3290607.3312970" target="_blank">
+                        <el-card shadow="hover">
+                            <h3 style="font-size: 18px; margin-top: 5px">Worker Demographics and Earnings on Amazon Mechanical Turk: An Exploratory Analysis</h3>
+                            <el-row type="flex">
+                                <el-badge value="Kotaro Hara et. al" class="item"></el-badge>
+                            </el-row>
+                        </el-card>
+                    </a>
+                </el-col>
+            </el-row>
         </div>
         <div class="topic-reference__outer">
             <div class="title__outer">

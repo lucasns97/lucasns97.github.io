@@ -99,18 +99,70 @@
             <div class="title__outer">
                 <h3>Sugestões de leitura</h3>
             </div>
-            <div class="topic-sugestions">
-                <a href="https://lucasns97.github.io/topics/0006_this_person_does_not_exist.html" class="back-to-text"><i class="material-icons">menu_book</i></a>
-                <b>Quais rostos a IA pode gerar?</b>
-            </div>
-            <div class="topic-sugestions">
-                <a href="https://lucasns97.github.io/topics/0001_turkers_trabalhadores_invisibilizados_das_ias.html" class="back-to-text"><i class="material-icons">menu_book</i></a>
-                <b>Turkers: os trabalhadores invisibilizados das IAs</b>
-            </div>
-            <div class="topic-sugestions">
-                <a href="https://visualgenome.org/" class="back-to-text"><i class="material-icons">menu_book</i></a>
-                <b>Visual Genome</b>
-            </div>
+            <el-row class="topic-sugestions__items">
+                <el-col :sm="24" :md="24">
+                    <a href="https://lucasns97.github.io/topics/0001_turkers_trabalhadores_invisibilizados_das_ias.html" target="_blank">
+                        <el-card shadow="hover">
+                            <h3 style="font-size: 18px; margin-top: 5px">Turkers: os trabalhadores invisibilizados das IAs</h3>
+                            <el-row type="flex">
+                                <el-badge value="Lucas N. Sequeira" class="item"></el-badge>
+                                <el-badge value="Bruno S. Moreschi" class="item"></el-badge>
+                            </el-row>
+                        </el-card>
+                    </a>
+                </el-col>
+                <el-col :sm="24" :md="24">
+                    <a href="https://visualgenome.org/" target="_blank">
+                        <el-card shadow="hover">
+                            <h3 style="font-size: 18px; margin-top: 5px">Visual Genome</h3>
+                            <el-row type="flex">
+                                <el-badge value="Ranjay Krishna et. al" class="item"></el-badge>
+                            </el-row>
+                        </el-card>
+                    </a>
+                </el-col>
+                <el-col :sm="24" :md="24">
+                    <a href="https://ijoc.org/index.php/ijoc/article/viewFile/6349/2149" target="_blank">
+                        <el-card shadow="hover">
+                            <h3 style="font-size: 18px; margin-top: 5px">Digital Labor Studies Go Global: Toward a Digital Decolonial Turn</h3>
+                            <el-row type="flex">
+                                <el-badge value="Antonio A. Casilli" class="item"></el-badge>
+                            </el-row>
+                        </el-card>
+                    </a>
+                </el-col>
+                <el-col :sm="24" :md="24">
+                    <a href="https://www2.boitempoeditorial.com.br/produto/os-laboratorios-do-trabalho-digital-entrevistas-1085" target="_blank">
+                        <el-card shadow="hover">
+                            <h3 style="font-size: 18px; margin-top: 5px">Os laboratórios do trabalho digital: entrevistas</h3>
+                            <el-row type="flex">
+                                <el-badge value="Rafael Grohmann" class="item"></el-badge>
+                            </el-row>
+                        </el-card>
+                    </a>
+                </el-col>
+                <el-col :sm="24" :md="24">
+                    <a href="https://www.google.com.br/books/edition/Riqueza_e_mis%C3%A9ria_do_trabalho_no_Brasil/gHs7pFAF7AUC?hl=pt-BR&gbpv=0&bsq=Riqueza%20e%20mis%C3%A9ria%20do%20trabalho%20no%20Brasil%20IV" target="_blank">
+                        <el-card shadow="hover">
+                            <h3 style="font-size: 18px; margin-top: 5px">Riqueza e miséria do trabalho no Brasil IV</h3>
+                            <el-row type="flex">
+                                <el-badge value="Ricardo Antunes" class="item"></el-badge>
+                            </el-row>
+                        </el-card>
+                    </a>
+                </el-col>
+                <el-col :sm="24" :md="24">
+                    <a href="https://www.google.com.br/books/edition/24_7_Capitalismo_tardio_e_os_fins_do_son/ZNHZDQAAQBAJ?hl=pt-BR&gbpv=0" target="_blank">
+                        <el-card shadow="hover">
+                            <h3 style="font-size: 18px; margin-top: 5px">24/7: Capitalismo tardio e os fins do sono</h3>
+                            <el-row type="flex">
+                                <el-badge value="Jonathan Crary" class="item"></el-badge>
+                                <el-badge value="Joaquim Toledo Jr" class="item"></el-badge>
+                            </el-row>
+                        </el-card>
+                    </a>
+                </el-col>
+            </el-row>
         </div>
         <div class="topic-reference__outer">
             <div class="title__outer">
