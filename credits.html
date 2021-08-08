@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>IA Experimental - Agradecimentos</title>
+    <!-- import CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <!-- bootstrap -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <link rel="stylesheet" href="src/css/app.css">
+</head>
+
+<body>
+    <div id="credits">
+        <el-row class="menu__outer">
+            <el-menu
+                :default-active="activeMenu"
+                class="el-menu-demo"
+                mode="horizontal"
+                @select="handleMenu"
+                background-color="#FFFFFF"
+                text-color="#4E598C"
+                active-text-color="#FF8C42">
+                <el-menu-item index="1" class="menu-text" @click="navigateTo('index.html')">Home</el-menu-item>
+                <el-menu-item index="2" class="menu-text" @click="navigateTo('search.html')">Pesquise</el-menu-item>
+                <el-menu-item index="3" class="menu-text" @click="navigateTo('credits.html')">Agradecimentos</el-menu-item>
+            </el-menu>
+        </el-row>
+        <!-- home -->
+        <div>
+            <div class="introduction-text__outer">
+                <el-row class="introduction-text">Ao longo desses dois anos de pesquisa e colaboração científica, eu agradeço muito ao Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq), o instituto de fomento à pesquisa nacional pelos dois anos de bolsa de Pesquisa.</el-row>
+                
+                <el-row class="introduction-text">Um agradecimento especial ao meu orientador, Bruno Moreschi que pôde sempre me acompanhar no desenvolvimento do projeto e no meu crescimento acadêmico.</el-row>
+                <el-row class="introduction-text">Agradeço também aos colaboradores do GAIA, Amanda Jurno, Bernardo Fontes, Gabriel Pereira, Giselle Beiguelman, Rafael Tsu, Vinícius Ariel, e muitos outros.</el-row>
+                
+                <el-row class="introduction-text">Agradeço também à coleção Moraes-Barbosa, que teve um papel fundamental no fomento à pesquisa no GAIA.</el-row>
+                
+                <el-row class="introduction-text">Um agradecimento especial à minha família e à minha companheira Paloma Victor, por me condicionarem motivação e foco.</el-row>
+                <el-row class="introduction-text">Agradeço à Universidade de São Paulo por proporcionar toda a infraestrutura necessária para o desenvolvimento da pesquisa.</el-row>
+                
+                <el-row class="introduction-text" style="margin: 20px;">
+                    <div class="card" id="right" style="width: 200px">
+                        <img class="image-link" src="src/assets/images/cnpq.png" alt="Avatar" style="width: 100%; display: block; margin-left: auto; margin-right: auto">
+                    </div>
+                </el-row>
+                <el-row class="introduction-text" style="margin: 20px;">
+                    <div class="card" id="right" style="width: 200px">
+                        <img class="image-link" src="src/assets/images/GAIA_provisorio.png" alt="Avatar" style="width: 100%; display: block; margin-left: auto; margin-right: auto">
+                    </div>
+                </el-row>
+                <el-row class="introduction-text" style="margin: 20px;">
+                    <div class="card" id="right" style="width: 200px">
+                        <img class="image-link" src="src/assets/images/moraes_barbosa.png" alt="Avatar" style="width: 100%; display: block; margin-left: auto; margin-right: auto">
+                    </div>
+                </el-row>
+                <el-row class="introduction-text" style="margin: 20px;">
+                    <div class="card" id="right" style="width: 200px">
+                        <img class="image-link" src="src/assets/images/usp.png" alt="Avatar" style="width: 100%; display: block; margin-left: auto; margin-right: auto">
+                    </div>
+                </el-row>
+
+                <el-row class="introduction-text">
+                    <strong>Obrigado!</strong>
+                </el-row>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+    <!-- import vue -->
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <!-- import element ui -->
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <!-- import axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!-- import app -->
+    <script src="src/js/credits.js"></script>
+    <!-- import chartjs -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- lightbox -->
+    <script src="src/modules/lightbox/lightbox.js"></script>
+    
+
+    <script>
+        // lightbox options
+        lightbox.option({
+            'resizeDuration': 200,
+            'wrapAround': true,
+            'fadeDuration': 200,
+        })
+    </script>
+    
+</html>
+
+
+
