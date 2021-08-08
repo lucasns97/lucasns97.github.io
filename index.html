@@ -26,17 +26,27 @@
                 active-text-color="#FF8C42">
                 <el-menu-item index="1" class="menu-text" @click="navigateTo('index.html')">Home</el-menu-item>
                 <el-menu-item index="2" class="menu-text" @click="navigateTo('search.html')">Pesquise</el-menu-item>
+                <el-menu-item index="3" class="menu-text" @click="navigateTo('credits.html')">Agradecimentos</el-menu-item>
             </el-menu>
         </el-row>
         <!-- home -->
         <div>
             <div class="introduction-text__outer">
-                <el-row class="introduction-text">Ingressei na Universidade de São Paulo (<a href="https://www5.usp.br/" target="_blank">USP</a>) em 2017, no curso de Engenharia. Mas buscava algo mais interdisciplinar, o que me fez trocar de curso, para Ciências Moleculares. O curso exige que <a class="gender" @click="changeGender()">{{ genderPairs['ao'][selectedGender] }}</a> alun<a class="gender" @click="changeGender()">{{ genderPairs['ao'][selectedGender] }}</a> complete dois anos de ciclo básico, período em que me deparei com diferentes campos do conhecimento dentro das ciências exatas e biológicas; como neurociência, grafos em computação, cálculo, química orgânica etc. Os dois anos que se seguem (chamado de ciclo avançado) é o período que <a class="gender" @click="changeGender()">{{ genderPairs['ao'][selectedGender] }}</a> alun<a class="gender" @click="changeGender()">{{ genderPairs['ao'][selectedGender] }}</a> define um projeto de pesquisa a ser orientado por um<a class="gender" @click="changeGender()">{{ genderPairs['a_'][selectedGender] }}</a> pesquisador<a class="gender" @click="changeGender()">{{ genderPairs['a_'][selectedGender] }}</a>, como também as disciplinas que irá cursar, dando foco a, ao menos, uma área específica.</el-row>
-                <el-row class="introduction-text">Muito interessado por computação (mas também por artes), tinha em mente uma área da estatística para seguir estudo: o campo da Inteligência Artificial (IA). Meados de Abril de 2019, conheci o pesquisador e artista <a href="http://www.brunomoreschi.com" target="_blank">Bruno Moreschi</a>; que iniciava na USP uma residência artística que precedeu um pós doutorado – ele passou a ser meu orientador. Iniciei a pesquisa com leituras que estimulam a intersecção do campo das IAs com camadas humanas, como o projeto <a href="https://anatomyof.ai/" target="_blank">Anatomy of an AI System</a> de Kate Crawford e Vladan Joler; e o livro <a href="https://mitpress.mit.edu/books/machine-learners" target="_blank">Machine Learners: Archaeology of a Data Practice</a> de Adrian Mackenzie.</el-row>
-                <el-row class="introduction-text">O início das investigações que culminaram neste website deu-se graças ao professor <a href="http://sites.poli.usp.br/p/fabio.cozman/" target="_blank">Fabio Cozman</a> (POLI-USP), que inicialmente pode nos conceder uma pequena sala dentro do prédio do Centro de Inovação da USP, o <a href="https://inova.usp.br/" target="_blank">Inova USP</a>. Foi nessa sala que iniciamos as leituras e o ínicio do desenvolvimento deste material. Nossa ideia sempre foi que este projeto fosse algo que garantisse acessibilidade e conteúdo crítico complementar aos cursos de aprendizado de máquina online.</el-row>
-                <el-row class="introduction-text">Nessa plataforma você terá acesso a alguns tópicos relacionados ao aprendizado de máquina, incluindo relatos de experiências que realizamos neste processo. Não sabe o que é “aprendizado de máquina”? Sem problemas. Sugiro você começar por aqui. Vale ressaltar que o conteúdo está relacionado com uma perspectiva crítica de encarar processos que perpassam as IAs como algo já inserido na nossa sociedade, que por sua vez, possui implicações sociais. Nosso objetivo também é ampliar referências do campo para além do Norte Global.</el-row>
-                <el-row class="introduction-text">Esse projeto insere-se no <a href="https://sites.usp.br/gaia/quem-somos/" target="_blank">Grupo de Arte e Inteligência Artificial da USP</a> (GAIA), uma rede de pesquisadores e artistas interessados em refletir e problematizar as infraestruturas digitais contemporâneas de forma experimental e artística.</el-row>
-                <el-row class="introduction-text">Este trabalho compila dois anos de pesquisas e experimentações, em que foram produzidos artigos, seminários e workshops. O relato e a discussão crítica dessas ações são aqui pensados em forma de uma rede interligada de aproximações que, juntas, podem contribuir para perspectivas mais críticas e diversas em relação ao campo de aprendizado de máquina. Sempre levando em conta o contexto produzido deste trabalho: São Paulo, Brasil, América Latina, Sul Global. Boa visita!</el-row>
+                <el-row class="introduction-text">Me chamo Lucas Nunes Sequeira, ingressei na Universidade de São Paulo (<a href="https://www5.usp.br/" target="_blank">USP</a>) em 2017, no curso de Engenharia. Mas buscava algo mais interdisciplinar, o que me fez trocar de curso, para Ciências Moleculares. O curso exige que <a class="gender" @click="changeGender()">{{ genderPairs['ao'][selectedGender] }}</a> alun<a class="gender" @click="changeGender()">{{ genderPairs['ao'][selectedGender] }}</a> complete dois anos de ciclo básico, período em que me deparei com diferentes campos do conhecimento dentro das ciências exatas e biológicas; como neurociência, ciência da computação, matemática, química orgânica etc. Os dois anos que se seguem (chamado de "ciclo avançado") é o período que <a class="gender" @click="changeGender()">{{ genderPairs['ao'][selectedGender] }}</a> alun<a class="gender" @click="changeGender()">{{ genderPairs['ao'][selectedGender] }}</a> define um projeto de pesquisa a ser desenvolvido, como também as disciplinas que irá cursar nas diferentes faculdades da USP (ou em outras Universidades), dando foco a, ao menos, uma área específica.</el-row>
+                    <div class="card" id="right" style="width: 600px">
+                        <a href="src/assets/images/intro.jpg" data-lightbox="The Turk" data-title="Membros do GAIA em uma dinâmica de trabalho">
+                            <img class="image-link" src="src/assets/images/intro.jpg" alt="Avatar" style="width: 100%; display: block; margin-left: auto; margin-right: auto">
+                        </a>
+                        <div class="container">
+                            <p style="font-size: 14px; padding-top: 5px"><b>GAIA</b></p> 
+                            <p style="font-size: 14px">Membros do GAIA em uma dinâmica de trabalho</p> 
+                        </div>
+                    </div>
+                <el-row class="introduction-text">Muito interessado por computação (mas também por artes), tinha em mente uma área da estatística para seguir estudo: o campo da Inteligência Artificial (IA). Meados de Abril de 2019, conheci o pesquisador e artista <a href="http://www.brunomoreschi.com" target="_blank">Bruno Moreschi</a>; que iniciava na USP uma residência artística que precedeu um pós doutorado na Faculdade de Arquitetura e Urbanismo – ele passou a ser meu orientador. Iniciei a pesquisa com leituras que estimulam a intersecção do campo das IAs com as humanidades, como o projeto <a href="https://anatomyof.ai/" target="_blank">Anatomy of an AI System</a> de Kate Crawford e Vladan Joler; e o livro <a href="https://mitpress.mit.edu/books/machine-learners" target="_blank">Machine Learners: Archaeology of a Data Practice</a> de Adrian Mackenzie.</el-row>
+                <el-row class="introduction-text">As investigações que culminaram neste website se deu graças ao professor da Escola Politécnica da USP e diretor do <a href="https://c4ai.inova.usp.br/pt/home-2/" target="_blank">C4AI</a>, <a href="http://sites.poli.usp.br/p/fabio.cozman/" target="_blank">Fabio Cozman</a>,  que nos ofereceu uma sala dentro do prédio do Centro de Inovação da USP, o <a href="https://inova.usp.br/" target="_blank">Inova USP</a>. Foi nesse espaço que iniciamos o desenvolvimento deste material. Nossa ideia sempre foi que este projeto fosse algo que garantisse acessibilidade e conteúdo crítico complementar aos cursos online de aprendizado de máquina.</el-row>
+                <el-row class="introduction-text">Nessa plataforma você terá acesso a algumas experiências relacionadas ao aprendizado de máquina, sempre a partir de experiências realizadas neste processo. Não sabe o que é “aprendizado de máquina”? Sem problemas. Sugiro você começar por aqui. Vale ressaltar que o conteúdo foi construído a partir de  uma perspectiva crítica em relação a encarar os múltiplos (e muitas vezes opacos) processos que viabilizaram a IA na nossa sociedade, incluindo suas potencialidades positivas, assim como sua vez, possui implicações sociais. Nossa preocupação com este material também é ampliar referências do campo para além do Norte Global.</el-row>
+                <el-row class="introduction-text">Esse projeto insere-se no <a href="https://sites.usp.br/gaia/quem-somos/" target="_blank">Grupo de Arte e Inteligência Artificial da USP</a> (GAIA), coordenador por <a href="https://bv.fapesp.br/pt/pesquisador/88539/giselle-beiguelman/" target="_blank">Giselle Beiguelman</a> e Bruno Moreschi, parte do C4AI, localizado no Inova USP, uma rede de pesquisador<a class="gender" @click="changeGender()">{{ genderPairs['ae'][selectedGender] }}</a>s interessad<a class="gender" @click="changeGender()">{{ genderPairs['ao'][selectedGender] }}</a>s em refletir e problematizar as infraestruturas digitais contemporâneas de forma experimental e artística.</el-row>
+                <el-row class="introduction-text">Este trabalho compila dois anos de pesquisas e experimentações, em formatos diversos, como artigos acadêmicos ou não, seminários, participação em aulas, grupos de leituras, workshops e ações para além da universidade. O relato e a discussão crítica dessas ações são aqui pensados em forma de uma rede interligada de aproximações que, juntas, podem contribuir para perspectivas mais críticas e diversas em relação ao campo de aprendizado de máquina. Boa visita!</el-row>
             </div>
         </div>
     </div>
@@ -51,6 +61,22 @@
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <!-- import app -->
     <script src="src/js/index.js"></script>
+    <!-- import chartjs -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- lightbox -->
+    <script src="src/modules/lightbox/lightbox.js"></script>
+    
+
+    <script>
+        // lightbox options
+        lightbox.option({
+            'resizeDuration': 200,
+            'wrapAround': true,
+            'fadeDuration': 200,
+        })
+    </script>
     
 </html>
 
