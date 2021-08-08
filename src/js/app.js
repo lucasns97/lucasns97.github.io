@@ -55,6 +55,7 @@ const vm = new Vue({
         },
 
         handleMenu(key, keyPath) {
+            console.log(key)
             this.activeMenu = key;
         },
 
