@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="UTF-8">
-    <title>Experiência com Tradução Sequencial de Máquina</title>
+    <title>Tradução de Máquina, um jogo de "Telefone Sem Fio"</title>
     <!-- import CSS -->
     <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
@@ -22,7 +22,7 @@
             <el-button round @click="navigateTo('../search.html')"><i class="material-icons">reply</i> Voltar</el-button>
         </div>
         <div class="title__outer">
-            <h2 class="title-text">Experiência com Tradução Sequencial de Máquina</h2>
+            <h2 class="title-text">Tradução de Máquina, um jogo de "Telefone Sem Fio"</h2>
         </div>
         <div class="tags__outer">
             <div class="row" style="margin: 0; padding: 0">
@@ -38,10 +38,21 @@
         </div>
         <div class="topic-text__outer">
             <el-row class="topic-text">
+                <div class="card" id="right" style="width: 500px">
+                    <a href="../src/assets/images/prensa_gutenberg.png" data-lightbox="Prensa de Gutenberg" data-title="Desenho ilustrativo da primeira prensa que permitiria impressão em massa">
+                        <img class="image-link" src="../src/assets/images/prensa_gutenberg.png" alt="Avatar" style="width: 100%; display: block; margin-left: auto; margin-right: auto">
+                    </a>
+                    <div class="container">
+                        <p style="font-size: 14px; padding-top: 5px"><b>Fonte: <a href = "https://pt.wikipedia.org/wiki/Prensa_m%C3%B3vel" target="_blank">Prensa de Gutenberg <i class="material-icons">open_in_new</i></a></b></p> 
+                    </div>
+                </div>
+            </el-row>
+            <el-row class="topic-text">
                 Algumas das primeiras traduções transformaram poemas sumérios em línguas asiáticas cerca de 4500 anos atrás <a id="ref1__text" href="#ref1">[ref 1]</a><a id="ref2__text" href="#ref2">[ref 2]</a>. Em 1440, com o desenvolvimento da imprensa, ficou mais fácil circular textos; consequentemente, os serviços de tradução se tornaram mais comuns. Desde a popularização da Internet, vivemos em um mundo onde a tradução é essencial com sistemas eficazes de tradução automática.
             </el-row>
             <el-row class="topic-text">
                 <canvas id="canvas1" style="width: 750px"></canvas> 
+                <p style="font-size: 14px; padding-top: 5px"><b>Quantidade de idiomas em diferentes serviços de tradução (2019)</b></p> 
             </el-row>
             <el-row class="topic-text">
                 Nesta pesquisa, desejamos compreender as características dos sistemas de tradução automática multilinguística. E como foco, a tradução sequencial, que poderíamos descrever resumidamente como um conjunto de traduções passo a passo de um único texto em uma cadeia de idiomas diferentes, como se as máquinas fossem jogar uma espécie de “telefone sem fio”. Isso é, uma frase de entrada deve ser traduzida sequencialmente em diferentes idiomas em várias etapas, e nosso objetivo é ver o que acontece com os textos de saída. Imagine isso acontecendo em um mundo onde muitas máquinas operam em vários idiomas e a tradução pode ocorrer em vários saltos até chegar a um determinado agente. O que um agente há de esperar da mensagem de recebimento em comparação com o original?
