@@ -12,10 +12,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
     <link rel="stylesheet" href="src/css/app.css">
     <link rel="stylesheet" href="src/modules/lightbox/lightbox.css">
+
+    <style>
+        /* evita mostrar o template cru antes do Vue montar */
+        [v-cloak] { display: none; }
+    </style>
 </head>
 
 <body>
-    <div id="credits">
+    <div id="credits" v-cloak>
         <el-row class="menu__outer">
             <el-menu
                 :default-active="activeMenu"
@@ -45,22 +50,22 @@
                 
                 <el-row class="introduction-text" style="margin: 20px;">
                     <div class="card" id="right" style="width: 200px">
-                        <img class="image-link" src="src/assets/images/cnpq.png" alt="Avatar" style="width: 100%; display: block; margin-left: auto; margin-right: auto">
+                        <img class="image-link" src="src/assets/images/cnpq.png" alt="CNPq" style="width: 100%; display: block; margin-left: auto; margin-right: auto">
                     </div>
                 </el-row>
                 <el-row class="introduction-text" style="margin: 20px;">
                     <div class="card" id="right" style="width: 200px">
-                        <img class="image-link" src="src/assets/images/GAIA_provisorio.png" alt="Avatar" style="width: 100%; display: block; margin-left: auto; margin-right: auto">
+                        <img class="image-link" src="src/assets/images/GAIA_provisorio.png" alt="GAIA" style="width: 100%; display: block; margin-left: auto; margin-right: auto">
                     </div>
                 </el-row>
                 <el-row class="introduction-text" style="margin: 20px;">
                     <div class="card" id="right" style="width: 200px">
-                        <img class="image-link" src="src/assets/images/moraes_barbosa.png" alt="Avatar" style="width: 100%; display: block; margin-left: auto; margin-right: auto">
+                        <img class="image-link" src="src/assets/images/moraes_barbosa.png" alt="Coleção Moraes-Barbosa" style="width: 100%; display: block; margin-left: auto; margin-right: auto">
                     </div>
                 </el-row>
                 <el-row class="introduction-text" style="margin: 20px;">
                     <div class="card" id="right" style="width: 200px">
-                        <img class="image-link" src="src/assets/images/usp.png" alt="Avatar" style="width: 100%; display: block; margin-left: auto; margin-right: auto">
+                        <img class="image-link" src="src/assets/images/usp.png" alt="USP" style="width: 100%; display: block; margin-left: auto; margin-right: auto">
                     </div>
                 </el-row>
 
@@ -71,34 +76,47 @@
         </div>
     </div>
 
-</body>
-
-    <!-- import vue -->
-    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <!-- import vue (fixado na v2, compatível com Element UI) -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.min.js"></script>
     <!-- import element ui -->
     <script src="https://unpkg.com/element-ui/lib/index.js"></script>
     <!-- import axios -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <!-- import app -->
-    <script src="src/js/credits.js"></script>
     <!-- import chartjs -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- lightbox -->
     <script src="src/modules/lightbox/lightbox.js"></script>
-    
 
     <script>
-        // lightbox options
-        lightbox.option({
-            'resizeDuration': 200,
-            'wrapAround': true,
-            'fadeDuration': 200,
-        })
+        // lightbox options (só configura se o lightbox carregou)
+        if (typeof lightbox !== 'undefined') {
+            lightbox.option({
+                'resizeDuration': 200,
+                'wrapAround': true,
+                'fadeDuration': 200,
+            })
+        }
     </script>
-    
+
+    <!-- instância Vue (substitui o src/js/credits.js) -->
+    <script>
+        new Vue({
+            el: '#credits',
+            data: {
+                activeMenu: '3'
+            },
+            methods: {
+                navigateTo: function (page) {
+                    window.location.href = page;
+                },
+                handleMenu: function (index) {
+                    this.activeMenu = index;
+                }
+            }
+        });
+    </script>
+
+</body>
 </html>
-
-
-
