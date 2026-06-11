@@ -12,10 +12,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
     <link rel="stylesheet" href="src/css/app.css">
     <link rel="stylesheet" href="src/modules/lightbox/lightbox.css">
+
+    <style>
+        /* evita mostrar {{ }} cru antes do Vue montar */
+        [v-cloak] { display: none; }
+    </style>
 </head>
 
 <body>
-    <div id="index">
+    <div id="index" v-cloak>
         <el-row class="menu__outer">
             <el-menu
                 :default-active="activeMenu"
@@ -45,39 +50,64 @@
                     </div>
                 <el-row class="introduction-text">Muito interessado por computação (mas também por artes), tinha em mente uma área da estatística para seguir estudo: o campo da Inteligência Artificial (IA). Meados de Abril de 2019, conheci o pesquisador e artista <a href="http://www.brunomoreschi.com" target="_blank">Bruno Moreschi</a>; que iniciava na USP uma residência artística que precedeu um pós doutorado na Faculdade de Arquitetura e Urbanismo – ele passou a ser meu orientador. Iniciei a pesquisa com leituras que estimulam a intersecção do campo das IAs com as humanidades, como o projeto <a href="https://anatomyof.ai/" target="_blank">Anatomy of an AI System</a> de Kate Crawford e Vladan Joler; e o livro <a href="https://mitpress.mit.edu/books/machine-learners" target="_blank">Machine Learners: Archaeology of a Data Practice</a> de Adrian Mackenzie.</el-row>
                 <el-row class="introduction-text">As investigações que culminaram neste website se deu graças ao professor da Escola Politécnica da USP e diretor do <a href="https://c4ai.inova.usp.br/pt/home-2/" target="_blank">C4AI</a>, <a href="http://sites.poli.usp.br/p/fabio.cozman/" target="_blank">Fabio Cozman</a>,  que nos ofereceu uma sala dentro do prédio do Centro de Inovação da USP, o <a href="https://inova.usp.br/" target="_blank">Inova USP</a>. Foi nesse espaço que iniciamos o desenvolvimento deste material. Nossa ideia sempre foi que este projeto fosse algo que garantisse acessibilidade e conteúdo crítico complementar aos cursos online de aprendizado de máquina.</el-row>
-                <el-row class="introduction-text">Nessa plataforma você terá acesso a algumas experiências relacionadas ao aprendizado de máquina, sempre a partir de experiências realizadas neste processo. Não sabe o que é “aprendizado de máquina”? Sem problemas. Sugiro você começar por aqui. Vale ressaltar que o conteúdo foi construído a partir de  uma perspectiva crítica em relação a encarar os múltiplos (e muitas vezes opacos) processos que viabilizaram a IA na nossa sociedade, incluindo suas potencialidades positivas, assim como sua vez, possui implicações sociais. Nossa preocupação com este material também é ampliar referências do campo para além do Norte Global.</el-row>
+                <el-row class="introduction-text">Nessa plataforma você terá acesso a algumas experiências relacionadas ao aprendizado de máquina, sempre a partir de experiências realizadas neste processo. Não sabe o que é "aprendizado de máquina"? Sem problemas. Sugiro você começar por aqui. Vale ressaltar que o conteúdo foi construído a partir de  uma perspectiva crítica em relação a encarar os múltiplos (e muitas vezes opacos) processos que viabilizaram a IA na nossa sociedade, incluindo suas potencialidades positivas, assim como sua vez, possui implicações sociais. Nossa preocupação com este material também é ampliar referências do campo para além do Norte Global.</el-row>
                 <el-row class="introduction-text">Esse projeto insere-se no <a href="https://sites.usp.br/gaia/quem-somos/" target="_blank">Grupo de Arte e Inteligência Artificial da USP</a> (GAIA), coordenador por <a href="https://bv.fapesp.br/pt/pesquisador/88539/giselle-beiguelman/" target="_blank">Giselle Beiguelman</a> e Bruno Moreschi, parte do C4AI, localizado no Inova USP, uma rede de pesquisador<a class="gender" @click="changeGender()">{{ genderPairs['ae'][selectedGender] }}</a>s interessad<a class="gender" @click="changeGender()">{{ genderPairs['ao'][selectedGender] }}</a>s em refletir e problematizar as infraestruturas digitais contemporâneas de forma experimental e artística.</el-row>
                 <el-row class="introduction-text">Este trabalho compila dois anos de pesquisas e experimentações, em formatos diversos, como artigos acadêmicos ou não, seminários, participação em aulas, grupos de leituras, workshops e ações para além da universidade. O relato e a discussão crítica dessas ações são aqui pensados em forma de uma rede interligada de aproximações que, juntas, podem contribuir para perspectivas mais críticas e diversas em relação ao campo de aprendizado de máquina. Boa visita!</el-row>
             </div>
         </div>
     </div>
 
-</body>
-
-    <!-- import vue -->
-    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <!-- import vue (fixado na v2, compatível com Element UI) -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.min.js"></script>
     <!-- import element ui -->
     <script src="https://unpkg.com/element-ui/lib/index.js"></script>
     <!-- import axios -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <!-- import app -->
-    <script src="src/js/index.js"></script>
     <!-- import chartjs -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- lightbox -->
     <script src="src/modules/lightbox/lightbox.js"></script>
-    
 
     <script>
-        // lightbox options
-        lightbox.option({
-            'resizeDuration': 200,
-            'wrapAround': true,
-            'fadeDuration': 200,
-        })
+        // lightbox options (só configura se o lightbox carregou)
+        if (typeof lightbox !== 'undefined') {
+            lightbox.option({
+                'resizeDuration': 200,
+                'wrapAround': true,
+                'fadeDuration': 200,
+            })
+        }
     </script>
-    
-</html>
 
+    <!-- instância Vue (substitui o src/js/index.js) -->
+    <script>
+        new Vue({
+            el: '#index',
+            data: {
+                activeMenu: '1',
+                // 0 = feminino, 1 = masculino, 2 = neutro
+                selectedGender: 0,
+                genderPairs: {
+                    'ao': ['a', 'o', 'e'],
+                    'ae': ['a', 'e', 'e']
+                }
+            },
+            methods: {
+                changeGender: function () {
+                    this.selectedGender =
+                        (this.selectedGender + 1) % this.genderPairs['ao'].length;
+                },
+                navigateTo: function (page) {
+                    window.location.href = page;
+                },
+                handleMenu: function (index) {
+                    this.activeMenu = index;
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
