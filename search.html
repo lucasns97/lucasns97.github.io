@@ -11,10 +11,15 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">  
     <link rel="stylesheet" href="src/css/app.css">
+
+    <style>
+        /* evita mostrar o template cru antes do Vue montar */
+        [v-cloak] { display: none; }
+    </style>
 </head>
 
 <body>
-    <div id="search">
+    <div id="search" v-cloak>
         <el-row class="menu__outer">
             <el-menu
                 :default-active="activeMenu"
@@ -38,7 +43,8 @@
                         placeholder="Pesquise um tópico" 
                         v-model="inputData" 
                         class="input-bar" 
-                        size="medium">
+                        size="medium"
+                        @keyup.enter.native="filterByText()">
                     </el-input>
                 </el-col>
             </el-row>
@@ -97,16 +103,118 @@
         </div>
     </div>
 
-</body>
-
-    <!-- import vue -->
-    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <!-- import vue (fixado na v2, compatível com Element UI) -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.min.js"></script>
     <!-- import element ui -->
     <script src="https://unpkg.com/element-ui/lib/index.js"></script>
     <!-- import axios -->
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <!-- import app -->
-    <script src="src/js/search.js"></script>
-    
-</html>
 
+    <!-- instância Vue (substitui o src/js/search.js) -->
+    <script>
+        // ====================================================================
+        // LISTA DE TÓPICOS
+        // Edite aqui os tópicos do site. Cada tópico tem:
+        //   title     -> título exibido no card
+        //   tags      -> lista de etiquetas
+        //   path      -> página aberta ao clicar no card
+        //   read_time -> { time_text: 'X min' }
+        //
+        // Se existir um arquivo src/assets/topics.json no repositório com o
+        // mesmo formato, ele será carregado automaticamente e substituirá
+        // esta lista.
+        // ====================================================================
+        var TOPICS = [
+            {
+                title: 'O que é aprendizado de máquina?',
+                tags: ['introdução', 'conceitos'],
+                path: 'topics/aprendizado-de-maquina.html',
+                read_time: { time_text: '10 min' }
+            },
+            {
+                title: 'Datasets e suas opacidades',
+                tags: ['dados', 'crítica'],
+                path: 'topics/datasets.html',
+                read_time: { time_text: '15 min' }
+            },
+            {
+                title: 'IA e o Norte Global',
+                tags: ['sociedade', 'crítica'],
+                path: 'topics/norte-global.html',
+                read_time: { time_text: '12 min' }
+            }
+        ];
+
+        // remove acentos e normaliza para busca
+        function normalize(text) {
+            return String(text)
+                .toLowerCase()
+                .normalize('NFD')
+                .replace(/[\u0300-\u036f]/g, '');
+        }
+
+        new Vue({
+            el: '#search',
+            data: {
+                activeMenu: '2',
+                inputData: '',
+                loading: true,
+                topicsData: [],
+                filteredTopicsData: []
+            },
+            mounted: function () {
+                var self = this;
+                // tenta carregar topics.json; se não existir, usa a lista TOPICS acima
+                axios.get('src/assets/topics.json')
+                    .then(function (response) {
+                        self.topicsData = Array.isArray(response.data) ? response.data : TOPICS;
+                    })
+                    .catch(function () {
+                        self.topicsData = TOPICS;
+                    })
+                    .finally(function () {
+                        self.filteredTopicsData = self.topicsData;
+                        self.loading = false;
+                    });
+            },
+            methods: {
+                filterByText: function () {
+                    var self = this;
+                    this.loading = true;
+
+                    var query = normalize(this.inputData.trim());
+
+                    // pequeno delay só para o skeleton de loading aparecer
+                    setTimeout(function () {
+                        if (query === '') {
+                            self.filteredTopicsData = self.topicsData;
+                        } else {
+                            self.filteredTopicsData = self.topicsData.filter(function (topic) {
+                                var inTitle = normalize(topic.title).indexOf(query) !== -1;
+                                var inTags = (topic.tags || []).some(function (tag) {
+                                    return normalize(tag).indexOf(query) !== -1;
+                                });
+                                return inTitle || inTags;
+                            });
+                        }
+                        self.loading = false;
+                    }, 300);
+                },
+                getRandomTopic: function () {
+                    if (this.topicsData.length === 0) return;
+                    var randomIndex = Math.floor(Math.random() * this.topicsData.length);
+                    this.inputData = '';
+                    this.filteredTopicsData = [this.topicsData[randomIndex]];
+                },
+                navigateTo: function (page) {
+                    window.location.href = page;
+                },
+                handleMenu: function (index) {
+                    this.activeMenu = index;
+                }
+            }
+        });
+    </script>
+
+</body>
+</html>
